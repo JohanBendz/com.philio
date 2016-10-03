@@ -1,0 +1,13 @@
+{
+	"name": "com.philio",
+	"version": "0.0.1",
+	"description": "This app adds support for Philio Z-Wave devices to Homey",
+	"main": "app.js",
+	"dependencies": {
+		"homey-zwavedriver": "git+https://github.com/athombv/node-homey-zwavedriver.git"
+	},
+	"devDependencies": {},
+	"author": "",
+	"license": "ISC",
+	"homepage": "http://www.frijmann.nl"
+}

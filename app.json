@@ -1,0 +1,459 @@
+{
+    "id": "com.philio",
+    "name": {
+        "en": "Philio"
+    },
+    "version": "0.0.3",
+    "compatibility": ">=0.9.2",
+    "description": {
+        "en": "Philio Z-Wave devices for Homey"
+    },
+    "category": ["appliances"],
+    "images": {
+        "large": "/assets/images/large.png",
+        "small": "/assets/images/small.png"
+    },
+    "author": {
+        "name": "Marco Frijmann",
+        "email": "marco@frijmann.nl"
+    },
+    "contributors": {
+        "developers": [
+            {
+                "name": "Marco Frijmann",
+                "email": "marco@frijmann.nl"
+            }
+        ]
+    },
+    "drivers": [
+        {
+            "id": "PSM02",
+            "name": {
+                "en": "Philio Slim Multi-Sensor PSM02 4:1"
+            },
+            "class": "sensor",
+            "capabilities": ["alarm_motion","alarm_contact","alarm_tamper","measure_temperature", "measure_luminance", "measure_battery"],
+            "images": {
+                "large": "/drivers/PSM02/assets/images/large.png",
+                "small": "/drivers/PSM02/assets/images/small.png"
+            },
+            "zwave": {
+                "manufacturerId": 316,
+                "productTypeId": 2,
+                "productId": 2,
+                "learnmode": {
+                    "image": "/drivers/PSM02/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Tripple Click the Temper Switch on the backside confirms inclusion and exclusion."
+                    }
+                },
+                "associationGroups": [1,2],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 1,
+                        "value": -1
+                    }, {
+                        "id": "pir_sensitivity",
+                        "size": 1,
+                        "value": 70
+                    }, {
+                        "id": "light_threshold",
+                        "size": 1,
+                        "value": 99
+                    }, {
+                        "id": "operation_mode",
+                        "size": 1,
+                        "value": 0
+                    }, {
+                        "id": "multi_sensor_function_switch",
+                        "size": 1,
+                        "value": 4
+                    }, {
+                        "id": "pir_re_detect_interval_time",
+                        "size": 1,
+                        "value": 3
+                    }, {
+                        "id": "turn_off_light_time",
+                        "size": 1,
+                        "value": 4
+                    }, {
+                        "id": "auto_report_battery_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_door_window_state_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_illumination_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_temperature_time",
+                        "size": 1,
+                        "value": 12
+                    }
+                ]
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic Set Level"
+                    },
+                    "value": -1,
+                    "hint": {
+                        "en": "Setting the BASIC command value to turn on the light. -1 = Turn On. 1 - 99 = Dimming level"
+                    }
+                }, {
+                    "id": "pir_sensitivity",
+                    "type": "number",
+                    "label": {
+                        "en": "PIR Sensitivity"
+                    },
+                    "hint": {
+                        "en": "parameter to set the Sensitivity for the PIR (Passiv Infrared Sensor). 0 = Disable PIR motion. 1 - 99 = 1 means the lowest sensitivity, 99 means the highest sensitivity"
+                    },
+                    "value": 70
+
+                }, {
+                    "id": "light_threshold",
+                    "type": "number",
+                    "label": {
+                        "en": "Light Threshold"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light. 1 - 99 = 1 means darkest, 99 means brightest. 100 = Turn off illumination detected. 0 means turn off illumination detected function And never turn on the light."
+                    }
+                }, {
+                    "id": "operation_mode",
+                    "type": "number",
+                    "label": {
+                        "en": "Operation Mode"
+                    },
+                    "value": 0,
+                    "hint": {
+                        "en": "Bit0. 0 - Home Automation mode 1 - Security Mode,Bit1. Test Mode,Bit2. Disable Door/Window Sensor,Bit3. 0 - Temperature in Fahrenheit; 1 - Temperature in Celsius,Bit4. Disable illumination report after event triggered,Bit5. Disable temperature report after event triggered"
+                    }
+                }, {
+                    "id": "multi_sensor_function_switch",
+                    "type": "number",
+                    "label": {
+                        "en": "Multi-Sensor Function Switch"
+                    },
+                    "value": 4,
+                    "hint": {
+                        "en": "Bit0. Disable magnetic integrate illumination,Bit1. Disable PIR integrate Illumination,Bit2. Disable magnetic integrate PIR,Bit3. When Bit2 is 0 (Enable), the device is install in the same room with the light? 0: In the same room(Default), 1: In the different room,Bit4. Disable delay 5 seconds to turn off the light, when door/window closed,Bit5. Disable auto turn off the light, after door/window opened to turn on the light. If Bit2 = 0, this setting is useless,Bit6. Enable temperature monitoring. When this bit enable, the temperature changed 3 degree Fahrenheit, it will report. And also the temperature over 140 degree Fahrenheit, it will report every 64 second"
+                    }
+                }, {
+                    "id": "pir_re_detect_interval_time",
+                    "type": "number",
+                    "label": {
+                        "en": "PIR Re-Detect Interval Time"
+                    },
+                    "value": 4,
+                    "hint": {
+                        "en": "In the security mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, and minimum time is 24 seconds, default tick is 3 (24 seconds)"
+                    }
+                }, {
+                    "id": "turn_off_light_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Turn Off Light Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "After turn on the light, setting the delay time to turn off the light when the PIR motion is not detected. 8 seconds per tick, and minimum time is 32 seconds, default tick is 4 (32 seconds)"
+                    }
+                }, {
+                    "id": "auto_report_battery_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Battery Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "Interval time for auto report the battery level. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+                    }
+                }, {
+                    "id": "auto_report_door_window_state_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Door/Window State Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "Interval time for auto report the door/window state. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+                    }
+                }, {
+                    "id": "auto_report_illumination_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Illumination Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+                    }
+                }, {
+                    "id": "auto_report_temperature_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Temperature Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+                    }
+                }
+            ]
+        },{
+            "id": "PST02-A",
+            "name": {
+                "en": "Philio Slim Multi-Sensor PST02-A 3:1"
+            },
+            "class": "sensor",
+            "capabilities": ["alarm_motion","alarm_contact","alarm_tamper","measure_temperature", "measure_luminance", "measure_battery"],
+            "images": {
+                "large": "/drivers/PST02-A/assets/images/large.png",
+                "small": "/drivers/PST02-A/assets/images/small.png"
+            },
+            "zwave": {
+                "manufacturerId": 316,
+                "productTypeId": 2,
+                "productId": 12,
+                "learnmode": {
+                    "image": "/drivers/PST02-A/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Tripple Click the Temper Switch on the backside confirms inclusion and exclusion."
+                    }
+                },
+                "associationGroups": [1,2],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 1,
+                        "value": 1
+                    }, {
+                        "id": "pir_sensitivity",
+                        "size": 1,
+                        "value": 70
+                    }, {
+                        "id": "light_threshold",
+                        "size": 1,
+                        "value": 100
+                    }, {
+                        "id": "operation_mode",
+                        "size": 1,
+                        "value": 0
+                    }, {
+                        "id": "multi_sensor_function_switch",
+                        "size": 1,
+                        "value": 4
+                    }, {
+                        "id": "customer_function",
+                        "size": 1,
+                        "value": 4
+                    },{
+                        "id": "pir_re_detect_interval_time",
+                        "size": 1,
+                        "value": 3
+                    }, {
+                        "id": "turn_off_light_time",
+                        "size": 1,
+                        "value": 4
+                    }, {
+                        "id": "auto_report_battery_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_door_window_state_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_illumination_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_temperature_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_temperature_time",
+                        "size": 1,
+                        "value": 12
+                    }, {
+                        "id": "auto_report_tick_interval",
+                        "size": 1,
+                        "value": 30
+                    }, {
+                        "id": "temperature_differential_report",
+                        "size": 1,
+                        "value": 1
+                    }, {
+                        "id": "illumination_differential_report",
+                        "size": 1,
+                        "value": 1
+                    }
+                ]
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic Set Level"
+                    },
+                    "value": -1,
+                    "hint": {
+                        "en": "Setting the BASIC command value to turn on the light. 0 = Turn off the light, 1 - 100 = For dimmers 1 to 100 means the light strength, 255 = turns on the light. (Default)"
+                    }
+                }, {
+                    "id": "pir_sensitivity",
+                    "type": "number",
+                    "label": {
+                        "en": "PIR Sensitivity"
+                    },
+                    "hint": {
+                        "en": "parameter to set the Sensitivity for the PIR (Passiv Infrared Sensor). 0 = Disable PIR motion. 1 - 99 = 1 means the lowest sensitivity, 99 means the highest sensitivity"
+                    },
+                    "value": 70
+
+                }, {
+                    "id": "light_threshold",
+                    "type": "number",
+                    "label": {
+                        "en": "Light Threshold"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Setting the illumination threshold to turn on the light. When the event triggers and the environment illumination is lower than the threshold, the device will turn on the light. 0 = Turn off illumination detected function and never turn."
+                    }
+                }, {
+                    "id": "operation_mode",
+                    "type": "number",
+                    "label": {
+                        "en": "Operation Mode"
+                    },
+                    "value": 0,
+                    "hint": {
+                        "en": "Bit 0: Reserved. Bit 1: 1 means enable test mode; 0 means normal mode. Notice: Ignored if DIP Switch is not set to Customer Mode. Bit 2: Disable the door/window function. 1"
+                    }
+                }, {
+                    "id": "multi_sensor_function_switch",
+                    "type": "number",
+                    "label": {
+                        "en": "Multi-Sensor Function Switch"
+                    },
+                    "value": 4,
+                    "hint": {
+                        "en": "Bit 0: Disable magnetic integrate illumination to turn on the lighting nodes in the association group 2. 1: Disable, 0: Enable, Bit 1: Disable PIR integrate Illumination to turn on the"
+                    }
+                }, {
+                    "id": "customer_Function",
+                    "type": "number",
+                    "label": {
+                        "en": "Customer Function"
+                    },
+                    "value": 4,
+                    "hint": {
+                        "en": "Bit 0: Reserved. Bit 1: Enable sending motion OFF report. 0: Disable, 1: Enable. Note: Depends on the Bit4, 0: Report Notification CC, Type: 0x07, Event: 0xFE 1: Sensor Binary Report,"
+                    }
+                },{
+                    "id": "pir_re_detect_interval_time",
+                    "type": "number",
+                    "label": {
+                        "en": "PIR Re-Detect Interval Time"
+                    },
+                    "value": 4,
+                    "hint": {
+                        "en": "In the normal mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, default is 3 (24 seconds). 1 - 127 = Number of ticks. 8 seconds per tick, default value is 3 (24 seconds)."
+                    }
+                }, {
+                    "id": "turn_off_light_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Turn Off Light Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "After turn on the light, setting the delay time to turn off the light when the PIR motion is not detected. 8 seconds per tick, and minimum time is 32 seconds, default tick is 4 (32 seconds)"
+                    }
+                }, {
+                    "id": "auto_report_battery_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Battery Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "The interval time for auto reporting the battery level. 0 = Turn off auto report battery. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration No. 20."
+                    }
+                }, {
+                    "id": "auto_report_door_window_state_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Door/Window State Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "The interval time for auto reporting the door/window state. 0 = Turn off auto report door/window state. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration No. 20."
+                    }
+                }, {
+                    "id": "auto_report_illumination_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Illumination Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "The Interval time for auto reporting the illumination state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration No. 20."
+                    }
+                }, {
+                    "id": "auto_report_temperature_time",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Temperature Time"
+                    },
+                    "value": 12,
+                    "hint": {
+                        "en": "The interval time for auto reporting the temperature state. 0 = Turn off auto report temperature. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration No. 20."
+                    }
+                }, {
+                    "id": "auto_report_tick_interval",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto Report Tick Interval"
+                    },
+                    "value": 30,
+                    "hint": {
+                        "en": "The interval time for each auto report tick. Setting this configuration will effect configuration No.10, No.11, No.12 and No.13. 0 = Turn off all auto report functions. 1-255 = Interval time for each tick. Default is 30."
+                    }
+                }, {
+                    "id": "temperature_differential_report",
+                    "type": "number",
+                    "label": {
+                        "en": "Temperature Differential Report"
+                    },
+                    "value": 1,
+                    "hint": {
+                        "en": "The interval time for auto reporting the temperature state. 0 = Turn off auto report temperature. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration No. 20."
+                    }
+                }, {
+                    "id": "illumination_differential_report",
+                    "type": "number",
+                    "label": {
+                        "en": "Illumination Differential Report"
+                    },
+                    "value": 1,
+                    "hint": {
+                        "en": "The illumination differential to report. The unit is percentage. When enabled, the device will measure every minute. Enabling this functionality will cause some issue. Please check the “Illumination Report” section of the Multisensor manual."
+                    }
+                }
+            ]
+        }
+    ]
+}
