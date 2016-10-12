@@ -14,6 +14,7 @@
                     'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
                     'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
+                        Homey.log(report);
                         if (report['Sensor Type'] === 'Motion') {
                             return report['Sensor Value'] === 'detected an event';
                         }else{
@@ -25,6 +26,7 @@
                     'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
                     'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
+                        Homey.log(report);
                         if(report['Sensor Type'] === 'Door/Window'){
                             return report['Sensor Value'] === 'detected an event';
                         }
@@ -34,6 +36,7 @@
                     'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
                     'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
+                        Homey.log(report);
                         if (report['Sensor Type'] === 'Tamper') {
                             return report['Sensor Value'] === 'detected an event';
                         }else{
@@ -51,6 +54,7 @@
                     },
                     'command_report': 'SENSOR_MULTILEVEL_REPORT',
                     'command_report_parser': function (report) {
+                        Homey.log(report);
                         if(report['Sensor Type'] !== 'Temperature (version 1)'){
                             return null;
                         }else{
@@ -69,7 +73,7 @@
                     },
                     'command_report': 'SENSOR_MULTILEVEL_REPORT',
                     'command_report_parser': function (report) {
-
+						Homey.log(report);
                         if(report['Sensor Type'] !== 'Luminance (version 1)'){
                             return null;
                         }else{

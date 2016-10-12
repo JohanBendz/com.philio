@@ -6,7 +6,6 @@
 // Product Line:	Philio Z-Wave Product
 // Product Code:	PST02-A
 // Product Version:	1.0
-
         module.exports = new ZwaveDriver(path.basename(__dirname), {
             debug: true,
             capabilities: {
@@ -30,7 +29,7 @@
                     'command_report': 'NOTIFICATION_REPORT',
                     'command_report_parser': function (report) {
                         if (report['Notification Type'] === 'Access Control') {
-                            if (report['Event (Parsed)'] === 'Window/Door is open') {
+                            if (report['Event (Parsed)'] === 'Door/Window is open') {
                                 return true;
                             } else {
                                 return false;
@@ -57,20 +56,20 @@
                 },
                 'measure_temperature': {
                     'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+                    'command_get': 'SENSOR_MULTILEVEL_GET',
                     'command_get_parser': function () {
                         return {
                             'Sensor Type': "Temperature (version 1)",
-                            'Properties1': {'Scale': 0}
+                            'Properties1': { 'Scale': 0 }
                         }
                     },
                     'command_report': 'SENSOR_MULTILEVEL_REPORT',
                     'command_report_parser': function (report) {
-                        if(report['Sensor Type'] !== 'Temperature (version 1)'){
+                        if(report['Sensor Type'] !== 'Temperature (version 1)') {
                             return null;
-                        }else{
+                        } else {
                             return report['Sensor Value (Parsed)'];
                         }
-                        
                     }
                 },
                 'measure_luminance': {
@@ -83,7 +82,6 @@
                     },
                     'command_report': 'SENSOR_MULTILEVEL_REPORT',
                     'command_report_parser': function (report) {
-
                         if(report['Sensor Type'] !== 'Luminance (version 1)'){
                             return null;
                         }else{
@@ -95,6 +93,7 @@
                 },
                 'measure_battery': {
                     'command_class': 'COMMAND_CLASS_BATTERY',
+					'command_get': 'BATTERY_GET',
                     'command_report': 'BATTERY_REPORT',
                     'command_report_parser': function (report) {
                         Homey.log(report);
@@ -134,6 +133,13 @@
                         return new Buffer([parseInt(input)]);
                     }
                 },
+                "customer_function": {
+                    "index": 7,
+                    "size": 1,
+                    "parser": function (input) {
+                        return new Buffer([parseInt(input)]);
+                    }
+                },
                 "pir_re_detect_interval_time": {
                     "index": 8,
                     "size": 1
@@ -156,6 +162,18 @@
                 },
                 "auto_report_temperature_time": {
                     "index": 13,
+                    "size": 1
+                },
+                "auto_report_tick_interval": {
+                    "index": 20,
+                    "size": 1
+                },
+                "temperature_differential_report": {
+                    "index": 21,
+                    "size": 1
+                },
+                "illumination_differential_report": {
+                    "index": 22,
                     "size": 1
                 }
             }
