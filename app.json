@@ -115,7 +115,7 @@
                     }
                 }, {
                     "id": "operation_mode",
-                    "type": "dropdown",
+                    "type": "number",
                     "label": {
                         "en": "Operation Mode"
                     },
