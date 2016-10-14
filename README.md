@@ -19,6 +19,7 @@ Homey version >= 0.10.4 (due to z-wave rewrite)
 
 
 Changelog:
+
 0.0.8
 * Fixt all sensors for PST02-A. Please remove and re-add your devices. If the temperature reports +/- -40 then the settings are in Fahrenheit and the device settings weren't applied correctly. Please update "Operation Mode" and "Customer Function" to another value, click save and change it back to the original values. Otherwise your sensors won't update.
 
