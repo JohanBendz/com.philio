@@ -113,16 +113,10 @@
                 "operation_mode": {
                     "index": 5,
                     "size": 1,
-                    "parser": function (input) {
-                        return new Buffer([parseInt(input)]);
-                    }
                 },
                 "multi_sensor_function_switch": {
                     "index": 6,
                     "size": 1,
-                    "parser": function (input) {
-                        return new Buffer([parseInt(input)]);
-                    }
                 },
                 "pir_re_detect_interval_time": {
                     "index": 8,
