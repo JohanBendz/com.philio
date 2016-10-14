@@ -14,17 +14,18 @@
         "small": "/assets/images/small.png"
     },
     "author": {
-        "name": "Marco Frijmann",
-        "email": "marco@frijmann.nl"
+        "name": "Robin van Kekem",
+        "email": "nl.inversion@gmail.com"
     },
     "contributors": {
         "developers": [
             {
                 "name": "Marco Frijmann",
-                "email": "marco@frijmann.nl"
+                "email": ""
             },
             {
-                "name": "Robert Raaijmakers"
+                "name": "Robert Raaijmakers",
+                "email": ""
             }
         ]
     },
