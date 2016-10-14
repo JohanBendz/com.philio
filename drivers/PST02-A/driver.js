@@ -8,50 +8,38 @@
 // Product Version:	1.0
         module.exports = new ZwaveDriver(path.basename(__dirname), {
             debug: true,
-            capabilities: {
+            capabilities: {				
                 'alarm_motion': {
-                    'command_class': 'COMMAND_CLASS_NOTIFICATION',
-                    'command_report': 'NOTIFICATION_REPORT',
+                    'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
+                    'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
-                        if (report['Notification Type'] === 'Home Security') {
-                            if (report['Event (Parsed)'] === 'Motion Detection' || report['Event (Parsed)'] === 'Motion Detection, Unknown Location') {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        } else {
-                            return null;
+                        if (report['Sensor Type'] === 'Motion') {
+                            return report['Sensor Value'] === 'detected an event';
                         }
+                        
+                        return null;
                     }
                 },
                 'alarm_contact': {
-                    'command_class': 'COMMAND_CLASS_NOTIFICATION',
-                    'command_report': 'NOTIFICATION_REPORT',
+                    'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
+                    'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
-                        if (report['Notification Type'] === 'Access Control') {
-                            if (report['Event (Parsed)'] === 'Door/Window is open') {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        } else {
-                            return null;
+                        if(report['Sensor Type'] === 'Door/Window') {
+                            return report['Sensor Value'] === 'detected an event';
                         }
+                        
+                        return null;
                     }
                 },
                 'alarm_tamper': {
-                    'command_class': 'COMMAND_CLASS_NOTIFICATION',
-                    'command_report': 'NOTIFICATION_REPORT',
+                    'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
+                    'command_report': 'SENSOR_BINARY_REPORT',
                     'command_report_parser': function (report) {
-                        if (report['Notification Type'] === 'Home Security') {
-                            if (report['Event (Parsed)'] === 'Tampering, Product covering removed') {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        } else {
-                            return null;
+                        if (report['Sensor Type'] === 'Tamper') {
+                            return report['Sensor Value'] === 'detected an event';
                         }
+                        
+                        return null;
                     }
                 },
                 'measure_temperature': {
@@ -72,17 +60,19 @@
                         }
                     }
                 },
+                
                 'measure_luminance': {
                     'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+                    'command_get': 'SENSOR_MULTILEVEL_GET',
                     'command_get_parser': function () {
                         return {
                             'Sensor Type': "Luminance (version 1)",
-                            'Properties1': {'Scale': 0}
+                            'Properties1': {'Scale': 0 }
                         }
                     },
                     'command_report': 'SENSOR_MULTILEVEL_REPORT',
                     'command_report_parser': function (report) {
-                        if(report['Sensor Type'] !== 'Luminance (version 1)'){
+                        if(report['Sensor Type'] !== 'Luminance (version 1)') {
                             return null;
                         }else{
                             return report['Sensor Value (Parsed)'];
@@ -91,16 +81,15 @@
                         
                     }
                 },
+                
                 'measure_battery': {
                     'command_class': 'COMMAND_CLASS_BATTERY',
 					'command_get': 'BATTERY_GET',
                     'command_report': 'BATTERY_REPORT',
                     'command_report_parser': function (report) {
-                        Homey.log(report);
-                        Homey.log(report['Battery Level (Raw)'][0].toString(10));
-                        if(report['Battery Level'] === "battery low warning"){
+                        if(report['Battery Level'] === "battery low warning") {
                             return 1;
-                        }else{
+                        } else {
                             return report['Battery Level (Raw)'][0];
                         }
                     }
