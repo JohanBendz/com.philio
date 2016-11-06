@@ -75,18 +75,6 @@ module.exports.on('initNode', token => {
 	if (node) {
 		node.instance.CommandClass['COMMAND_CLASS_BASIC'].on('report', (command, report) => {
 			if (command.name === "BASIC_SET") {
-				let on = 99;
-				
-				module.exports.getSettings(node.device_data, (err, settings) => {
-					if (!err &&
-					settings &&
-					settings.hasOwnProperty(1) &&
-					settings.hasOwnProperty(2)) {
-						if (settings[1] !== 99)
-							on = settings[1];
-					}
-				});
-				
 				const dimLevel = {
 					"dim": report.Value / 100
 				};
@@ -100,7 +88,7 @@ module.exports.on('initNode', token => {
 				
 				if (report.Value <= 0) {
 					state = false;
-					Homey.manager('flow').triggerDevice('PSR04_off', dimLevel, null, node.device_data, err => {
+					Homey.manager('flow').triggerDevice('PSR04_off', null, null, node.device_data, err => {
 						if (err) return Homey.error(err);
 					});
 				}
