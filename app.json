@@ -3,7 +3,7 @@
    "name":{
       "en":"Philio"
    },
-   "version":"0.0.8",
+   "version":"0.0.9",
    "compatibility":">=0.10.4",
    "description":{
       "en":"Philio Z-Wave devices for Homey"
@@ -31,11 +31,115 @@
          }
       ]
    },
+   "capabilities": {
+      "show_dim_level": {
+         "type": "number",
+         "title": {
+            "en": "Dim level",
+            "nl": "Dim niveau"
+         },
+         "chartType": "line",
+         "min": 0,
+         "max": 100,
+         "decimals": 0,
+         "units": {
+            "en": "%"
+         },
+         "getable": true,
+         "setable": false
+      }
+   },
+   "flow": {
+      "triggers": [
+         {
+            "id": "PSR04_on",
+            "title": {
+               "en": "Switched on",
+               "nl": "Aangezet"
+            },
+            "args": [
+               {
+                  "name": "device",
+                  "type": "device",
+                  "filter": "driver_id=PSR04"
+               }
+            ],
+            "tokens": [
+               {
+                  "name": "dim",
+                  "title": {
+                     "en": "Level",
+                     "en": "Niveau"
+                  },
+                  "example": {
+                     "en": 0.5
+                  }
+               }
+            ]
+         },
+		 {
+            "id": "PSR04_off",
+            "title": {
+               "en": "Switched off",
+               "nl": "Uitgezet"
+            },
+            "args": [
+               {
+                  "name": "device",
+                  "type": "device",
+                  "filter": "driver_id=PSR04"
+               }
+            ]
+         },
+         {
+            "id": "PSR04_dim",
+            "title": {
+               "en": "Dim-level changed",
+               "nl": "Dim-niveau veranderd"
+            },
+            "args": [
+               {
+                  "name": "device",
+                  "type": "device",
+                  "filter": "driver_id=PSR04"
+               }
+            ],
+            "tokens": [
+               {
+                  "name": "dim",
+                  "title": {
+                     "en": "Level",
+                     "en": "Niveau"
+                  },
+                  "example": {
+                     "en": 0.5
+                  }
+               }
+            ]
+         }
+      ],
+      "conditions": [
+         {
+            "id": "PSR04_onoff",
+            "title": {
+               "en": "Is !{{on|off}}",
+               "nl": "Is !{{aan|uit}}"
+			},
+            "args": [
+               {
+                  "name": "device_data",
+                  "type": "device",
+                  "filter": "driver_id=PSR04"
+               }
+            ]
+         }
+      ]
+   },
    "drivers":[
       {
          "id":"PSM02",
          "name":{
-            "en":"Philio Slim Multi-Sensor PSM02 4:1"
+            "en":"Slim Multi-Sensor PSM02 4:1"
          },
          "class":"sensor",
          "capabilities":[
@@ -247,10 +351,163 @@
          ]
       },
       {
+         "id": "PSR04",
+         "name":{
+            "en": "Smart Color Button PSR04"
+         },
+         "class": "other",
+         "capabilities": [
+            "measure_battery",
+            "show_dim_level"
+         ],
+         "images":{
+            "large": "/drivers/PSR04/assets/images/large.png",
+            "small": "/drivers/PSR04/assets/images/small.png"
+         },
+         "zwave": {
+            "manufacturerId": 316,
+            "productTypeId": 9,
+            "productId": [
+               34
+            ],
+            "learnmode": {
+               "image": "/drivers/PSR04/assets/learnmode.svg",
+               "instruction": {
+                  "en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
+				  "nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
+               }
+            },
+            "associationGroups": [
+               1,
+               2
+            ]
+         },
+         "mobile": {
+            "components": [
+               {
+                  "id": "icon",
+				  "capabilities": [ ]
+               },
+               {
+                  "id": "battery",
+				  "capabilities": [
+                     "measure_battery"
+                  ]
+               },
+               {
+                  "id": "sensor",
+				  "capabilities": [
+                     "show_dim_level"
+                  ],
+				  "options": {
+                     "icons": {
+                        "show_dim_level": "./drivers/PSR04/assets/dim_level.svg"
+                     }
+				  }
+               }
+            ]
+		 },
+         "settings": [
+            {
+               "id": 1,
+               "type": "number",
+               "label":{
+                  "en": "Dimming Level 'Off' Command",
+				  "nl": "Dim level 'Uit' Commando"
+               },
+               "value": 0,
+               "attr": {
+                  "min": 0,
+                  "max": 99
+               },
+               "hint": {
+                  "en": "What dimming level will be send, when sending the 'Off' Command. Range: 0 - 99",
+                  "nl": "Welk dim niveau moet worden verzonden bij het 'Uit' Commando. Bereik: 0 - 99"
+               }
+            },
+            {
+               "id": 2,
+               "type": "number",
+               "label":{
+                  "en": "Dimming Level 'On' Command",
+				  "nl": "Dim level 'Aan' Commando"
+               },
+               "value": 99,
+               "attr": {
+                  "min": 1,
+                  "max": 99
+               },
+               "hint": {
+                  "en": "What dimming level will be send, when sending the 'On' Command. Range: 1 - 99",
+                  "nl": "Welk dim niveau moet worden verzonden bij het 'Aan' Commando. Bereik: 1 - 99"
+               }
+            },
+            {
+               "id": 10,
+               "type": "number",
+               "label":{
+                  "en": "Battery Report",
+				  "nl": "Batterij Verzending"
+               },
+               "value": 12,
+               "attr": {
+                  "min": 0,
+                  "max": 127
+               },
+               "hint": {
+                  "en": "Interval (in hours) for when to send the battery level. Range: 0 (off), 1 - 127",
+                  "nl": "Interval (in uur) wanneer het batterij niveau word verzonden. Bereik: 0 (uit), 1 - 127"
+               }
+            },
+            {
+               "id": 251,
+               "type": "dropdown",
+               "label":{
+                  "en": "Reporting",
+				  "nl": "Verzending"
+               },
+               "value": "0",
+               "hint": {
+                  "en": "Determine when the signal will be send.",
+                  "nl": "Bepaal wanneer het signaal word verzonden."
+               },
+               "values": [
+                  {
+                     "id": "0",
+                     "label": {
+                        "en": "Automatic after rotating.",
+                        "nl": "Automatische no rotatie."
+					 }
+                  },
+                  {
+                     "id": "1",
+                     "label": {
+                        "en": "After pressing the button.",
+                        "nl": "Met het drukken op de knop."
+					 }
+                  }
+               ]
+            },
+            {
+               "id": 252,
+               "type": "checkbox",
+               "label":{
+                  "en": "Timer Buzzer",
+				  "nl": "Timer Buzzer"
+               },
+               "value": true,
+               "hint": {
+                  "en": "Determine if the buzzer will activate with the timer.",
+                  "nl": "Bepaal of de buzzer activeert met de timer."
+               }
+            }
+         ]
+      },
+      {
          "id":"PST02-A",
          "name":{
-            "en":"Philio Slim Multi-Sensor PST02-A 4:1",
-            "nl":"Philio Slim Multi-Sensor PST02-A 4:1"
+            "en":"Slim Multi-Sensor PST02-A 4:1",
+            "nl":"Slim Multi-Sensor PST02-A 4:1"
          },
          "class":"sensor",
          "capabilities":[

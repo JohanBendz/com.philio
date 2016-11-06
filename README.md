@@ -5,6 +5,7 @@ This app adds support for Philio Z-Wave devices to Homey.
 
 Supported devices:
 * PSM02   motion sensor 4:1
+* PSR04   smart color button
 * PST02-A motion sensor 4:1
 
 
@@ -19,6 +20,9 @@ Homey version >= 0.10.4 (due to z-wave rewrite)
 
 
 Changelog:
+0.0.9
+* Add smart color button PSR04
+* Update z-wave drivers (1.0.2)
 
 0.0.8
 * Fixt all sensors for PST02-A. Please remove and re-add your devices. If the temperature reports +/- -40 then the settings are in Fahrenheit and the device settings weren't applied correctly. Please update "Operation Mode" and "Customer Function" to another value, click save and change it back to the original values. Otherwise your sensors won't update.
