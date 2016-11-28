@@ -1,6 +1,6 @@
 "use strict";
-        const path = require('path');
-        const ZwaveDriver = require('homey-zwavedriver');
+        var path = require('path');
+        var ZwaveDriver = require('homey-zwavedriver');
 // Product Name:	Slim Multi-Sensor PSM02
 // Brand Name:	Philio
 // Product Line:	Philio Z-Wave Product
