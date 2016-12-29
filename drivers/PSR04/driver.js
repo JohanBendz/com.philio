@@ -45,7 +45,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				const bit1 = Number(value);
 				
 				let bit2 = 0;
-				if (!settings[252]) bit2 = 2;
+				if (!settings['252']) bit2 = 2;
 				
 				return new Buffer([Math.round(bit1 + bit2)]);
 			}
@@ -54,7 +54,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"index": 25,
 			"size": 1,
 			"parser": (value, settings) => {
-				const bit1 = Number(settings[251]);
+				const bit1 = Number(settings['251']);
 				
 				let bit2 = 0;
 				if (!value) bit2 = 2;
