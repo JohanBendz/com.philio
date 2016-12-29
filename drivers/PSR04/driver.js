@@ -10,14 +10,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		'show_dim_level': {
 			'command_class': 'COMMAND_CLASS_BASIC',
 			'command_report': 'BASIC_SET',
-			'command_report_parser': report => {
-				let value = report.Value;	
-				
-				if (value === 99)
-					value = 100;
-				
-				return value;
-			}
+			'command_report_parser': report => report.Value / 100
 		},
 		
 		'measure_battery': {
@@ -33,6 +26,10 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		}
 	},
 	settings: {
+		1: { // Basic OFF
+			"index": 1,
+			"size": 1
+		},
 		2: { // Basic ON
 			"index": 2,
 			"size": 1
