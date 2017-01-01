@@ -3,8 +3,8 @@
    "name":{
       "en":"Philio"
    },
-   "version":"0.0.9",
-   "compatibility":">=0.10.4",
+   "version":"0.0.10",
+   "compatibility":">=1.1.0",
    "description":{
       "en":"Philio Z-Wave devices for Homey"
    },
@@ -40,11 +40,8 @@
          },
          "chartType": "line",
          "min": 0,
-         "max": 100,
-         "decimals": 0,
-         "units": {
-            "en": "%"
-         },
+         "max": 1,
+         "decimals": 2,
          "getable": true,
          "setable": false
       }
@@ -67,9 +64,10 @@
             "tokens": [
                {
                   "name": "dim",
+                  "type": "number",
                   "title": {
-                     "en": "Level",
-                     "en": "Niveau"
+                     "en": "level",
+                     "nl": "niveau"
                   },
                   "example": {
                      "en": 0.5
@@ -107,9 +105,10 @@
             "tokens": [
                {
                   "name": "dim",
+                  "type": "number",
                   "title": {
-                     "en": "Level",
-                     "en": "Niveau"
+                     "en": "level",
+                     "nl": "niveau"
                   },
                   "example": {
                      "en": 0.5
@@ -124,7 +123,7 @@
             "title": {
                "en": "Is !{{on|off}}",
                "nl": "Is !{{aan|uit}}"
-			},
+            },
             "args": [
                {
                   "name": "device_data",
@@ -374,46 +373,55 @@
                "image": "/drivers/PSR04/assets/learnmode.svg",
                "instruction": {
                   "en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
-				  "nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
+                  "nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
                }
             },
             "associationGroups": [
                1,
                2
-            ]
+            ],
+            "associationGroupsOptions": {
+                "1": {
+                    "hint": {
+                        "en": "Battery level and current dim level get reported in here.",
+                        "nl": "Batterij niveau en huidig dim niveau worden hier op gemeld."
+                    }
+                },
+                "2": {
+                    "hint": {
+                        "en": "Dim level changes will be reported here.",
+                        "nl": "Dim niveau veranderingen worden hier op gemeld."
+                    }
+                }
+            }
          },
          "mobile": {
             "components": [
                {
                   "id": "icon",
-				  "capabilities": [ ]
+                  "capabilities": [ ]
                },
                {
                   "id": "battery",
-				  "capabilities": [
+                  "capabilities": [
                      "measure_battery"
                   ]
                },
                {
-                  "id": "sensor",
-				  "capabilities": [
+                  "id": "slider",
+                  "capabilities": [
                      "show_dim_level"
-                  ],
-				  "options": {
-                     "icons": {
-                        "show_dim_level": "./drivers/PSR04/assets/dim_level.svg"
-                     }
-				  }
+                  ]
                }
             ]
-		 },
+         },
          "settings": [
             {
                "id": 1,
                "type": "number",
                "label":{
                   "en": "Dimming Level 'Off' Command",
-				  "nl": "Dim level 'Uit' Commando"
+                  "nl": "Dim level 'Uit' Commando"
                },
                "value": 0,
                "attr": {
@@ -430,7 +438,7 @@
                "type": "number",
                "label":{
                   "en": "Dimming Level 'On' Command",
-				  "nl": "Dim level 'Aan' Commando"
+                  "nl": "Dim level 'Aan' Commando"
                },
                "value": 99,
                "attr": {
@@ -447,7 +455,7 @@
                "type": "number",
                "label":{
                   "en": "Battery Report",
-				  "nl": "Batterij Verzending"
+                  "nl": "Batterij Verzending"
                },
                "value": 12,
                "attr": {
@@ -464,7 +472,7 @@
                "type": "dropdown",
                "label":{
                   "en": "Reporting",
-				  "nl": "Verzending"
+                  "nl": "Verzending"
                },
                "value": "0",
                "hint": {
@@ -477,14 +485,14 @@
                      "label": {
                         "en": "Automatic after rotating.",
                         "nl": "Automatische no rotatie."
-					 }
+                     }
                   },
                   {
                      "id": "1",
                      "label": {
                         "en": "After pressing the button.",
                         "nl": "Met het drukken op de knop."
-					 }
+                     }
                   }
                ]
             },
@@ -492,8 +500,8 @@
                "id": 252,
                "type": "checkbox",
                "label":{
-                  "en": "Timer Buzzer",
-				  "nl": "Timer Buzzer"
+                   "en": "Timer Buzzer",
+                   "nl": "Timer Buzzer"
                },
                "value": true,
                "hint": {

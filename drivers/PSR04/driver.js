@@ -10,14 +10,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		'show_dim_level': {
 			'command_class': 'COMMAND_CLASS_BASIC',
 			'command_report': 'BASIC_SET',
-			'command_report_parser': report => {
-				let value = report.Value;	
-				
-				if (value === 99)
-					value = 100;
-				
-				return value;
-			}
+			'command_report_parser': report => report.Value / 100
 		},
 		
 		'measure_battery': {
@@ -33,6 +26,10 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		}
 	},
 	settings: {
+		1: { // Basic OFF
+			"index": 1,
+			"size": 1
+		},
 		2: { // Basic ON
 			"index": 2,
 			"size": 1
@@ -48,7 +45,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				const bit1 = Number(value);
 				
 				let bit2 = 0;
-				if (!settings[252]) bit2 = 2;
+				if (!settings['252']) bit2 = 2;
 				
 				return new Buffer([Math.round(bit1 + bit2)]);
 			}
@@ -57,7 +54,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"index": 25,
 			"size": 1,
 			"parser": (value, settings) => {
-				const bit1 = Number(settings[251]);
+				const bit1 = Number(settings['251']);
 				
 				let bit2 = 0;
 				if (!value) bit2 = 2;

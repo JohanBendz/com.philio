@@ -20,6 +20,10 @@ Homey version >= 0.10.4 (due to z-wave rewrite)
 
 
 Changelog:
+0.0.10
+* PSR04 fix driver for global tags support
+* Update z-wave drivers (1.1.2)
+
 0.0.9
 * Add smart color button PSR04
 * Update z-wave drivers (1.0.2)
