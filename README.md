@@ -7,19 +7,21 @@ Supported devices:
 * PSM02   motion sensor 4:1
 * PSR04   smart color button
 * PST02-A motion sensor 4:1
+* PST02-C Door/Window 3 in 1 sensor
 
 
 Currently supported languages:
 * English
 
-#Compatibility
-Homey version >= 0.10.4 (due to z-wave rewrite)
 
-#Buy me a beer/pizza/holiday?
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KWMTEXY3U6VVN&lc=GB&item_name=HomeyApp&item_number=PhilioApp&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+#Compatibility
+Homey version >= 1.1.0
 
 
 Changelog:
+0.0.11
+* Add support for PST02-C door/windows 3 in 1 sensor (thanks valkhyr1!)
+
 0.0.10
 * PSR04 fix driver for global tags support
 * Update z-wave drivers (1.1.2)
