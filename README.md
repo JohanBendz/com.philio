@@ -8,7 +8,7 @@ Supported devices:
 * PSR04   smart color button
 * PST02-A motion sensor 4:1
 * PST02-C Door/Window 3 in 1 sensor
-
+* PAN11-1 Smart Energy Plug In Switch
 
 Currently supported languages:
 * English
@@ -19,6 +19,9 @@ Homey version >= 1.1.0
 
 
 Changelog:
+0.0.12
+* Add support for PAN11-1 Smart Energy Plug in Switch
+
 0.0.11
 * Add support for PST02-C door/windows 3 in 1 sensor (thanks valkhyr1!)
 

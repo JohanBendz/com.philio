@@ -3,7 +3,7 @@
    "name":{
       "en":"Philio"
    },
-   "version":"0.0.11",
+   "version":"0.0.12",
    "compatibility":">=1.1.0",
    "description":{
       "en":"Philio Z-Wave devices for Homey"
@@ -27,6 +27,10 @@
          },
          {
             "name":"Robert Raaijmakers",
+            "email":""
+         },
+         {
+            "name":"René van Veen",
             "email":""
          }
       ]
@@ -1095,6 +1099,107 @@
                }
             }
          ]
-      }
+     }, {
+         "id":"PAN11-1",
+         "name":{
+             "en":"Smart Energy Plug In Switch PAN11-1"
+            },
+            "zwave": {
+            "manufacturerId": 316,
+            "productTypeId": 1,
+            "productId": 1,
+            "learnmode": {
+                "image": "/drivers/PAN11-1/assets/learnmode.svg",
+                "instruction": {
+                "en": "Double Press the (action) button on the Energy Plug to enter learn mode"
+                }
+            },
+            "associationGroups": [
+                1
+            ],
+            "defaultConfiguration": [
+                {
+                "id": 1,
+                "size": 2,
+                "value": 720
+                },
+                {
+                "id": 2,
+                "size": 2,
+                "value": 6
+                },
+                {
+                "id": 3,
+                "size": 2,
+                "value": 3000
+                },
+                {
+                "id": 4,
+                "size": 2,
+                "value": 10000
+                }
+            ]
+            },
+            "class": "socket",
+            "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power"
+            ],
+            "images": {
+            "large": "/drivers/PAN11-1/assets/images/large.png",
+            "small": "/drivers/PAN11-1/assets/images/small.png"
+            },
+            "settings": [
+            {
+                "id": 1,
+                "type": "number",
+                "label": {
+                    "en": "Watt Meter Report Period"
+                },
+                "value": 720,
+                "attr": {
+                    "min": 1,
+                    "max": 32767
+                }
+            },
+            {
+                "id": 2,
+                "type": "number",
+                "label": {
+                    "en": "KWH Meter Report Period"
+                },
+                "value": 6,
+                "attr": {
+                    "min": 1,
+                    "max": 32767
+                }
+            },
+            {
+                "id": 3,
+                "type": "number",
+                "label": {
+                    "en": "Threshold of Watt for Load caution"
+                },
+                "value": 3000,
+                "attr": {
+                    "min": 10,
+                    "max": 3000
+                }
+            },
+            {
+                "id": 4,
+                "type": "number",
+                "label": {
+                    "en": "Threshold of KWh for Load caution"
+                },
+                "value": 10000,
+                "attr": {
+                    "min": 1,
+                    "max": 10000
+                }
+            }
+      ]
+    }
    ]
 }
