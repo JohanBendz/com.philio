@@ -9,6 +9,7 @@ Supported devices:
 * PST02-A motion sensor 4:1
 * PST02-C Door/Window 3 in 1 sensor
 * PAN11-1 Smart Energy Plug In Switch
+* PAN06-1 In Wall Dual relay(1 way) switch module
 
 Currently supported languages:
 * English
@@ -19,6 +20,10 @@ Homey version >= 1.1.0
 
 
 Changelog:
+0.0.13
+* Add support for PAN06-1 In Wall Dual relay(1 way) switch module
+* Removed debug marker from some devices
+
 0.0.12
 * Add support for PAN11-1 Smart Energy Plug in Switch
 
