@@ -20,6 +20,7 @@ Homey version >= 1.1.0
 
 
 Changelog:
+
 0.0.13
 * Add support for PAN06-1 In Wall Dual relay(1 way) switch module
 * Removed debug marker from some devices

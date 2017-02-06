@@ -21,7 +21,7 @@
                     },
                     command_report: 'SWITCH_BINARY_REPORT',
                     command_report_parser: report => report['Value'] === 'on/enable'
-                    }
+                }
             },
             settings: {
                 "mode_selection": {
