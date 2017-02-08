@@ -7,8 +7,7 @@
 // Product Code:	PST02-A
 // Product Version:	1.0
         module.exports = new ZwaveDriver(path.basename(__dirname), {
-            debug: true,
-            capabilities: {				
+            capabilities: {
                 'alarm_motion': {
                     'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
                     'command_report': 'SENSOR_BINARY_REPORT',
@@ -16,7 +15,7 @@
                         if (report['Sensor Type'] === 'Motion') {
                             return report['Sensor Value'] === 'detected an event';
                         }
-                        
+
                         return null;
                     }
                 },
@@ -27,7 +26,7 @@
                         if(report['Sensor Type'] === 'Door/Window') {
                             return report['Sensor Value'] === 'detected an event';
                         }
-                        
+
                         return null;
                     }
                 },
@@ -38,7 +37,7 @@
                         if (report['Sensor Type'] === 'Tamper') {
                             return report['Sensor Value'] === 'detected an event';
                         }
-                        
+
                         return null;
                     }
                 },
@@ -60,7 +59,7 @@
                         }
                     }
                 },
-                
+
                 'measure_luminance': {
                     'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
                     'command_get': 'SENSOR_MULTILEVEL_GET',
@@ -78,10 +77,10 @@
                             return report['Sensor Value (Parsed)'];
                         }
 
-                        
+
                     }
                 },
-                
+
                 'measure_battery': {
                     'command_class': 'COMMAND_CLASS_BATTERY',
 					'command_get': 'BATTERY_GET',
