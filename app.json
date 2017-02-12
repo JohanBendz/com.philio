@@ -3,7 +3,7 @@
     "name": {
         "en": "Philio"
     },
-    "version": "0.0.13",
+    "version": "0.0.14",
     "compatibility": ">=1.1.0",
     "description": {
         "en": "Philio Z-Wave devices for Homey"
@@ -1231,21 +1231,7 @@
                         "icon": "/drivers/PAN06-1/assets/icon.svg",
                         "name": {
                             "en": "In Wall Dual relay PAN06-1 (Switch-B)"
-                        },
-                        "settings": [
-                            {
-                                "id": 4,
-                                "type": "number",
-                                "label": {
-                                    "en": "Sets auto off timer."
-                                },
-                                "value": 0,
-                                "attr": {
-                                    "min": 1,
-                                    "max": 32767
-                                }
-                            }
-                        ]
+                        }
                     },
                     "3": {
                         "class": "socket",
@@ -1255,21 +1241,7 @@
                         "icon": "/drivers/PAN06-1/assets/icon.svg",
                         "name": {
                             "en": "In Wall Dual relay PAN06-1 (Switch-A & Switch-B)"
-                        },
-                        "settings": [
-                            {
-                                "id": 4,
-                                "type": "number",
-                                "label": {
-                                    "en": "Sets auto off timer."
-                                },
-                                "value": 0,
-                                "attr": {
-                                    "min": 1,
-                                    "max": 32767
-                                }
-                            }
-                        ]
+                        }
                     }
                 },
                 "defaultConfiguration": [
@@ -1292,6 +1264,11 @@
                         "id": 4,
                         "size": 2,
                         "value": 0
+                    },
+                    {
+                        "id": 5,
+                        "size": 1,
+                        "value": 0
                     }
                 ]
             },
@@ -1305,16 +1282,156 @@
             },
             "settings": [
                 {
+                    "id": 1,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Selected Relay that can be controlled."
+                    },
+                    "value": "3",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Only relay1"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Only relay2"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Relay1 and relay2"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Edge / Pulse / Edge-Toggle mode."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Edge mode"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Pulse mode"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Edge-Toggle mode"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Restore switch state mode."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Last Switch State"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
+                },
+                {
                     "id": 4,
                     "type": "number",
                     "label": {
-                        "en": "Sets auto off timer."
+                        "en": "Auto off timer."
                     },
                     "value": 0,
                     "attr": {
-                        "min": 1,
+                        "min": 0,
                         "max": 32767
                     }
+                },
+                {
+                    "id": 5,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "RF off command mode."
+                    },
+                    "value": "0",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Ignore"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch Toggle"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Existence of Endpoint3."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Endpoint3 exist"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "No Endpoint3"
+                        }
+                      }
+                    ]
                 }
             ]
         }

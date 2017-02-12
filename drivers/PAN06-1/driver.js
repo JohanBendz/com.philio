@@ -28,13 +28,25 @@
                     "index": 2,
                     "size": 1
                 },
-                "switch_state_mode": {
+                "edge_pulse_edge_toggle_mode": {
+                    "index": 2,
+                    "size": 1
+                },
+                "restore_switch_state_mode": {
                     "index": 3,
                     "size": 1
                 },
                 "auto_off_timer": {
                     "index": 4,
                     "size": 2
+                },
+                "rf_off_command ": {
+                    "index": 5,
+                    "size": 1
+                },
+                "existence_endpoint3 ": {
+                    "index": 6,
+                    "size": 1
                 }
             }
         });
