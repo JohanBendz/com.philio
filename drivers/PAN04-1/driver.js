@@ -20,6 +20,46 @@
                     },
                     command_report: 'SWITCH_BINARY_REPORT',
                     command_report_parser: report => report['Value'] === 'on/enable'
+                },
+                //Power in Watt
+                measure_power: {
+                    command_class: 'COMMAND_CLASS_METER',
+                    command_get: 'METER_GET',
+                    command_get_parser: () => ({
+                        'Sensor Type': 'Electric meter',
+                        'Properties1': {
+                            'Scale': 0,
+                        },
+                    }),
+                    command_report: 'METER_REPORT',
+                    command_report_parser: report => {
+                        if (report.hasOwnProperty('Properties2') &&
+                            report.Properties2.hasOwnProperty('Scale bits 10') &&
+                            report.Properties2['Scale bits 10'] === 2) {
+                            return report['Meter Value (Parsed)'];
+                        }
+                        return null;
+                    }
+                },
+                //Power usage in KiloWattHour
+                meter_power: {
+                    command_class: 'COMMAND_CLASS_METER',
+                    command_get: 'METER_GET',
+                    command_get_parser: () => ({
+                        'Sensor Type': 'Electric meter',
+                        'Properties1': {
+                            'Scale': 2,
+                        },
+                    }),
+                    command_report: 'METER_REPORT',
+                    command_report_parser: report => {
+                        if (report.hasOwnProperty('Properties2') &&
+                            report.Properties2.hasOwnProperty('Scale bits 10') &&
+                            report.Properties2['Scale bits 10'] === 0) {
+                            return report['Meter Value (Parsed)'];
+                        }
+                        return null;
+                    },
                 }
             },
             settings: {

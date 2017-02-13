@@ -1621,7 +1621,9 @@
                     "2": {
                         "class": "socket",
                         "capabilities": [
-                            "onoff"
+                            "onoff",
+                            "measure_power",
+                            "meter_power"
                         ],
                         "icon": "/drivers/PAN04-1/assets/icon.svg",
                         "name": {
@@ -1631,7 +1633,9 @@
                     "3": {
                         "class": "socket",
                         "capabilities": [
-                            "onoff"
+                            "onoff",
+                            "measure_power",
+                            "meter_power"
                         ],
                         "icon": "/drivers/PAN04-1/assets/icon.svg",
                         "name": {
@@ -1694,7 +1698,9 @@
             },
             "class": "socket",
             "capabilities": [
-                "onoff"
+                "onoff",
+                "measure_power",
+                "meter_power"
             ],
             "images": {
                 "large": "/drivers/PAN04-1/assets/images/large.png",
