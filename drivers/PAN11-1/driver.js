@@ -8,7 +8,6 @@
 // Product Version:    1.1
 
         module.exports = new ZwaveDriver(path.basename(__dirname), {
-            //debug: true,
             capabilities: {
                 onoff: [
                     {

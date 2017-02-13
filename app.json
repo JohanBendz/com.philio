@@ -1596,6 +1596,312 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "PAN04-1",
+            "name": {
+                "en": "In Wall Dual relay PAN04-1 (Switch-A)"
+            },
+            "zwave": {
+                "manufacturerId": 316,
+                "productTypeId": 1,
+                "productId": 3,
+                "learnmode": {
+                    "image": "/drivers/PAN04-1/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Pressing Include button of PAN04 three times within 2 seconds will enter inclusion mode"
+                    }
+                },
+                "associationGroups": [
+                    1,
+                    2,
+                    3
+                ],
+                "multiChannelNodes": {
+                    "2": {
+                        "class": "socket",
+                        "capabilities": [
+                            "onoff"
+                        ],
+                        "icon": "/drivers/PAN04-1/assets/icon.svg",
+                        "name": {
+                            "en": "In Wall Dual relay PAN04-1 (Switch-B)"
+                        }
+                    },
+                    "3": {
+                        "class": "socket",
+                        "capabilities": [
+                            "onoff"
+                        ],
+                        "icon": "/drivers/PAN04-1/assets/icon.svg",
+                        "name": {
+                            "en": "In Wall Dual relay PAN04-1 (Switch-A & Switch-B)"
+                        }
+                    }
+                },
+                "defaultConfiguration": [
+                    {
+                        "id": 1,
+                        "size": 2,
+                        "value": 20
+                    },
+                    {
+                        "id": 2,
+                        "size": 2,
+                        "value": 720
+                    },
+                    {
+                        "id": 3,
+                        "size": 1,
+                        "value": 3
+                    },
+                    {
+                        "id": 4,
+                        "size": 2,
+                        "value": 1
+                    },
+                    {
+                        "id": 5,
+                        "size": 2,
+                        "value": 750
+                    },
+                    {
+                        "id": 6,
+                        "size": 2,
+                        "value": 10000
+                    },
+                    {
+                        "id": 7,
+                        "size": 1,
+                        "value": 1
+                    },
+                    {
+                        "id": 8,
+                        "size": 2,
+                        "value": 0
+                    },
+                    {
+                        "id": 9,
+                        "size": 1,
+                        "value": 0
+                    },
+                    {
+                        "id": 10,
+                        "size": 1,
+                        "value": 1
+                    }
+                ]
+            },
+            "class": "socket",
+            "capabilities": [
+                "onoff"
+            ],
+            "images": {
+                "large": "/drivers/PAN04-1/assets/images/large.png",
+                "small": "/drivers/PAN04-1/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": 1,
+                    "type": "number",
+                    "label": {
+                        "en": "Watt Meter Report Period"
+                    },
+                    "value": 20,
+                    "attr": {
+                        "min": 1,
+                        "max": 32767
+                    }
+                },
+                {
+                    "id": 2,
+                    "type": "number",
+                    "label": {
+                        "en": "KWH Meter Report Period"
+                    },
+                    "value": 720,
+                    "attr": {
+                        "min": 1,
+                        "max": 32767
+                    }
+                },
+                {
+                    "id": 3,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Selected Relay that can be controlled."
+                    },
+                    "value": "3",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Only relay1"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Only relay2"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Relay1 and relay2"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Edge / Pulse / Edge-Toggle mode."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Edge mode"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Pulse mode"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Edge-Toggle mode"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "number",
+                    "label": {
+                        "en": "Threshold of current for Load Caution"
+                    },
+                    "value": 750,
+                    "attr": {
+                        "min": 1,
+                        "max": 750
+                    }
+                },
+                {
+                    "id": 6,
+                    "type": "number",
+                    "label": {
+                        "en": "Threshold of KWh for Load Caution"
+                    },
+                    "value": 10000,
+                    "attr": {
+                        "min": 1,
+                        "max": 10000
+                    }
+                },
+                {
+                    "id": 7,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Restore switch state mode."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Last Switch State"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "type": "number",
+                    "label": {
+                        "en": "Auto off timer."
+                    },
+                    "value": 0,
+                    "attr": {
+                        "min": 0,
+                        "max": 32767
+                    }
+                },
+                {
+                    "id": 9,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "RF off command mode."
+                    },
+                    "value": "0",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Ignore"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch Toggle"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Existence of Endpoint3."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Endpoint3 exist"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "No Endpoint3"
+                        }
+                      }
+                    ]
+                }
+            ]
         }
     ]
 }

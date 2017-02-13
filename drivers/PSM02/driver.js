@@ -8,7 +8,6 @@
 // Product Version:	1.0
 
         module.exports = new ZwaveDriver(path.basename(__dirname), {
-            debug: true,
             capabilities: {
                 'alarm_motion': {
                     'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
@@ -60,7 +59,7 @@
                         }else{
                             return report['Sensor Value (Parsed)'];
                         }
-                        
+
                     }
                 },
                 'measure_luminance': {
@@ -80,7 +79,7 @@
                             return report['Sensor Value (Parsed)'];
                         }
 
-                        
+
                     }
                 },
                 'measure_battery': {
