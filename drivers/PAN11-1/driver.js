@@ -8,6 +8,7 @@
 // Product Version:    1.1
 
         module.exports = new ZwaveDriver(path.basename(__dirname), {
+            //debug: true,
             capabilities: {
                 onoff: [
                     {
@@ -28,6 +29,7 @@
                         },
                     },
                 ],
+                //Power in Watt
                 measure_power: {
                     command_class: 'COMMAND_CLASS_METER',
                     command_get: 'METER_GET',
@@ -47,6 +49,7 @@
                         return null;
                     }
                 },
+                //Power usage in KiloWattHour
                 meter_power: {
                     command_class: 'COMMAND_CLASS_METER',
                     command_get: 'METER_GET',
@@ -66,6 +69,44 @@
                         return null;
                     },
                 },
+                measure_voltage: {
+                    command_class: 'COMMAND_CLASS_METER',
+                    command_get: 'METER_GET',
+                    command_get_parser: () => ({
+                        'Sensor Type': 'Electric meter',
+                        'Properties1': {
+                            'Scale': 1,
+                        },
+                    }),
+                    command_report: 'METER_REPORT',
+                    command_report_parser: report => {
+                        if (report.hasOwnProperty('Properties2') &&
+                            report.Properties2.hasOwnProperty('Scale bits 10') &&
+                            report.Properties2['Scale bits 10'] === 4) {
+                            return report['Meter Value (Parsed)'];
+                        }
+                        return null;
+                    }
+                },
+                measure_current: {
+                    command_class: 'COMMAND_CLASS_METER',
+                    command_get: 'METER_GET',
+                    command_get_parser: () => ({
+                        'Sensor Type': 'Electric meter',
+                        'Properties1': {
+                            'Scale': 1,
+                        },
+                    }),
+                    command_report: 'METER_REPORT',
+                    command_report_parser: report => {
+                        if (report.hasOwnProperty('Properties2') &&
+                            report.Properties2.hasOwnProperty('Scale bits 10') &&
+                            report.Properties2['Scale bits 10'] === 5) {
+                            return report['Meter Value (Parsed)'];
+                        }
+                        return null;
+                    }
+                }
             },
             settings: {
                 "watt_report_period": {
@@ -83,6 +124,26 @@
                 "threshold_kwh_load": {
                     "index": 4,
                     "size": 2
+                },
+                "restore_switch_state": {
+                    "index": 5,
+                    "size": 1
+                },
+                "mode_of_switch_off": {
+                    "index": 6,
+                    "size": 1
+                },
+                "LED_indication": {
+                    "index": 7,
+                    "size": 1
+                },
+                "auto_off_timer": {
+                    "index": 8,
+                    "size": 1
+                },
+                "RF_off_command": {
+                    "index": 9,
+                    "size": 1
                 }
             }
         });

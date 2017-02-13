@@ -23,7 +23,10 @@ Changelog:
 
 0.0.14
 * Added missing parameters for the PAN06-1
+* Added missing parameters for the PAN11-1
+* Added missing Voltage and Amp Meter
 * Fix wrong image for learn mode
+* Update z-wave drivers (1.1.4)
 
 0.0.13
 * Add support for PAN06-1 In Wall Dual relay(1 way) switch module

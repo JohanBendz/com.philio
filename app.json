@@ -1103,7 +1103,7 @@
         {
             "id": "PAN11-1",
             "name": {
-                "en": "Smart Energy Plug In Switch PAN11-1"
+                "en": "Smart Energy Plug In Switch"
             },
             "zwave": {
                 "manufacturerId": 316,
@@ -1112,7 +1112,7 @@
                 "learnmode": {
                     "image": "/drivers/PAN11-1/assets/learnmode.svg",
                     "instruction": {
-                        "en": "Double Press the (action) button on the Energy Plug to enter learn mode"
+                        "en": "1.  Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter inclusion \n     mode on the switch."
                     }
                 },
                 "associationGroups": [
@@ -1145,7 +1145,9 @@
             "capabilities": [
                 "onoff",
                 "measure_power",
-                "meter_power"
+                "meter_power",
+                "measure_voltage",
+                "measure_current"
             ],
             "images": {
                 "large": "/drivers/PAN11-1/assets/images/large.png",
@@ -1154,9 +1156,13 @@
             "settings": [
                 {
                     "id": 1,
+                    "_size": "2",
                     "type": "number",
                     "label": {
                         "en": "Watt Meter Report Period"
+                    },
+                    "hint": {
+                        "en": "If  the  setting  is  configured  for  1hour  (set  value  =720),  the  PAN11  will  report  its instant power consumption every 1 hour to Group1 node.    The maximum interval to report its instant power consumption is 45 hours (5s*32767/3600=45hr)."
                     },
                     "value": 720,
                     "attr": {
@@ -1166,9 +1172,13 @@
                 },
                 {
                     "id": 2,
+                    "_size": "2",
                     "type": "number",
                     "label": {
                         "en": "KWH Meter Report Period"
+                    },
+                    "hint": {
+                        "en": "If  the  setting  is  configured  for  1hour  (set  value  =6),  the  PAN11  will  report  its Accumulated  Power  Consumption  (KW/h)  every  1  hour  to  Group1  node.   The maximum interval to report its Accumulated Power Consumption (KW/h) is 227.55 days (10min*32767/1440=227.55 days)."
                     },
                     "value": 6,
                     "attr": {
@@ -1178,9 +1188,13 @@
                 },
                 {
                     "id": 3,
+                    "_size": "2",
                     "type": "number",
                     "label": {
-                        "en": "Threshold of Watt for Load caution"
+                        "en": "Threshold of current for Load Caution"
+                    },
+                    "hint": {
+                        "en": "This is a warning when the current of load over the preset threshold value, if the setting value is 3000, when the load current of Relay1 over this value, PAN11 will send current meter report to warn the Group1 node, the Range of the setting value is from 10 to 3000,and the default value is 3000."
                     },
                     "value": 3000,
                     "attr": {
@@ -1191,14 +1205,162 @@
                 {
                     "id": 4,
                     "type": "number",
+                    "_size": "2",
                     "label": {
-                        "en": "Threshold of KWh for Load caution"
+                        "en": "Threshold of KWh for Load Caution"
+                    },
+                    "hint": {
+                        "en": "This is a warning when the KWh of load over the preset threshold value, If the \nsetting value is 10000, when the Accumulated Power Consumption of Relay1 over this value, PAN11 will send KWH meter report to warn the Group1 node, \nminimum value is 1KWh and default value is 10000 kWh."
                     },
                     "value": 10000,
                     "attr": {
                         "min": 1,
                         "max": 10000
                     }
+                },
+                {
+                    "id": 5,
+                    "type": "dropdown",
+                    "_size": "1",
+                    "label": {
+                        "en": "Restore switch state mode"
+                    },
+                    "hint": {
+                        "en": "Whenever the AC power return from lost, PAN11 will restore the switch state which could be SWITCH OFF、LAST SWITCH STATE、SWITCH ON. The default setting is LAST SWITCH STATE."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Last Switch state"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": "6",
+                    "_size": "1",
+                    "type": "radio",
+                    "label": {
+                        "en": "Mode of switch off function"
+                    },
+                    "hint": {
+                        "en": "When the mode of switch On/Off is set to 0, any command of switch off will be \ndisabled  and  the  On/Off  function  of  include  button  will  be  disabled.  The  default setting is enable mode."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Disable"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Enable"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": "7",
+                    "_size": "1",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "LED indication mode"
+                    },
+                    "hint": {
+                        "en": "1. Show Switch State：When switch is on, LED is on. When switch is off, LED is off. The default setting is Show Switch State. \n 2. Show Night mode：When switch is on, LED is off. When switch is off, LED is on. \n 3. One Flash mode：When the state of switch changes, LED will be on only one second, then LED keeps off."
+                    },
+                    "value": "1",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Show Switch State"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Show night mode"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "One flash mode"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "id": "8",
+                    "_size": "1",
+                    "type": "number",
+                    "label": {
+                        "en": "Auto off timer"
+                    },
+                    "hint": {
+                        "en": "Whenever PAN11 switches to on, the auto off timer begin to count down. After the timer decrease to zero, it will switch to off automatically. However if Auto off timer is set as 0, the auto off function will be disabled. The default setting is 0."
+                    },
+                    "value": 0,
+                    "attr": {
+                        "min": 0,
+                        "max": 32767
+                    }
+                },
+                {
+                    "id": "9",
+                    "_size": "1",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "RF off command mode"
+                    },
+                    "hint": {
+                        "en": "Whenever  a  switch  off    command,  BASIC_SET 、 BINARY_SWITCH_SET 、\nSWITCH_ALL_OFF, is received, it could be interpreted as 4 variety of commands.   \n1. Switch Off：It switches to OFF state. The default setting is Switch Off. \n2. Ignore：The switch off command will be ignored. \n3. Switch Toggle：It switches to the inverse of current state. \n4. Switch On：It switches to ON state."
+                    },
+                    "value": "0",
+                    "values": [
+                      {
+                        "id": "0",
+                        "label": {
+                          "en": "Switch Off"
+                        }
+                      },
+                      {
+                        "id": "1",
+                        "label": {
+                          "en": "Ignore"
+                        }
+                      },
+                      {
+                        "id": "2",
+                        "label": {
+                          "en": "Switch Toggle"
+                        }
+                      },
+                      {
+                        "id": "3",
+                        "label": {
+                          "en": "Switch On"
+                        }
+                      }
+                    ]
                 }
             ]
         },
