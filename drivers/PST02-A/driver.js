@@ -82,6 +82,7 @@
                 },
 
                 'measure_battery': {
+                    'getOnWakeUp': true,
                     'command_class': 'COMMAND_CLASS_BATTERY',
 					'command_get': 'BATTERY_GET',
                     'command_report': 'BATTERY_REPORT',
