@@ -1153,9 +1153,10 @@
                 "large": "/drivers/PAN11-1/assets/images/large.png",
                 "small": "/drivers/PAN11-1/assets/images/small.png"
             },
+            "poll_interval": 720,
             "settings": [
                 {
-                    "id": 1,
+                    "id": "watt_report_period",
                     "_size": "2",
                     "type": "number",
                     "label": {
@@ -1171,7 +1172,7 @@
                     }
                 },
                 {
-                    "id": 2,
+                    "id": "kwh_report_period",
                     "_size": "2",
                     "type": "number",
                     "label": {
@@ -1187,7 +1188,7 @@
                     }
                 },
                 {
-                    "id": 3,
+                    "id": "threshold_watt_load",
                     "_size": "2",
                     "type": "number",
                     "label": {
@@ -1203,7 +1204,7 @@
                     }
                 },
                 {
-                    "id": 4,
+                    "id": "threshold_kwh_load",
                     "type": "number",
                     "_size": "2",
                     "label": {
@@ -1219,7 +1220,7 @@
                     }
                 },
                 {
-                    "id": 5,
+                    "id": "restore_switch_state",
                     "type": "dropdown",
                     "_size": "1",
                     "label": {
@@ -1251,7 +1252,7 @@
                     ]
                 },
                 {
-                    "id": "6",
+                    "id": "mode_of_switch_off",
                     "_size": "1",
                     "type": "radio",
                     "label": {
@@ -1277,7 +1278,7 @@
                     ]
                 },
                 {
-                    "id": "7",
+                    "id": "LED_indication",
                     "_size": "1",
                     "type": "dropdown",
                     "label": {
@@ -1309,7 +1310,7 @@
                     ]
                 },
                 {
-                    "id": "8",
+                    "id": "auto_off_timer",
                     "_size": "1",
                     "type": "number",
                     "label": {
@@ -1325,7 +1326,7 @@
                     }
                 },
                 {
-                    "id": "9",
+                    "id": "RF_off_command",
                     "_size": "1",
                     "type": "dropdown",
                     "label": {
@@ -1444,7 +1445,7 @@
             },
             "settings": [
                 {
-                    "id": 1,
+                    "id": "modeSelection",
                     "type": "dropdown",
                     "label": {
                         "en": "Selected Relay that can be controlled."
@@ -1472,7 +1473,7 @@
                     ]
                 },
                 {
-                    "id": 2,
+                    "id": "edgePulseedgeToggleMode",
                     "type": "dropdown",
                     "label": {
                         "en": "Edge / Pulse / Edge-Toggle mode."
@@ -1500,7 +1501,7 @@
                     ]
                 },
                 {
-                    "id": 3,
+                    "id": "restoreSwitchStateMode",
                     "type": "dropdown",
                     "label": {
                         "en": "Restore switch state mode."
@@ -1528,7 +1529,7 @@
                     ]
                 },
                 {
-                    "id": 4,
+                    "id": "autoOffTimer",
                     "type": "number",
                     "label": {
                         "en": "Auto off timer."
@@ -1540,7 +1541,7 @@
                     }
                 },
                 {
-                    "id": 5,
+                    "id": "rfOffCommand",
                     "type": "dropdown",
                     "label": {
                         "en": "RF off command mode."
@@ -1574,7 +1575,7 @@
                     ]
                 },
                 {
-                    "id": 6,
+                    "id": "existenceEndpoint3",
                     "type": "dropdown",
                     "label": {
                         "en": "Existence of Endpoint3."
@@ -1708,7 +1709,7 @@
             },
             "settings": [
                 {
-                    "id": 1,
+                    "id": "wattMeterReportPeriod",
                     "type": "number",
                     "label": {
                         "en": "Watt Meter Report Period"
@@ -1720,7 +1721,7 @@
                     }
                 },
                 {
-                    "id": 2,
+                    "id": "kwhMeterReportPeriod",
                     "type": "number",
                     "label": {
                         "en": "KWH Meter Report Period"
@@ -1732,7 +1733,7 @@
                     }
                 },
                 {
-                    "id": 3,
+                    "id": "selectedRelay",
                     "type": "dropdown",
                     "label": {
                         "en": "Selected Relay that can be controlled."
@@ -1760,7 +1761,7 @@
                     ]
                 },
                 {
-                    "id": 4,
+                    "id": "edgePulseModeEdgeToggleMode",
                     "type": "dropdown",
                     "label": {
                         "en": "Edge / Pulse / Edge-Toggle mode."
@@ -1788,7 +1789,7 @@
                     ]
                 },
                 {
-                    "id": 5,
+                    "id": "thresholdCurrentLoadCaution",
                     "type": "number",
                     "label": {
                         "en": "Threshold of current for Load Caution"
@@ -1800,7 +1801,7 @@
                     }
                 },
                 {
-                    "id": 6,
+                    "id": "thresholdKwhLoadCaution",
                     "type": "number",
                     "label": {
                         "en": "Threshold of KWh for Load Caution"
@@ -1812,7 +1813,7 @@
                     }
                 },
                 {
-                    "id": 7,
+                    "id": "restoreSwitchStateMode",
                     "type": "dropdown",
                     "label": {
                         "en": "Restore switch state mode."
@@ -1840,7 +1841,7 @@
                     ]
                 },
                 {
-                    "id": 8,
+                    "id": "autoOffTimer",
                     "type": "number",
                     "label": {
                         "en": "Auto off timer."
@@ -1852,7 +1853,7 @@
                     }
                 },
                 {
-                    "id": 9,
+                    "id": "rfOffCommandMode",
                     "type": "dropdown",
                     "label": {
                         "en": "RF off command mode."
@@ -1886,7 +1887,7 @@
                     ]
                 },
                 {
-                    "id": 10,
+                    "id": "existenceOfEndpoint3",
                     "type": "dropdown",
                     "label": {
                         "en": "Existence of Endpoint3."
