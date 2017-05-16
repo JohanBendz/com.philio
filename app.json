@@ -3,7 +3,7 @@
     "name": {
         "en": "Philio"
     },
-    "version": "0.0.14",
+    "version": "0.0.15",
     "compatibility": ">=1.1.0",
     "description": {
         "en": "Philio Z-Wave devices for Homey"
