@@ -423,11 +423,11 @@
                   	"type": "number",
                   	"label": {
                     		"en": "PIR Sensitivity",
-                        "nl": "PIR Gevoeligheid"
+                    		"nl": "PIR Gevoeligheid"
                   	},
                   	"hint": {
                     		"en": "The lower the value, the more motion is needed for the motion alarm to activate.\nRange: 0 (motion off), 1 - 99",
-                        "nl": "Hoe lager de waarde, hoe meer beweging er nodig is om het bewegingsalarm te activeren.\nBereik: 0 (beweging uit), 1 - 99"
+                    		"nl": "Hoe lager de waarde, hoe meer beweging er nodig is om het bewegingsalarm te activeren.\nBereik: 0 (beweging uit), 1 - 99"
                   	},
                   	"value": 80,
                   	"attr": {
@@ -440,7 +440,7 @@
                   	"type": "number",
                   	"label": {
                     		"en": "Motion Sensor Timeout",
-                        "nl": "Bewegingssensor Time-out"
+                    		"nl": "Bewegingssensor Time-out"
                   	},
                   	"hint": {
                     		"en": "The time the motion alarm will be on unable to re-trigger or be extended until the alarm is canceled (in steps of 8 seconds).\nRange: 8 - 1016 seconds",
@@ -458,11 +458,11 @@
                   	"type": "number",
                   	"label": {
                     		"en": "Tamper Cancellation Time",
-                        "nl": "Sabotage Annulerings Tijd"
+                    		"nl": "Sabotage Annulerings Tijd"
                   	},
                   	"hint": {
                     		"en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
-                        "nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+                    		"nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
                   	},
                   	"value": 120,
                   	"attr": {
@@ -475,11 +475,11 @@
                   	"type": "number",
                   	"label": {
                     		"en": "Value Association Group 2",
-                        "nl": "Waarde Associatie Groep 2"
+                    		"nl": "Waarde Associatie Groep 2"
                   	},
                   	"hint": {
                     		"en": "This value will be send to association group 2 when motion is detected.\nRange: 0 (off command), 1 - 99 (1-100%), 255 (on command/previous state)",
-                        "nl": "Deze waarde word verzonden naar associatie groep 2 wanneer beweging is gedetecteerd.\nBereik: 0 (uit commando), 1 - 99 (1-100%), 255 (aan commando/vorige status)"
+                    		"nl": "Deze waarde word verzonden naar associatie groep 2 wanneer beweging is gedetecteerd.\nBereik: 0 (uit commando), 1 - 99 (1-100%), 255 (aan commando/vorige status)"
                   	},
                   	"value": 255,
                   	"attr": {
@@ -492,7 +492,7 @@
                   	"type": "number",
                   	"label": {
                     		"en": "Group 2: Off Command Timer",
-                        "nl": "Groep 2: Uit Commando Timer"
+                    		"nl": "Groep 2: Uit Commando Timer"
                   	},
                   	"hint": {
                     		"en": "After how many seconds will there be send an off command to association group 2, in steps of 8 seconds.\nRange: 0 (Not Send), 8 - 1016 seconds",
@@ -510,11 +510,11 @@
                   	"type": "number",
                   	"label": {
                     		"en": "Battery Level Interval",
-                        "nl": "Batterij Niveau Interval"
+                    		"nl": "Batterij Niveau Interval"
                   	},
                   	"hint": {
                     		"en": "The interval the battery level will be send automatically.\nRange: 0 (not send), 1 - 127",
-                        "nl": "De interval het batterij niveau automatisch verzonden word.\nBereik: 0 (niet verzonden), 1 - 127"
+                    		"nl": "De interval het batterij niveau automatisch verzonden word.\nBereik: 0 (niet verzonden), 1 - 127"
                   	},
                   	"value": 6,
                   	"attr": {
@@ -527,7 +527,7 @@
                   	"type": "dropdown",
                   	"label": {
                     		"en": "Battery Interval Range",
-                        "nl": "Batterij Interval Bereik"
+                    		"nl": "Batterij Interval Bereik"
                   	},
                   	"hint": {
                     		"en": "Choose which range will be used in the \"battery level interval\" setting.",
@@ -539,14 +539,14 @@
                     			"id": "1",
                     			"label": {
                       				"en": "Minutes",
-                              "nl": "Minuten"
+                      				"nl": "Minuten"
                     			}
                     		},
                     		{
                       			"id": "60",
                       			"label": {
                         				"en": "Hours",
-                                "nl": "Uren"
+                        				"nl": "Uren"
                       			}
                     		}
                   	]
