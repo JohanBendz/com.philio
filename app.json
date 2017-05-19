@@ -170,7 +170,7 @@
                 "learnmode": {
                     "image": "/drivers/PSM02/assets/learnmode.svg",
                     "instruction": {
-                        "en": "Tripple Click the Temper Switch on the backside confirms inclusion and exclusion."
+                        "en": "Tripple Click the Tamper Switch on the backside confirms inclusion and exclusion."
                     }
                 },
                 "associationGroups": [
@@ -383,8 +383,8 @@
                 "learnmode": {
                     "image": "/drivers/PSP05/assets/learnmode.svg",
                     "instruction": {
-                        "en": "Press the button on the back once.",
-                        "nl": "Druk 1 keer op de knop op de achterkant."
+                        "en": "Press the button on the inside once.",
+                        "nl": "Druk 1 keer op de knop aan de binnenkant."
                     }
                 },
                 "associationGroups": [
@@ -405,6 +405,11 @@
                     }
                 },
                 "defaultConfiguration": [
+                    {
+                        "id": 7,
+                        "size": 1,
+                        "value": 22
+                    },
                     {
                         "id": 20,
                         "size": 1,
@@ -431,21 +436,38 @@
                   	}
                 },
                 {
-                  	"id": "motion_cancellation_delay",
+                  	"id": "retrigger_time",
                   	"type": "number",
                   	"label": {
-                    		"en": "Motion Cancellation Delay",
-                        "nl": "Beweging Annulerings Vertraging"
+                    		"en": "Motion Sensor Timeout",
+                        "nl": "Bewegingssensor Time-out"
                   	},
                   	"hint": {
-                    		"en": "After how many seconds will the motion alarm automatically be cancelled, in steps of 8 seconds.\nRange: 8 - 1016 seconds",
-                        "nl": "Na hoeveel seconden zal bewegingsalarm automatisch uitgezet worden, in stappen van 8 seconden.\nBereik: 8 - 1016 seconden"
+                    		"en": "The time the motion alarm will be on unable to re-trigger or be extended until the alarm is canceled (in steps of 8 seconds).\nRange: 8 - 1016 seconds",
+                        "nl": "De tijd het bewegingsalarm aan zal zijn zonder te kunnen her-activeren of verlengen tot het alarm is geannuleerd (in stappen van 8 seconden).\nBereik: 8 - 1016 seconden"
                   	},
                   	"value": 24,
                   	"attr": {
                     		"min": 8,
                     		"max": 1016,
                     		"step": 8
+                  	}
+                },
+                {
+                  	"id": "tamper_cancellation",
+                  	"type": "number",
+                  	"label": {
+                    		"en": "Tamper Cancellation Time",
+                        "nl": "Sabotage Annulerings Tijd"
+                  	},
+                  	"hint": {
+                    		"en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
+                        "nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+                  	},
+                  	"value": 120,
+                  	"attr": {
+                    		"min": 0,
+                    		"max": 86400
                   	}
                 },
                 {
@@ -476,7 +498,7 @@
                     		"en": "After how many seconds will there be send an off command to association group 2, in steps of 8 seconds.\nRange: 0 (Not Send), 8 - 1016 seconds",
                         "nl": "Na hoeveel seconden zal er een uit commando worden verzonden naar associatie groep 2, in stappen van 8 seconden.\nBereik: 0 (Niet Verzonden), 8 - 1016 seconds"
                   	},
-                  	"value": 24,
+                  	"value": 32,
                   	"attr": {
                     		"min": 0,
                     		"max": 1016,
