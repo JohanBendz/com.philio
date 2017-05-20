@@ -5,10 +5,12 @@ This app adds support for Philio Z-Wave devices to Homey.
 
 Supported devices:
 * PSM02   motion sensor 4:1
+* PSP05   outdoor motion sensor
 * PSR04   smart color button
 * PST02-A motion sensor 4:1
 * PST02-C Door/Window 3 in 1 sensor
 * PAN11-1 Smart Energy Plug In Switch
+* PAN04-1 In Wall Dual relay(1 way) switch module
 * PAN06-1 In Wall Dual relay(1 way) switch module
 
 Currently supported languages:
@@ -19,7 +21,10 @@ Currently supported languages:
 Homey version >= 1.1.0
 
 
-Changelog:
+Changelog:  
+0.0.16
+* Add support PSP05 - Outdoor Motion Sensor
+* Add proper icons and images PAN04/PAN06/PAN11
 
 0.0.15
 * Fix that onOff is not correctly set after restart
