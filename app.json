@@ -3,7 +3,7 @@
     "name": {
         "en": "Philio"
     },
-    "version": "0.0.16",
+    "version": "0.0.17",
     "compatibility": ">=1.1.0",
     "description": {
         "en": "Philio Z-Wave devices for Homey"
@@ -354,6 +354,23 @@
                     "hint": {
                         "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
                     }
+                },
+                {
+                  	"id": "tamper_cancellation",
+                  	"type": "number",
+                  	"label": {
+                    		"en": "Tamper Cancellation Time",
+                    		"nl": "Sabotage Annulerings Tijd"
+                  	},
+                  	"hint": {
+                    		"en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
+                    		"nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+                  	},
+                  	"value": 120,
+                  	"attr": {
+                    		"min": 0,
+                    		"max": 86400
+                  	}
                 }
             ]
         },

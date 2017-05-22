@@ -22,6 +22,9 @@ Homey version >= 1.1.0
 
 
 Changelog:  
+0.0.17
+* Fix PSM02: door/window and tamper were working incorrectly
+
 0.0.16
 * Add support PSP05 - Outdoor Motion Sensor
 * Add proper icons and images PAN04/PAN06/PAN11
