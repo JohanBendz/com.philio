@@ -871,6 +871,12 @@
                             "label": {
                                 "en": "Fahrenheit, Door/Window-, Illumination- and Temperature report disabled"
                             }
+                        },
+                        {
+                            "id": "12",
+                            "label": {
+                                "en": "Door/window disabled, Celsius, Door/Window-, Illumination- and Temp report enabled"
+                            }
                         }
                     ],
                     "hint": {
