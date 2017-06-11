@@ -3,7 +3,7 @@
 	"name": {
 		"en": "Philio"
 	},
-	"version": "0.0.18",
+	"version": "0.0.20",
 	"compatibility": ">=1.1.0",
 	"description": {
 		"en": "Philio Z-Wave devices for Homey"
@@ -37,6 +37,10 @@
 				"name": "Remco Mengers",
 				"email": ""
             },
+			{
+				"name": "Ted Tolboom",
+				"email": "dtNL.Homey@gmail.com"
+			},
 			{
 				"name": "Erik Scheffers",
 				"email": ""
@@ -1620,6 +1624,264 @@
             ]
         },
 		{
+			"id": "PAT02-1A",
+			"name": {
+				"en": "Flood Multisensor PAT02-1A",
+				"nl": "Flood Multisensor PAT02-1A"
+			},
+			"class": "sensor",
+			"capabilities": [
+		                "measure_temperature",
+		                "measure_humidity",
+										"alarm_water",
+		                "measure_battery",
+		                "alarm_tamper"
+		            ],
+			"images": {
+				"large": "/drivers/PAT02-1A/assets/images/large.png",
+				"small": "/drivers/PAT02-1A/assets/images/small.png"
+			},
+			"zwave": {
+				"manufacturerId": 316,
+				"productTypeId": 2,
+				"productId": [
+		                    31
+		                ],
+				"learnmode": {
+					"image": "/drivers/PAT02-1A/assets/learnmode.svg",
+					"instruction": {
+						"en": "Put the battery in the device or tripple click the tamper button on the backside of the device to put in in inclusion/exclusion modus.",
+						"nl": "Stop de batterij in het apparaat of klik drie keer op de tamper knop op de achterzijde / binnenkant van het apparaat om deze in de toevoeg/verwijder modus te zetten."
+					}
+				},
+				"associationGroups": [
+		                    1
+		                ],
+				"defaultConfiguration": [
+					{
+						"id": 5,
+						"size": 1,
+						"value": 8
+		                    },
+					{
+						"id": 7,
+						"size": 1,
+						"value": 16
+							},
+					{
+						"id": 23,
+						"size": 1,
+						"value": 5
+		                    }
+		                ]
+			},
+			"settings": [
+				{
+					"id": "basic_set_OFF",
+					"type": "number",
+					"label": {
+						"en": "Basic Set OFF Level"
+					},
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"hint": {
+						"en": "Setting the BASIC OFF command value to turn OFF the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+					}
+		                },
+				{
+					"id": "basic_set_ON",
+					"type": "number",
+					"label": {
+						"en": "Basic Set ON Level"
+					},
+					"value": 255,
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"hint": {
+						"en": "Setting the BASIC ON command value to turn ON the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+					}
+						},
+				{
+					"id": "operation_mode",
+					"type": "dropdown",
+					"label": {
+						"en": "Operation Mode"
+					},
+					"value": "8",
+					"values": [
+						{
+							"id": "8",
+							"label": {
+								"en": "Temperature report enabled (Celcius), Flood sensor enabled"
+							}
+		                        },
+						{
+							"id": "0",
+							"label": {
+								"en": "Temperature report enabled (Fahrenheit), Flood Sensor enabled"
+							}
+								},
+						{
+							"id": "9",
+							"label": {
+								"en": "Temperature report enabled (Celcius), Flood sensor disabled"
+							}
+		                        },
+						{
+							"id": "1",
+							"label": {
+								"en": "Temperature report enabled (Fahrenheit), Flood Sensor disabled"
+							}
+		                        }
+		                    ],
+					"hint": {
+						"en": "Bit 0: Disable Flood. Bit 1 - 2: Reserved. Bit 3: Temperature, 0 = Fahrenheid; 1 = Celcius. Bit 4: Reserved. Bit 5: Temperature report after event, 1 = Disable; 0 = Enable. Bit 6 - 7: Reserved"
+					}
+		                },
+				{
+					"id": "multi_sensor_function_switch",
+					"type": "number",
+					"label": {
+						"en": "Multi-Sensor Function Switch"
+					},
+					"value": 64,
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"hint": {
+						"en": "Bit0 - Bit5: Reserved. Bit6: Disable the humidity report after event triggered. (1:Disable, 0:Enable)"
+					}
+						                },
+				{
+					"id": "customer_function",
+					"type": "number",
+					"label": {
+						"en": "Customer Function"
+					},
+					"value": 16,
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"hint": {
+						"en": "Bit 0 - Bit2: Reserved. Bit3: Disable send out BASIC OFF after the flood event cleared. Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 16."
+					}
+		                },
+				{
+					"id": "auto_report_battery_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Battery Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The interval time for auto reporting the battery level. 0 = Turn off auto report battery. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+		                },
+				{
+					"id": "auto_report_temperature_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Temperature Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The interval time for auto reporting the temperature state. 0 = Turn off auto report temperature. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+		                },
+				{
+					"id": "auto_report_humidity_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Humidity Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The Interval time for auto reporting the Humidity state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+		                        },
+				{
+					"id": "auto_report_flood_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Flood Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The Interval time for auto reporting the Flood state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+										                        },
+				{
+					"id": "auto_report_tick_interval",
+					"type": "number",
+					"label": {
+						"en": "Auto Report Tick Interval"
+					},
+					"value": 30,
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"hint": {
+						"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time for each tick (tick is 8 seconds). Default is 30."
+					}
+		                },
+				{
+					"id": "temperature_differential_report",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Temperature Differential Report"
+					},
+					"value": 1,
+					"hint": {
+						"en": "0 = Turn of this function. Enable this function the device will measure every minute. When the temperature is over 140 degrees Fahrenheit, it will continue report. Enable this function will cause some issue, please check the 'Illumination Report' section of the manual."
+					}
+		                },
+				{
+					"id": "humidity_differential_report",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Humidity Differential Report"
+					},
+					"value": 5,
+					"hint": {
+						"en": "The humidity differential to report. The unit is percentage. When enabled, the device will measure every minute. Enabling this functionality will cause some issue. Please check the 'Illumination Report' section of the manual."
+					}
+		                }
+		            ]
+		        },
+
+		{
 			"id": "PAT02-1B",
 			"name": {
 				"en": "Temperature and Humidity sensor PAT02-1B",
@@ -1661,7 +1923,12 @@
 					{
 						"id": 7,
 						"size": 1,
-						"value": 54
+						"value": 48
+					},
+					{
+						"id": 23,
+						"size": 1,
+						"value": 5
                     }
                 ]
 			},
@@ -1697,13 +1964,13 @@
 					"label": {
 						"en": "Customer Function"
 					},
-					"value": 54,
+					"value": 48,
 					"attr": {
 						"min": 0,
 						"max": 127
 					},
 					"hint": {
-						"en": "Bit 0: Reserved. Bit 1: Reserved. Bit 2: Reserved. Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 00110110 = 54."
+						"en": "Bit 0 - 3: Reserved. Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 00000110 = 48."
 					}
                 },
 				{
@@ -1791,13 +2058,184 @@
 					"label": {
 						"en": "Humidity Differential Report"
 					},
-					"value": 1,
+					"value": 5,
 					"hint": {
 						"en": "The humidity differential to report. The unit is percentage. When enabled, the device will measure every minute. Enabling this functionality will cause some issue. Please check the 'Illumination Report' section of the manual."
 					}
                 }
             ]
         },
+
+		{
+			"id": "PAT02-1C",
+			"name": {
+				"en": "Flood sensor PAT02-1C",
+				"nl": "Flood sensor PAT02-1C"
+			},
+			"class": "sensor",
+			"capabilities": [
+		                "measure_temperature",
+		                "measure_humidity",
+		                "measure_battery",
+		                "alarm_tamper"
+		            ],
+			"images": {
+				"large": "/drivers/PAT02-1C/assets/images/large.png",
+				"small": "/drivers/PAT02-1C/assets/images/small.png"
+			},
+			"zwave": {
+				"manufacturerId": 316,
+				"productTypeId": 2,
+				"productId": [
+		                    33
+		                ],
+				"learnmode": {
+					"image": "/drivers/PAT02-1C/assets/learnmode.svg",
+					"instruction": {
+						"en": "Put the battery in the device or tripple click the tamper button on the backside of the device to put in in inclusion/exclusion modus.",
+						"nl": "Stop de batterij in het apparaat of klik drie keer op de tamper knop op de achterzijde / binnenkant van het apparaat om deze in de toevoeg/verwijder modus te zetten."
+					}
+				},
+				"associationGroups": [
+		                    1
+		                ],
+				"defaultConfiguration": [
+					{
+						"id": 5,
+						"size": 1,
+						"value": 8
+		                    },
+					{
+						"id": 7,
+						"size": 1,
+						"value": 54
+							},
+					{
+						"id": 23,
+						"size": 1,
+						"value": 5
+		                    }
+		                ]
+			},
+			"settings": [
+				{
+					"id": "basic_set_OFF",
+					"type": "number",
+					"label": {
+						"en": "Basic Set OFF Level"
+					},
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"hint": {
+						"en": "Setting the BASIC OFF command value to turn OFF the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+					}
+										},
+				{
+					"id": "basic_set_ON",
+					"type": "number",
+					"label": {
+						"en": "Basic Set ON Level"
+					},
+					"value": 255,
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"hint": {
+						"en": "Setting the BASIC ON command value to turn ON the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+					}
+						},
+				{
+					"id": "operation_mode",
+					"type": "dropdown",
+					"label": {
+						"en": "Operation Mode"
+					},
+					"value": "0",
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Flood Sensor enabled"
+							}
+								},
+						{
+							"id": "1",
+							"label": {
+								"en": "Flood Sensor disabled"
+							}
+														}
+												],
+					"hint": {
+						"en": "Bit 0: Disable Flood. Bit 1 - 7: Reserved. Preferred settings for Homey: 00000000 = 0."
+					}
+										},
+				{
+					"id": "customer_function",
+					"type": "number",
+					"label": {
+						"en": "Customer Function"
+					},
+					"value": 16,
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"hint": {
+						"en": "Bit 0 - Bit2: Reserved. Bit3: Disable send out BASIC OFF after the flood event cleared. Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 00001000 = 16."
+					}
+										},
+				{
+					"id": "auto_report_battery_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Battery Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The interval time for auto reporting the battery level. 0 = Turn off auto report battery. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+										},
+				{
+					"id": "auto_report_flood_time",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"label": {
+						"en": "Auto Report Flood Time"
+					},
+					"value": 12,
+					"hint": {
+						"en": "The Interval time for auto reporting the Flood state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+					}
+																						},
+				{
+					"id": "auto_report_tick_interval",
+					"type": "number",
+					"label": {
+						"en": "Auto Report Tick Interval"
+					},
+					"value": 30,
+					"attr": {
+						"min": 0,
+						"max": 127
+					},
+					"hint": {
+						"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time for each tick (tick is 8 seconds). Default is 30."
+					}
+										}
+								]
+						},
+
 
 		{
 			"id": "PAN11-1",
