@@ -21,7 +21,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				return null;
 			}
 		},
-		alarm_water: {
+		'alarm_water': {
 			command_class: 'COMMAND_CLASS_SENSOR_BINARY',
 			command_get: 'SENSOR_BINARY_GET',
 			command_report: 'SENSOR_BINARY_REPORT',
