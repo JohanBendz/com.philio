@@ -2074,8 +2074,7 @@
 			},
 			"class": "sensor",
 			"capabilities": [
-		                "measure_temperature",
-		                "measure_humidity",
+		                "alarm_water",
 		                "measure_battery",
 		                "alarm_tamper"
 		            ],
