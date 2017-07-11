@@ -2030,7 +2030,7 @@
 						"max": 127
 					},
 					"hint": {
-						"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time for each tick (tick is 8 seconds). Default is 30."
+						"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time in minutes. Default is 30."
 					}
                 },
 				{
@@ -2041,11 +2041,11 @@
 						"max": 127
 					},
 					"label": {
-						"en": "Temperature Differential Report"
+						"en": "Temperature Differential Report (in Fahrenheit)"
 					},
 					"value": 1,
 					"hint": {
-						"en": "0 = Turn of this function. Enable this function the device will measure every minute. When the temperature is over 140 degrees Fahrenheit, it will continue report. Enable this function will cause some issue, please check the 'Illumination Report' section of the manual."
+						"en": "0 = Turn of this function. Enable this function the device will measure every minute. When the temperature is over 140 degrees Fahrenheit, it will continue report. This setting is in Fahrenheit even if you set the reporting to Celsius"
 					}
                 },
 				{
@@ -2060,7 +2060,7 @@
 					},
 					"value": 5,
 					"hint": {
-						"en": "The humidity differential to report. The unit is percentage. When enabled, the device will measure every minute. Enabling this functionality will cause some issue. Please check the 'Illumination Report' section of the manual."
+						"en": "The humidity differential to report. The unit is percentage. When enabled, the device will measure every minute."
 					}
                 }
             ]
