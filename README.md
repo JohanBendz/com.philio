@@ -7,6 +7,9 @@ Supported devices:
 * PSM02   motion sensor 4:1
 * PSP05   outdoor motion sensor
 * PSR04   smart color button
+* PAT02-1A Flood Multisensor
+* PAT02-1B Temperature and Humidity sensor
+* PAT02-1C Flood sensor
 * PST02-A motion sensor 4:1
 * PST02-C Door/Window 3 in 1 sensor
 * PAN11-1 Smart Energy Plug In Switch
@@ -22,6 +25,11 @@ Homey version >= 1.1.0
 
 
 Changelog:  
+0.0.20
+* Add support for PAT02-1A Flood Multisensor   
+* Add support for PAT02-1B Temperature and Humidity sensor    
+* Add support for PAT02-1C Flood Sensor   
+
 0.0.17
 * Fix PSM02: door/window and tamper were working incorrectly
 
