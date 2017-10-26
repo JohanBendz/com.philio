@@ -26,6 +26,10 @@ Homey version >= 1.1.0
 
 
 Changelog:  
+
+0.0.21
+* Add support for PAN16-1 Smart Energy Plug-in Switch   
+
 0.0.20
 * Add support for PAT02-1A Flood Multisensor   
 * Add support for PAT02-1B Temperature and Humidity sensor    
