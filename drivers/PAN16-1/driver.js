@@ -11,9 +11,9 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
     debug: true,
     capabilities: {
         onoff: {
-			command_class: 'COMMAND_CLASS_BASIC', //SWITCH_BINARY
-			command_get: 'BASIC_GET',
-			command_set: 'BASIC_SET',
+			command_class: 'COMMAND_CLASS_SWITCH_BINARY', //SWITCH_BINARY
+			command_get: 'SWITCH_BINARY_GET',
+			command_set: 'SWITCH_BINARY_SET',
 			command_set_parser: (value) => ({
 				'Switch Value': (value > 0) ? 'on/enable' : 'off/disable',
 			}),
