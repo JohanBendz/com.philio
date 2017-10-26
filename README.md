@@ -13,6 +13,7 @@ Supported devices:
 * PST02-A motion sensor 4:1
 * PST02-C Door/Window 3 in 1 sensor
 * PAN11-1 Smart Energy Plug In Switch
+* PAN16-1 Smart Energy Plug In Switch
 * PAN04-1 In Wall Dual relay(1 way) switch module
 * PAN06-1 In Wall Dual relay(1 way) switch module
 
@@ -25,6 +26,10 @@ Homey version >= 1.1.0
 
 
 Changelog:  
+
+0.0.21
+* Add support for PAN16-1 Smart Energy Plug-in Switch   
+
 0.0.20
 * Add support for PAT02-1A Flood Multisensor   
 * Add support for PAT02-1B Temperature and Humidity sensor    
