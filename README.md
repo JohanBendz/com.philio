@@ -27,6 +27,9 @@ Homey version >= 1.1.0
 
 Changelog:  
 
+0.0.22
+* Added Z-wave+ versions of PAN11, PAN04, PAN06
+
 0.0.21
 * Add support for PAN16-1 Smart Energy Plug-in Switch   
 
