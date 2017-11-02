@@ -3,7 +3,7 @@
 	"name": {
 		"en": "Philio"
 	},
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"compatibility": ">=1.1.0",
 	"description": {
 		"en": "Philio Z-Wave devices for Homey"
@@ -2243,12 +2243,15 @@
 		{
 			"id": "PAN11-1",
 			"name": {
-				"en": "Smart Energy Plug In Switch"
+				"en": "Smart Energy Plug-In Switch PAN11-1"
 			},
 			"zwave": {
 				"manufacturerId": 316,
 				"productTypeId": 1,
-				"productId": 1,
+				"productId": [
+					1,
+					17
+				],
 				"learnmode": {
 					"image": "/drivers/PAN11-1/assets/learnmode.svg",
 					"instruction": {
@@ -2508,7 +2511,7 @@
 		{
 			"id": "PAN16-1",
 			"name": {
-				"en": "Smart Energy Plug In Switch"
+				"en": "Smart Energy Plug In Switch PAN16-1"
 			},
 			"zwave": {
 				"manufacturerId": 316,
@@ -2800,7 +2803,10 @@
 			"zwave": {
 				"manufacturerId": 316,
 				"productTypeId": 1,
-				"productId": 4,
+				"productId": [
+					4,
+					19
+				],
 				"learnmode": {
 					"image": "/drivers/PAN06-1/assets/learnmode.svg",
 					"instruction": {
@@ -3033,7 +3039,10 @@
 			"zwave": {
 				"manufacturerId": 316,
 				"productTypeId": 1,
-				"productId": 3,
+				"productId": [
+					3,
+					18
+				],
 				"learnmode": {
 					"image": "/drivers/PAN04-1/assets/learnmode.svg",
 					"instruction": {
