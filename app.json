@@ -2243,7 +2243,7 @@
 		{
 			"id": "PAN11-1",
 			"name": {
-				"en": "Smart Energy Plug In Switch"
+				"en": "Smart Energy Plug-In Switch PAN11-1"
 			},
 			"zwave": {
 				"manufacturerId": 316,
@@ -2511,7 +2511,7 @@
 		{
 			"id": "PAN16-1",
 			"name": {
-				"en": "Smart Energy Plug In Switch"
+				"en": "Smart Energy Plug In Switch PAN16-1"
 			},
 			"zwave": {
 				"manufacturerId": 316,
