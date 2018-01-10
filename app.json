@@ -3,7 +3,7 @@
 	"name": {
 		"en": "Philio"
 	},
-	"version": "0.0.22",
+	"version": "0.0.23",
 	"compatibility": ">=1.1.0",
 	"description": {
 		"en": "Philio Z-Wave devices for Homey"
@@ -48,6 +48,10 @@
 			{
 				"name": "Jonas Lundblad",
 				"email": "jolnyx@gmail.com"
+	    },
+			{
+				"name": "Oliver Schwab",
+				"email": ""
 			}
         ]
 	},
