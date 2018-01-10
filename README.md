@@ -25,7 +25,10 @@ Currently supported languages:
 Homey version >= 1.1.0
 
 
-Changelog:  
+Changelog:
+
+0.0.23
+* Added support for PAN08 ruller shutter controller
 
 0.0.22
 * Added support for Z-wave+ versions of PAN11, PAN04, PAN06
