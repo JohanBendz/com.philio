@@ -3,7 +3,7 @@
 	"name": {
 		"en": "Philio"
 	},
-	"version": "0.0.23",
+	"version": "0.0.24",
 	"compatibility": ">=1.1.0",
 	"description": {
 		"en": "Philio Z-Wave devices for Homey"
@@ -444,6 +444,11 @@
 						"value": 22
                     },
 					{
+						"id": 8,
+						"size": 1,
+						"value": 2
+                    },
+					{
 						"id": 20,
 						"size": 1,
 						"value": 60
@@ -469,17 +474,34 @@
 					}
                 },
 				{
+					"id": "motion_cancellation",
+					"type": "number",
+					"label": {
+						"en": "Motion Cancellation Time",
+						"nl": "Bewegingsalarm Annulerings Tijd"
+					},
+					"hint": {
+						"en": "After how many seconds of no motion will the motion alarm be de-activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
+						"nl": "Na hoeveel seconden moet het bewegingsalarm deactiveren bij geen beweging.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+					},
+					"value": 30,
+					"attr": {
+						"min": 0,
+						"max": 86400
+					}
+                },
+				{
 					"id": "retrigger_time",
 					"type": "number",
 					"label": {
-						"en": "Motion Sensor Timeout",
-						"nl": "Bewegingssensor Time-out"
+						"en": "Motion Sensor Blindtime",
+						"nl": "Bewegingssensor Blind Tijd"
 					},
 					"hint": {
 						"en": "The time the motion alarm will be on unable to re-trigger or be extended until the alarm is canceled (in steps of 8 seconds).\nRange: 8 - 1016 seconds",
 						"nl": "De tijd het bewegingsalarm aan zal zijn zonder te kunnen her-activeren of verlengen tot het alarm is geannuleerd (in stappen van 8 seconden).\nBereik: 8 - 1016 seconden"
 					},
-					"value": 24,
+					"value": 16,
 					"attr": {
 						"min": 8,
 						"max": 1016,

@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
+const motionCancellation = {};
 const tamperCancellation = {};
 
 // Outdoor Motion Sensor PSP05
@@ -11,8 +12,28 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		alarm_motion: {
 			command_class: 'COMMAND_CLASS_SENSOR_BINARY',
 			command_report: 'SENSOR_BINARY_REPORT',
-			command_report_parser: report => {
-				if (report['Sensor Type'] === 'Motion') return report['Sensor Value'] === 'detected an event';
+			command_report_parser: (report, node) => {
+				if (report['Sensor Type'] === 'Motion' && report['Sensor Value'] === 'detected an event') {
+					if (node) {
+						if (motionCancellation.hasOwnProperty(node.device_data.token) && motionCancellation[node.device_data.token]) {
+							clearTimeout(motionCancellation[node.device_data.token]);
+							motionCancellation[node.device_data.token] = null;
+						}
+						if (node.settings.hasOwnProperty('motion_cancellation') && node.settings.motion_cancellation > 0) {
+							if (!motionCancellation.hasOwnProperty('node.device_data.token')) motionCancellation[node.device_data.token];
+							motionCancellation[node.device_data.token] = setTimeout(() => {
+								node.state.alarm_motion = false;
+								module.exports.realtime(node.device_data, 'alarm_motion', false);
+							}, node.settings.motion_cancellation * 1000);
+						}
+					}
+					return true;
+				} else if (report['Sensor Type'] === 'Motion' &&
+					report['Sensor Value'] !== 'detected an event' &&
+					!node.settings.hasOwnProperty('motion_cancellation')) {
+					// this is just to catch people not having saved the settings yet of the device yet so the alarm still turns off
+					return false;
+				}
 				return null;
 			}
 		},
@@ -58,6 +79,17 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		pir_sensitivity: {
 			index: 3,
 			size: 1,
+		},
+		motion_cancellation: (newValue, oldValue, deviceData) => {
+			if (motionCancellation.hasOwnProperty(deviceData.token) && motionCancellation[deviceData.token]) {
+				clearTimeout(motionCancellation[deviceData.token]);
+				motionCancellation[deviceData.token] = null;
+				const node = module.exports.nodes[deviceData.token];
+				if (node) {
+					if (node.state.alarm_motion) module.exports.realtime(deviceData, 'alarm_motion', false);
+					node.state.alarm_motion = false;
+				}
+			}
 		},
 		tamper_cancellation: (newValue, oldValue, deviceData) => {
 			if (tamperCancellation.hasOwnProperty(deviceData.token) && tamperCancellation[deviceData.token]) {

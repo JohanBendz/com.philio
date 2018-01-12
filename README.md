@@ -26,6 +26,8 @@ Homey version >= 1.1.0
 
 
 Changelog:
+0.0.24
+* Added a (custom) motion cancellation setting for the PSP05
 
 0.0.23
 * Added support for PAN08 ruller shutter controller
