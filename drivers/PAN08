@@ -1,141 +1,75 @@
-{
-  "id": "PAN08-1",
-  "name": {
-    "en": "Roller Shutter Controller PAN08",
-    "nl": "Rolluikschakelaar PAN08"
-  },
-  "zwave": {
-    "manufacturerId": 316,
-    "productTypeId": [
-    1
-    ],
-    "productId": [
-    6
-    ],
-    "learnmode": {
-      "image": "/drivers/PAN08/assets/learnmode.svg",
-      "instruction": {
-        "en": "Press the include button on your Philio PAN08 three times",
-        "nl": "Druk driemaal op de include knop op de Philio PAN08"
-      }
+"use strict";
+var path = require('path');
+const ZwaveDriver = require('homey-zwavedriver');
+// Product Name:    In Wall roller shutter controller PAN08-1
+// Brand Name:    Philio
+// Product Line:    Philio Z-Wave Product
+// Product Code:    PAN08-1
+// Product Version:    1.1
+
+module.exports = new ZwaveDriver(path.basename(__dirname), {
+  capabilities: {
+    windowcoverings_state: {
+      command_class: 'COMMAND_CLASS_SWITCH_BINARY',
+      command_get: 'SWITCH_BINARY_GET',
+      command_set: 'SWITCH_BINARY_SET',
+      command_set_parser: (value) => ({
+        'Switch Value': (value > 0) ? 'on/enable' : 'off/disable',
+      }),
+      command_report: 'SWITCH_BINARY_REPORT',
+      command_report_parser: (report, node) => {
+        switch (report.Value) {
+          case 'on/enable':
+            return 'up';
+          case 'off/disable':
+            return 'down';
+          default:
+            return 'idle';
+        }
+      },
+    },  
+    dim: {
+      command_class: 'COMMAND_CLASS_SWITCH_MULTILEVEL',
+      command_get: 'SWITCH_MULTILEVEL_GET',
+      command_set: 'SWITCH_MULTILEVEL_SET',
+      command_set_parser: (value, node) => {
+        if (value >= 1) {
+          value = 0.99;
+        }
+        return {
+          'Value': value * 100,
+          'Dimming Duration': 'Factory default',
+        };
+      },
+      command_report: 'SWITCH_MULTILEVEL_REPORT',
+      command_report_parser: (report, node) => {
+      },
     },
-    "associationGroups": [
-    1
-    ]
-  },
-  "class": "windowcoverings",
-  "capabilities": [
-  "windowcoverings_state",
-  "dim",
-  "measure_power"
-  ],
-  "mobile": {
-    "components": [
-    {
-      "capabilities": [
-      ],
-      "id": "icon"
-    },
-    {
-      "capabilities": [
-      "dim"
-      ],
-      "id": "slider"
-    },
-    {
-      "capabilities": [
-      "measure_power"
-      ],
-      "id": "sensor"
-    },
-    {
-      "capabilities": [
-      "windowcoverings_state"
-      ],
-      "id": "ternary"
+   },
+    settings: {
+        "modeSelection": {
+            "index": 1,
+            "size": 1
+        },
+        "edgePulseedgeToggleMode": {
+            "index": 2,
+            "size": 1
+        },
+        "restoreSwitchStateMode": {
+            "index": 3,
+            "size": 1
+        },
+        "autoOffTimer": {
+            "index": 4,
+            "size": 2
+        },
+        "rfOffCommand ": {
+            "index": 5,
+            "size": 1
+        },
+        "existenceEndpoint3 ": {
+            "index": 6,
+            "size": 1
+        }
     }
-    ]
-  },
-  "images": {
-    "large": "/drivers/PAN08/assets/images/large.png",
-    "small": "/drivers/PAN08/assets/images/small.png"
-  },
-  "settings": [
-  {
-    "id": "reports_type",
-    "type": "dropdown",
-    "label": {
-      "en": "Level report mode",
-      "nl": "Level report mode"
-    },
-    "value": "2",
-    "values": [
-    {
-      "id": "1",
-      "label": {
-        "en": "Report destination level in 5s"
-      }
-    },
-    {
-      "id": "2",
-      "label": {
-        "en": "Report 10 percent level while running"
-      }
-    }
-    ]
-  },
-  {
-    "id": "switch_type",
-    "type": "dropdown",
-    "label": {
-      "en": "Switch type",
-      "nl": "Schakel type"
-    },
-    "value": "1",
-    "hint": {
-      "en": "See the manual for explanation",
-      "nl": "See the manual for explanation"
-    },
-    "values": [
-    {
-      "id": "1",
-      "label": {
-        "en": "One push button"
-      }
-    },
-    {
-      "id": "2",
-      "label": {
-        "en": "Two push button"
-      }
-    }
-    ]
-  },
-  {
-    "id": "Watt meter report period",
-    "type": "number",
-    "label": {
-      "en": "Interval (in 5sec) to report instant power consumption",
-      "nl": "Interval (in 5sec) to report instant power consumption"
-    },
-    "value": 720,
-    "attr": {
-      "min": 1,
-      "max": 32767
-    }
-  },
-  {
-    "id": "KWh meter report period",
-    "type": "number",
-    "label": {
-      "en": "Interval (in 10min) to report accumulated power consumption",
-      "nl": "Interval (in 10min) to report accumulated power consumption"
-    },
-    "value": 6,
-    "attr": {
-      "min": 1,
-      "max": 32767
-    }
-  }
-  ]
-}
+});
