@@ -622,7 +622,7 @@
           6
         ],
         "learnmode": {
-          "image": "/drivers/PAN08/assets/learnmode.svg",
+          "image": "/drivers/PAN08-1/assets/learnmode.svg",
           "instruction": {
             "en": "Press the include button on your Philio PAN08 three times",
             "nl": "Druk driemaal op de include knop op de Philio PAN08"
@@ -665,8 +665,8 @@
         ]
       },
       "images": {
-        "large": "/drivers/PAN08/assets/images/large.png",
-        "small": "/drivers/PAN08/assets/images/small.png"
+        "large": "/drivers/PAN08-1/assets/images/large.png",
+        "small": "/drivers/PAN08-1/assets/images/small.png"
       },
       "settings": [
         {
