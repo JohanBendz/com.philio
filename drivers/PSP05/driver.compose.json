@@ -1,0 +1,66 @@
+{
+	"id": "PSP05",
+	"name": {
+		"en": "Outdoor Motion Sensor PSP05"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"measure_battery",
+		"alarm_motion",
+		"alarm_tamper"
+	],
+	"images": {
+		"large": "/drivers/PSP05/assets/images/large.png",
+		"small": "/drivers/PSP05/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": [
+			2
+		],
+		"productId": [
+			80
+		],
+		"learnmode": {
+			"image": "/drivers/PSP05/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the button on the inside once.",
+				"nl": "Druk 1 keer op de knop aan de binnenkant."
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "This is the controller group, it is not recommended to change this.",
+					"nl": "Dit is de controller groep, het is niet aangeraden deze te wijzigen."
+				}
+			},
+			"2": {
+				"hint": {
+					"en": "Devices associated here will receive the value in the setting \"Group 2 Value\" when motion is triggered.",
+					"nl": "Apparaten die hier zijn geassocieerd, krijgen de waarde in de setting \"Groep 2 Waarde\" wanneer het bewegingsalarm wordt geactiveerd."
+				}
+			}
+		},
+		"defaultConfiguration": [
+			{
+				"id": 7,
+				"size": 1,
+				"value": 22
+			},
+			{
+				"id": 8,
+				"size": 1,
+				"value": 2
+			},
+			{
+				"id": 20,
+				"size": 1,
+				"value": 60
+			}
+		]
+	}
+}

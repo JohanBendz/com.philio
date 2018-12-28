@@ -1,0 +1,95 @@
+[
+	{
+		"id": 1,
+		"type": "number",
+		"label": {
+			"en": "Dimming Level 'Off' Command",
+			"nl": "Dim level 'Uit' Commando"
+		},
+		"value": 0,
+		"attr": {
+			"min": 0,
+			"max": 99
+		},
+		"hint": {
+			"en": "What dimming level will be send, when sending the 'Off' Command. Range: 0 - 99",
+			"nl": "Welk dim niveau moet worden verzonden bij het 'Uit' Commando. Bereik: 0 - 99"
+		}
+	},
+	{
+		"id": 2,
+		"type": "number",
+		"label": {
+			"en": "Dimming Level 'On' Command",
+			"nl": "Dim level 'Aan' Commando"
+		},
+		"value": 99,
+		"attr": {
+			"min": 1,
+			"max": 99
+		},
+		"hint": {
+			"en": "What dimming level will be send, when sending the 'On' Command. Range: 1 - 99",
+			"nl": "Welk dim niveau moet worden verzonden bij het 'Aan' Commando. Bereik: 1 - 99"
+		}
+	},
+	{
+		"id": 10,
+		"type": "number",
+		"label": {
+			"en": "Battery Report",
+			"nl": "Batterij Verzending"
+		},
+		"value": 12,
+		"attr": {
+			"min": 0,
+			"max": 127
+		},
+		"hint": {
+			"en": "Interval (in hours) for when to send the battery level. Range: 0 (off), 1 - 127",
+			"nl": "Interval (in uur) wanneer het batterij niveau word verzonden. Bereik: 0 (uit), 1 - 127"
+		}
+	},
+	{
+		"id": 251,
+		"type": "dropdown",
+		"label": {
+			"en": "Reporting",
+			"nl": "Verzending"
+		},
+		"value": "0",
+		"hint": {
+			"en": "Determine when the signal will be send.",
+			"nl": "Bepaal wanneer het signaal word verzonden."
+		},
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Automatic after rotating.",
+					"nl": "Automatische no rotatie."
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "After pressing the button.",
+					"nl": "Met het drukken op de knop."
+				}
+			}
+		]
+	},
+	{
+		"id": 252,
+		"type": "checkbox",
+		"label": {
+			"en": "Timer Buzzer",
+			"nl": "Timer Buzzer"
+		},
+		"value": true,
+		"hint": {
+			"en": "Determine if the buzzer will activate with the timer.",
+			"nl": "Bepaal of de buzzer activeert met de timer."
+		}
+	}
+]

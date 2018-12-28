@@ -1,0 +1,52 @@
+{
+	"id": "PAT02-1B",
+	"name": {
+		"en": "Temperature and Humidity sensor PAT02-1B",
+		"nl": "Temperature and Humidity sensor PAT02-1B"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"measure_temperature",
+		"measure_humidity",
+		"measure_battery",
+		"alarm_tamper"
+	],
+	"images": {
+		"large": "/drivers/PAT02-1B/assets/images/large.png",
+		"small": "/drivers/PAT02-1B/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": 2,
+		"productId": [
+			32
+		],
+		"learnmode": {
+			"image": "/drivers/PAT02-1B/assets/learnmode.svg",
+			"instruction": {
+				"en": "Put the battery in the device or tripple click the tamper button on the backside of the device to put in in inclusion/exclusion modus.",
+				"nl": "Stop de batterij in het apparaat of klik drie keer op de tamper knop op de achterzijde / binnenkant van het apparaat om deze in de toevoeg/verwijder modus te zetten."
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"defaultConfiguration": [
+			{
+				"id": 5,
+				"size": 1,
+				"value": 8
+			},
+			{
+				"id": 7,
+				"size": 1,
+				"value": 48
+			},
+			{
+				"id": 23,
+				"size": 1,
+				"value": 5
+			}
+		]
+	}
+}

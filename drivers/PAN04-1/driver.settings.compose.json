@@ -1,0 +1,202 @@
+[
+	{
+		"id": "wattMeterReportPeriod",
+		"type": "number",
+		"label": {
+			"en": "Watt Meter Report Period"
+		},
+		"value": 20,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		}
+	},
+	{
+		"id": "kwhMeterReportPeriod",
+		"type": "number",
+		"label": {
+			"en": "KWH Meter Report Period"
+		},
+		"value": 720,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		}
+	},
+	{
+		"id": "selectedRelay",
+		"type": "dropdown",
+		"label": {
+			"en": "Selected Relay that can be controlled."
+		},
+		"value": "3",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Only relay1"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Only relay2"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Relay1 and relay2"
+				}
+			}
+		]
+	},
+	{
+		"id": "edgePulseModeEdgeToggleMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Edge / Pulse / Edge-Toggle mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Edge mode"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Pulse mode"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Edge-Toggle mode"
+				}
+			}
+		]
+	},
+	{
+		"id": "thresholdCurrentLoadCaution",
+		"type": "number",
+		"label": {
+			"en": "Threshold of current for Load Caution"
+		},
+		"value": 750,
+		"attr": {
+			"min": 1,
+			"max": 750
+		}
+	},
+	{
+		"id": "thresholdKwhLoadCaution",
+		"type": "number",
+		"label": {
+			"en": "Threshold of KWh for Load Caution"
+		},
+		"value": 10000,
+		"attr": {
+			"min": 1,
+			"max": 10000
+		}
+	},
+	{
+		"id": "restoreSwitchStateMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Restore switch state mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Last Switch State"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		]
+	},
+	{
+		"id": "autoOffTimer",
+		"type": "number",
+		"label": {
+			"en": "Auto off timer."
+		},
+		"value": 0,
+		"attr": {
+			"min": 0,
+			"max": 32767
+		}
+	},
+	{
+		"id": "rfOffCommandMode",
+		"type": "dropdown",
+		"label": {
+			"en": "RF off command mode."
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Ignore"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch Toggle"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		]
+	},
+	{
+		"id": "existenceOfEndpoint3",
+		"type": "dropdown",
+		"label": {
+			"en": "Existence of Endpoint3."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Endpoint3 exist"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "No Endpoint3"
+				}
+			}
+		]
+	}
+]

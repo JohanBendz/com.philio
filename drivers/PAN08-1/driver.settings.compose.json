@@ -1,0 +1,78 @@
+[
+	{
+		"id": "reports_type",
+		"type": "dropdown",
+		"label": {
+			"en": "Level report mode",
+			"nl": "Level report mode"
+		},
+		"value": "2",
+		"values": [
+		{
+			"id": "1",
+			"label": {
+				"en": "Report destination level in 5s"
+			}
+		},
+		{
+			"id": "2",
+			"label": {
+				"en": "Report 10 percent level while running"
+			}
+		}
+		]
+	},
+	{
+		"id": "switch_type",
+		"type": "dropdown",
+		"label": {
+			"en": "Switch type",
+			"nl": "Schakel type"
+		},
+		"value": "1",
+		"hint": {
+			"en": "See the manual for explanation",
+			"nl": "See the manual for explanation"
+		},
+		"values": [
+		{
+			"id": "1",
+			"label": {
+				"en": "One push button"
+			}
+		},
+		{
+			"id": "2",
+			"label": {
+				"en": "Two push button"
+			}
+		}
+		]
+	},
+	{
+		"id": "Watt meter report period",
+		"type": "number",
+		"label": {
+			"en": "Interval (in 5sec) to report instant power consumption",
+			"nl": "Interval (in 5sec) to report instant power consumption"
+		},
+		"value": 720,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		}
+	},
+	{
+		"id": "KWh meter report period",
+		"type": "number",
+		"label": {
+			"en": "Interval (in 10min) to report accumulated power consumption",
+			"nl": "Interval (in 10min) to report accumulated power consumption"
+		},
+		"value": 6,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		}
+	}
+]

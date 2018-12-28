@@ -7,9 +7,9 @@ const ZwaveDriver = require('homey-zwavedriver');
 // Product Code:	PST02-1B
 // Product Version:	1.0
 // http://products.z-wavealliance.org/products/1350
+
 module.exports = new ZwaveDriver(path.basename(__dirname), {
 	capabilities: {
-
 		'alarm_tamper': {
 			'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
 			'command_report': 'SENSOR_BINARY_REPORT',
@@ -114,4 +114,4 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"size": 1
 		}
 	}
-})
+});

@@ -1,0 +1,58 @@
+{
+	"id": "PST02-B",
+	"name": {
+		"en": "Slim Multi-Sensor PST02-B 3:1",
+		"nl": "Slim Multi-Sensor PST02-B 3:1"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"alarm_motion",
+		"alarm_tamper",
+		"measure_temperature",
+		"measure_luminance",
+		"measure_battery"
+	],
+	"images": {
+		"large": "/drivers/PST02-B/assets/images/large.png",
+		"small": "/drivers/PST02-B/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": 2,
+		"productId": [
+			13
+		],
+		"learnmode": {
+			"image": "/drivers/PST02-B/assets/learnmode.svg",
+			"instruction": {
+				"en": "Put the battery in the device or tripple click the tamper button on the backside of the device to put in in inclusion/exclusion modus.",
+				"nl": "Stop de batterij in het apparaat of klik drie keer op de tamper knop op de achterzijde / binnenkant van het apparaat om deze in de toevoeg/verwijder modus te zetten."
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"defaultConfiguration": [
+			{
+				"id": 5,
+				"size": 1,
+				"value": 8
+			},
+			{
+				"id": 6,
+				"size": 1,
+				"value": 4
+			},
+			{
+				"id": 7,
+				"size": 1,
+				"value": 54
+			},
+			{
+				"id": 22,
+				"size": 1,
+				"value": 1
+			}
+		]
+	}
+}

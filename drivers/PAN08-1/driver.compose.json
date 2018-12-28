@@ -1,0 +1,63 @@
+{
+	"id": "PAN08-1",
+	"name": {
+		"en": "Roller Shutter Controller PAN08",
+		"nl": "Rolluikschakelaar PAN08"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": [
+			1
+		],
+		"productId": [
+			6
+		],
+		"learnmode": {
+			"image": "/drivers/PAN08/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the include button on your Philio PAN08 three times",
+				"nl": "Druk driemaal op de include knop op de Philio PAN08"
+			}
+		},
+		"associationGroups": [
+			1
+		]
+	},
+	"class": "windowcoverings",
+	"capabilities": [
+		"windowcoverings_state",
+		"dim",
+		"measure_power"
+	],
+	"mobile": {
+		"components": [
+			{
+				"capabilities": [
+				],
+				"id": "icon"
+			},
+			{
+				"capabilities": [
+					"dim"
+				],
+				"id": "slider"
+			},
+			{
+				"capabilities": [
+					"measure_power"
+				],
+				"id": "sensor"
+			},
+			{
+				"capabilities": [
+					"windowcoverings_state"
+				],
+				"id": "ternary"
+			}
+		]
+	},
+	"images": {
+		"large": "/drivers/PAN08/assets/images/large.png",
+		"small": "/drivers/PAN08/assets/images/small.png"
+	}
+}
