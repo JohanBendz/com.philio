@@ -1,0 +1,67 @@
+{
+	"id": "PSR04",
+	"name": {
+		"en": "Smart Color Button PSR04"
+	},
+	"class": "other",
+	"capabilities": [
+		"measure_battery",
+		"show_dim_level"
+	],
+	"images": {
+		"large": "/drivers/PSR04/assets/images/large.png",
+		"small": "/drivers/PSR04/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": 9,
+		"productId": [
+			34
+		],
+		"learnmode": {
+			"image": "/drivers/PSR04/assets/learnmode.svg",
+			"instruction": {
+				"en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
+				"nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
+			}
+		},
+		"associationGroups": [
+			1,
+			2
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Battery level and current dim level get reported in here.",
+					"nl": "Batterij niveau en huidig dim niveau worden hier op gemeld."
+				}
+			},
+			"2": {
+				"hint": {
+					"en": "Dim level changes will be reported here.",
+					"nl": "Dim niveau veranderingen worden hier op gemeld."
+				}
+			}
+		}
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "icon",
+				"capabilities": []
+			},
+			{
+				"id": "battery",
+				"capabilities": [
+					"measure_battery"
+				]
+			},
+			{
+				"id": "slider",
+				"capabilities": [
+					"show_dim_level"
+				]
+			}
+		]
+	}
+}

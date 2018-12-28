@@ -26,11 +26,15 @@ Homey version >= 1.1.0
 
 
 Changelog:
+0.0.30
+* Fixed PAN08-1 support
+* Fixed any validator issues related to homey v2, further nothing functional changed (preparing SDKv2 rewrite)
+
 0.0.24
 * Added a (custom) motion cancellation setting for the PSP05
 
 0.0.23
-* Added support for PAN08 ruller shutter controller
+* Added support for PAN08 roller shutter controller
 
 0.0.22
 * Added support for Z-wave+ versions of PAN11, PAN04, PAN06

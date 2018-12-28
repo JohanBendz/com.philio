@@ -1,0 +1,47 @@
+{
+	"id": "PSM02",
+	"name": {
+		"en": "Slim Multi-Sensor PSM02 4:1"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"alarm_motion",
+		"alarm_contact",
+		"alarm_tamper",
+		"measure_temperature",
+		"measure_luminance",
+		"measure_battery"
+	],
+	"images": {
+		"large": "/drivers/PSM02/assets/images/large.png",
+		"small": "/drivers/PSM02/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": 2,
+		"productId": [
+			2
+		],
+		"learnmode": {
+			"image": "/drivers/PSM02/assets/learnmode.svg",
+			"instruction": {
+				"en": "Triple click the Tamper Switch on the backside confirms inclusion and exclusion."
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"defaultConfiguration": [
+			{
+				"id": 5,
+				"size": 1,
+				"value": 4
+			},
+			{
+				"id": 6,
+				"size": 1,
+				"value": 68
+			}
+		]
+	}
+}

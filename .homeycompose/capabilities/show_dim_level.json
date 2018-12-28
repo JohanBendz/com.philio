@@ -1,0 +1,14 @@
+{
+  "type": "number",
+  "uiComponent": "sensor",
+  "title": {
+    "en": "Dim level",
+    "nl": "Dim niveau"
+  },
+  "chartType": "line",
+  "min": 0,
+  "max": 1,
+  "decimals": 2,
+  "getable": true,
+  "setable": false
+}

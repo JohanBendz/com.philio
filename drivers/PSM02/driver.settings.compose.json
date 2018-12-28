@@ -1,0 +1,184 @@
+[
+  {
+    "id": "basic_set_level",
+    "type": "number",
+    "label": {
+      "en": "Basic Set Level"
+    },
+    "value": 255,
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "hint": {
+      "en": "Setting the BASIC command value to turn on the light. 255 = Turn On. 1 - 100 = Dimming level"
+    }
+  },
+  {
+    "id": "pir_sensitivity",
+    "type": "number",
+    "label": {
+      "en": "PIR Sensitivity"
+    },
+    "hint": {
+      "en": "Parameter to set sensitivity of the PIR (Passiv Infrared Sensor). 0 = Disable PIR motion. 1 - 99 = 1 means the lowest sensitivity, 99 means the highest sensitivity"
+    },
+    "value": 70,
+    "attr": {
+      "min": 0,
+      "max": 99
+    }
+  },
+  {
+    "id": "light_threshold",
+    "type": "number",
+    "label": {
+      "en": "Light Threshold"
+    },
+    "value": 99,
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "hint": {
+      "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light. 1 - 99 = 1 means darkest, 99 means brightest. 100 = Turn off illumination detected. 0 means turn off illumination detected function And never turn on the light."
+    }
+  },
+  {
+    "id": "operation_mode",
+    "type": "number",
+    "label": {
+      "en": "Operation Mode"
+    },
+    "value": 4,
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "hint": {
+      "en": "Bit0. 0 - Home Automation mode 1 - Security Mode,Bit1. Test Mode,Bit2. Disable Door/Window Sensor,Bit3. 0 - Temperature in Fahrenheit; 1 - Temperature in Celsius,Bit4. Disable illumination report after event triggered,Bit5. Disable temperature report after event triggered, Bit6&7 = 0"
+    }
+  },
+  {
+    "id": "multi_sensor_function_switch",
+    "type": "number",
+    "label": {
+      "en": "Multi-Sensor Function Switch"
+    },
+    "value": 68,
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "hint": {
+      "en": "Bit0. Disable magnetic integrate illumination,Bit1. Disable PIR integrate Illumination,Bit2. Disable magnetic integrate PIR,Bit3. When Bit2 is 0 (Enable), the device is install in the same room with the light? 0: In the same room(Default), 1: In the different room,Bit4. Disable delay 5 seconds to turn off the light, when door/window closed,Bit5. Disable auto turn off the light, after door/window opened to turn on the light. If Bit2 = 0, this setting is useless,Bit6. Enable temperature monitoring. When this bit enable, the temperature changed 3 degree Fahrenheit, it will report. And also the temperature over 140 degree Fahrenheit, it will report every 64 second"
+    }
+  },
+  {
+    "id": "pir_re_detect_interval_time",
+    "type": "number",
+    "label": {
+      "en": "PIR Re-Detect Interval Time"
+    },
+    "value": 4,
+    "attr": {
+      "min": 3,
+      "max": 127
+    },
+    "hint": {
+      "en": "In the security mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, and minimum time is 24 seconds, default tick is 3 (24 seconds)"
+    }
+  },
+  {
+    "id": "turn_off_light_time",
+    "type": "number",
+    "label": {
+      "en": "Turn Off Light Time"
+    },
+    "value": 12,
+    "attr": {
+      "min": 4,
+      "max": 127
+    },
+    "hint": {
+      "en": "After turn on the light, setting the delay time to turn off the light when the PIR motion is not detected. 8 seconds per tick, and minimum time is 32 seconds, default tick is 4 (32 seconds)"
+    }
+  },
+  {
+    "id": "auto_report_battery_time",
+    "type": "number",
+    "label": {
+      "en": "Auto Report Battery Time"
+    },
+    "value": 12,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Interval time for auto report the battery level. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+    }
+  },
+  {
+    "id": "auto_report_door_window_state_time",
+    "type": "number",
+    "label": {
+      "en": "Auto Report Door/Window State Time"
+    },
+    "value": 12,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Interval time for auto report the door/window state. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+    }
+  },
+  {
+    "id": "auto_report_illumination_time",
+    "type": "number",
+    "label": {
+      "en": "Auto Report Illumination Time"
+    },
+    "value": 12,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+    }
+  },
+  {
+    "id": "auto_report_temperature_time",
+    "type": "number",
+    "label": {
+      "en": "Auto Report Temperature Time"
+    },
+    "value": 12,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
+    }
+  },
+  {
+    "id": "tamper_cancellation",
+    "type": "number",
+    "label": {
+      "en": "Tamper Cancellation Time",
+      "nl": "Sabotage Annulerings Tijd"
+    },
+    "hint": {
+      "en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
+      "nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+    },
+    "value": 120,
+    "attr": {
+      "min": 0,
+      "max": 86400
+    }
+  }
+]
