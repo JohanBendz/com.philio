@@ -8,7 +8,8 @@
 		"manufacturerId": 316,
 		"productTypeId": 1,
 		"productId": [
-			6
+			6,
+			21
 		],
 		"learnmode": {
 			"image": "/drivers/PAN08-1/assets/learnmode.svg",
@@ -23,7 +24,6 @@
 	},
 	"class": "windowcoverings",
 	"capabilities": [
-		"windowcoverings_state",
 		"dim",
 		"measure_power",
 		"meter_power"
