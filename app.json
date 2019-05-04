@@ -620,32 +620,6 @@
         "measure_power",
         "meter_power"
       ],
-      "mobile": {
-        "components": [
-          {
-            "capabilities": [],
-            "id": "icon"
-          },
-          {
-            "capabilities": [
-              "dim"
-            ],
-            "id": "slider"
-          },
-          {
-            "capabilities": [
-              "measure_power"
-            ],
-            "id": "sensor"
-          },
-          {
-            "capabilities": [
-              "windowcoverings_state"
-            ],
-            "id": "ternary"
-          }
-        ]
-      },
       "images": {
         "large": "/drivers/PAN08-1/assets/images/large.png",
         "small": "/drivers/PAN08-1/assets/images/small.png"
@@ -2832,26 +2806,6 @@
           }
         }
       },
-      "mobile": {
-        "components": [
-          {
-            "id": "icon",
-            "capabilities": []
-          },
-          {
-            "id": "battery",
-            "capabilities": [
-              "measure_battery"
-            ]
-          },
-          {
-            "id": "slider",
-            "capabilities": [
-              "show_dim_level"
-            ]
-          }
-        ]
-      },
       "settings": [
         {
           "id": 1,
@@ -2932,15 +2886,15 @@
             {
               "id": "0",
               "label": {
-                "en": "Automatic after rotating.",
-                "nl": "Automatische no rotatie."
+                "en": "Automatic after rotating",
+                "nl": "Automatische na rotatie"
               }
             },
             {
               "id": "1",
               "label": {
-                "en": "After pressing the button.",
-                "nl": "Met het drukken op de knop."
+                "en": "After pressing the button",
+                "nl": "Met het drukken op de knop"
               }
             }
           ],
@@ -2961,6 +2915,151 @@
             "en": "Determine if the buzzer will activate with the timer.",
             "nl": "Bepaal of de buzzer activeert met de timer."
           },
+          "zwave": {
+            "index": 25,
+            "size": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "PSR07",
+      "name": {
+        "en": "Smart Color Button PSR07"
+      },
+      "class": "other",
+      "capabilities": [
+        "measure_battery",
+        "show_dim_level"
+      ],
+      "images": {
+        "large": "/drivers/PSR07/assets/images/large.png",
+        "small": "/drivers/PSR07/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 316,
+        "productTypeId": 9,
+        "productId": [
+          57
+        ],
+        "learnmode": {
+          "image": "/drivers/PSR07/assets/icon.svg",
+          "instruction": {
+            "en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
+            "nl": "Draai de knop naar Zone A (Onderin) en druk 3 keer op de knop."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Battery level and current dim level get reported in here.",
+              "nl": "Batterij niveau en huidig dim niveau worden hier op gemeld."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Dim level changes will be reported here.",
+              "nl": "Dim niveau veranderingen worden hier op gemeld."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": 1,
+          "type": "number",
+          "label": {
+            "en": "Dimming Level 'Off' Command",
+            "nl": "Dim level 'Uit' Commando"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "hint": {
+            "en": "What dimming level will be send, when sending the 'Off' Command. Range: 0 - 99",
+            "nl": "Welk dim niveau moet worden verzonden bij het 'Uit' Commando. Bereik: 0 - 99"
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "number",
+          "label": {
+            "en": "Dimming Level 'On' Command",
+            "nl": "Dim level 'Aan' Commando"
+          },
+          "value": 99,
+          "attr": {
+            "min": 1,
+            "max": 99
+          },
+          "hint": {
+            "en": "What dimming level will be send, when sending the 'On' Command. Range: 1 - 99",
+            "nl": "Welk dim niveau moet worden verzonden bij het 'Aan' Commando. Bereik: 1 - 99"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          }
+        },
+        {
+          "id": 10,
+          "type": "number",
+          "label": {
+            "en": "Battery Report",
+            "nl": "Batterij Verzending"
+          },
+          "value": 12,
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "hint": {
+            "en": "Interval (in hours) for when to send the battery level. Range: 0 (off), 1 - 127",
+            "nl": "Interval (in uur) wanneer het batterij niveau word verzonden. Bereik: 0 (uit), 1 - 127"
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          }
+        },
+        {
+          "id": 25,
+          "type": "dropdown",
+          "label": {
+            "en": "Reporting",
+            "nl": "Verzending"
+          },
+          "value": "0",
+          "hint": {
+            "en": "Determine when the signal will be send.",
+            "nl": "Bepaal wanneer het signaal word verzonden."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic after rotating",
+                "nl": "Automatische na rotatie"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "After pressing the button",
+                "nl": "Met het drukken op de knop"
+              }
+            }
+          ],
           "zwave": {
             "index": 25,
             "size": 1
@@ -4139,6 +4238,132 @@
             "filter": "driver_id=PSR04"
           }
         ]
+      },
+      {
+        "id": "PSR07_on",
+        "title": {
+          "en": "Switched on",
+          "nl": "Aangezet"
+        },
+        "tokens": [
+          {
+            "name": "dim",
+            "type": "number",
+            "title": {
+              "en": "level",
+              "nl": "niveau"
+            },
+            "example": 0.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=PSR07"
+          }
+        ]
+      },
+      {
+        "id": "PSR07_off",
+        "title": {
+          "en": "Switched off",
+          "nl": "Uitgezet"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=PSR07"
+          }
+        ]
+      },
+      {
+        "id": "PSR07_dim",
+        "title": {
+          "en": "Dim-level changed",
+          "nl": "Dim-niveau veranderd"
+        },
+        "tokens": [
+          {
+            "name": "dim",
+            "type": "number",
+            "title": {
+              "en": "level",
+              "nl": "niveau"
+            },
+            "example": 0.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=PSR07"
+          }
+        ]
+      },
+      {
+        "id": "PSR07_scene",
+        "title": {
+          "en": "Scene activation",
+          "nl": "Scene activatie"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=PSR07"
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x Gedrukt"
+                }
+              },
+              {
+                "id": "Key Pressed 2 times",
+                "label": {
+                  "en": "Pressed 2x",
+                  "nl": "2x Gedrukt"
+                }
+              },
+              {
+                "id": "Key Pressed 3 times",
+                "label": {
+                  "en": "Pressed 3x",
+                  "nl": "3x Gedrukt"
+                }
+              },
+              {
+                "id": "Key Held Down Single",
+                "label": {
+                  "en": "Held down (1x)",
+                  "nl": "Ingehouden (1x)"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Held down (5x per second)",
+                  "nl": "Ingehouden (5x per seconde)"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Key released",
+                  "nl": "Losgelaten"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "conditions": [
@@ -4153,6 +4378,20 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PSR04"
+          }
+        ]
+      },
+      {
+        "id": "PSR07_onoff",
+        "title": {
+          "en": "Is !{{on|off}}",
+          "nl": "Is !{{aan|uit}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=PSR07"
           }
         ]
       }

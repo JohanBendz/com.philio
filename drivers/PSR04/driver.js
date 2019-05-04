@@ -11,7 +11,7 @@ class PSR04Driver extends Homey.Driver {
     this.PSR04_dimTrigger = new Homey.FlowCardTriggerDevice('PSR04_dim').register();
 
     this.PSR04Condition = new Homey.FlowCardCondition('PSR04_onoff').register().registerRunListener((args, state) => {
-        return args.device.getCapabilityValue('show_dim_level');
+      return args.device.getCapabilityValue('show_dim_level');
     });
   }
 }

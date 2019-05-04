@@ -28,33 +28,6 @@
 		"measure_power",
 		"meter_power"
 	],
-	"mobile": {
-		"components": [
-			{
-				"capabilities": [
-				],
-				"id": "icon"
-			},
-			{
-				"capabilities": [
-					"dim"
-				],
-				"id": "slider"
-			},
-			{
-				"capabilities": [
-					"measure_power"
-				],
-				"id": "sensor"
-			},
-			{
-				"capabilities": [
-					"windowcoverings_state"
-				],
-				"id": "ternary"
-			}
-		]
-	},
 	"images": {
 		"large": "/drivers/PAN08-1/assets/images/large.png",
 		"small": "/drivers/PAN08-1/assets/images/small.png"

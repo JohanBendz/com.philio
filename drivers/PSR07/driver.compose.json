@@ -1,7 +1,7 @@
 {
-	"id": "PSR04",
+	"id": "PSR07",
 	"name": {
-		"en": "Smart Color Button PSR04"
+		"en": "Smart Color Button PSR07"
 	},
 	"class": "other",
 	"capabilities": [
@@ -9,20 +9,20 @@
 		"show_dim_level"
 	],
 	"images": {
-		"large": "/drivers/PSR04/assets/images/large.png",
-		"small": "/drivers/PSR04/assets/images/small.png"
+		"large": "/drivers/PSR07/assets/images/large.png",
+		"small": "/drivers/PSR07/assets/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,
 		"productTypeId": 9,
 		"productId": [
-			34
+			57
 		],
 		"learnmode": {
-			"image": "/drivers/PSR04/assets/learnmode.svg",
+			"image": "/drivers/PSR07/assets/icon.svg",
 			"instruction": {
 				"en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
-				"nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
+				"nl": "Draai de knop naar Zone A (Onderin) en druk 3 keer op de knop."
 			}
 		},
 		"associationGroups": [

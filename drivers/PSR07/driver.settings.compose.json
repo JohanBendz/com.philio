@@ -63,7 +63,7 @@
 		}
 	},
 	{
-		"id": 251,
+		"id": 25,
 		"type": "dropdown",
 		"label": {
 			"en": "Reporting",
@@ -90,23 +90,6 @@
 				}
 			}
 		],
-		"zwave": {
-			"index": 25,
-			"size": 1
-		}
-	},
-	{
-		"id": 252,
-		"type": "checkbox",
-		"label": {
-			"en": "Timer Buzzer",
-			"nl": "Timer Buzzer"
-		},
-		"value": true,
-		"hint": {
-			"en": "Determine if the buzzer will activate with the timer.",
-			"nl": "Bepaal of de buzzer activeert met de timer."
-		},
 		"zwave": {
 			"index": 25,
 			"size": 1
