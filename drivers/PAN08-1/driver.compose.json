@@ -6,14 +6,12 @@
 	},
 	"zwave": {
 		"manufacturerId": 316,
-		"productTypeId": [
-			1
-		],
+		"productTypeId": 1,
 		"productId": [
 			6
 		],
 		"learnmode": {
-			"image": "/drivers/PAN08/assets/learnmode.svg",
+			"image": "/drivers/PAN08-1/assets/learnmode.svg",
 			"instruction": {
 				"en": "Press the include button on your Philio PAN08 three times",
 				"nl": "Druk driemaal op de include knop op de Philio PAN08"
@@ -27,7 +25,8 @@
 	"capabilities": [
 		"windowcoverings_state",
 		"dim",
-		"measure_power"
+		"measure_power",
+		"meter_power"
 	],
 	"mobile": {
 		"components": [
@@ -57,7 +56,7 @@
 		]
 	},
 	"images": {
-		"large": "/drivers/PAN08/assets/images/large.png",
-		"small": "/drivers/PAN08/assets/images/small.png"
+		"large": "/drivers/PAN08-1/assets/images/large.png",
+		"small": "/drivers/PAN08-1/assets/images/small.png"
 	}
 }

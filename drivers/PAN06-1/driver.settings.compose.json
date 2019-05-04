@@ -25,7 +25,11 @@
 					"en": "Relay1 and relay2"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 1,
+			"size": 1
+		}
 	},
 	{
 		"id": "edgePulseedgeToggleMode",
@@ -53,7 +57,11 @@
 					"en": "Edge-Toggle mode"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 2,
+			"size": 1
+		}
 	},
 	{
 		"id": "restoreSwitchStateMode",
@@ -81,7 +89,11 @@
 					"en": "Switch On"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 3,
+			"size": 1
+		}
 	},
 	{
 		"id": "autoOffTimer",
@@ -93,6 +105,10 @@
 		"attr": {
 			"min": 0,
 			"max": 32767
+		},
+		"zwave": {
+			"index": 4,
+			"size": 2
 		}
 	},
 	{
@@ -127,7 +143,11 @@
 					"en": "Switch On"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 5,
+			"size": 1
+		}
 	},
 	{
 		"id": "existenceEndpoint3",
@@ -149,6 +169,10 @@
 					"en": "No Endpoint3"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 6,
+			"size": 1
+		}
 	}
 ]

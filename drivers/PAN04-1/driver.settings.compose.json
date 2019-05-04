@@ -5,10 +5,14 @@
 		"label": {
 			"en": "Watt Meter Report Period"
 		},
-		"value": 20,
+		"value": 720,
 		"attr": {
 			"min": 1,
 			"max": 32767
+		},
+		"zwave": {
+			"index": 1,
+			"size": 2
 		}
 	},
 	{
@@ -17,10 +21,14 @@
 		"label": {
 			"en": "KWH Meter Report Period"
 		},
-		"value": 720,
+		"value": 6,
 		"attr": {
 			"min": 1,
 			"max": 32767
+		},
+		"zwave": {
+			"index": 2,
+			"size": 2
 		}
 	},
 	{
@@ -49,7 +57,11 @@
 					"en": "Relay1 and relay2"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 3,
+			"size": 1
+		}
 	},
 	{
 		"id": "edgePulseModeEdgeToggleMode",
@@ -77,7 +89,11 @@
 					"en": "Edge-Toggle mode"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 4,
+			"size": 1
+		}
 	},
 	{
 		"id": "thresholdCurrentLoadCaution",
@@ -89,6 +105,10 @@
 		"attr": {
 			"min": 1,
 			"max": 750
+		},
+		"zwave": {
+			"index": 5,
+			"size": 2
 		}
 	},
 	{
@@ -101,6 +121,10 @@
 		"attr": {
 			"min": 1,
 			"max": 10000
+		},
+		"zwave": {
+			"index": 6,
+			"size": 2
 		}
 	},
 	{
@@ -129,7 +153,11 @@
 					"en": "Switch On"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 7,
+			"size": 1
+		}
 	},
 	{
 		"id": "autoOffTimer",
@@ -141,6 +169,10 @@
 		"attr": {
 			"min": 0,
 			"max": 32767
+		},
+		"zwave": {
+			"index": 8,
+			"size": 2
 		}
 	},
 	{
@@ -175,7 +207,11 @@
 					"en": "Switch On"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 9,
+			"size": 1
+		}
 	},
 	{
 		"id": "existenceOfEndpoint3",
@@ -197,6 +233,10 @@
 					"en": "No Endpoint3"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 10,
+			"size": 1
+		}
 	}
 ]

@@ -18,9 +18,7 @@
 	},
 	"zwave": {
 		"manufacturerId": 316,
-		"productTypeId": [
-			2
-		],
+		"productTypeId": 2,
 		"productId": [
 			31
 		],

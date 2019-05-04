@@ -12,6 +12,11 @@
 		},
 		"hint": {
 			"en": "Setting the BASIC OFF command value to turn OFF the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+		},
+		"zwave": {
+			"index": 1,
+			"size": 1,
+			"signed": false
 		}
 	},
 	{
@@ -27,6 +32,11 @@
 		},
 		"hint": {
 			"en": "Setting the BASIC ON command value to turn ON the light. 255 = Turn On. 1 - 100 = Dimming level. 0 = Turn Off"
+		},
+		"zwave": {
+			"index": 2,
+			"size": 1,
+			"signed": false
 		}
 	},
 	{
@@ -64,6 +74,10 @@
 		],
 		"hint": {
 			"en": "Bit 0: Disable Flood. Bit 1 - 2: Reserved. Bit 3: Temperature, 0 = Fahrenheid; 1 = Celcius. Bit 4: Reserved. Bit 5: Temperature report after event, 1 = Disable; 0 = Enable. Bit 6 - 7: Reserved"
+		},
+		"zwave": {
+			"index": 5,
+			"size": 1
 		}
 	},
 	{
@@ -79,6 +93,10 @@
 		},
 		"hint": {
 			"en": "Bit0 - Bit5: Reserved. Bit6: Disable the humidity report after event triggered. (1:Disable, 0:Enable)"
+		},
+		"zwave": {
+			"index": 6,
+			"size": 1
 		}
 	},
 	{
@@ -94,6 +112,10 @@
 		},
 		"hint": {
 			"en": "Bit 0 - Bit2: Reserved. Bit3: Disable send out BASIC OFF after the flood event cleared. Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 16."
+		},
+		"zwave": {
+			"index": 7,
+			"size": 1
 		}
 	},
 	{
@@ -109,6 +131,10 @@
 		"value": 12,
 		"hint": {
 			"en": "The interval time for auto reporting the battery level. 0 = Turn off auto report battery. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+		},
+		"zwave": {
+			"index": 10,
+			"size": 1
 		}
 	},
 	{
@@ -124,6 +150,10 @@
 		"value": 12,
 		"hint": {
 			"en": "The interval time for auto reporting the temperature state. 0 = Turn off auto report temperature. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+		},
+		"zwave": {
+			"index": 13,
+			"size": 1
 		}
 	},
 	{
@@ -139,6 +169,10 @@
 		"value": 12,
 		"hint": {
 			"en": "The Interval time for auto reporting the Humidity state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+		},
+		"zwave": {
+			"index": 14,
+			"size": 1
 		}
 	},
 	{
@@ -154,6 +188,10 @@
 		"value": 12,
 		"hint": {
 			"en": "The Interval time for auto reporting the Flood state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
+		},
+		"zwave": {
+			"index": 15,
+			"size": 1
 		}
 	},
 	{
@@ -169,6 +207,10 @@
 		},
 		"hint": {
 			"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time in minutes. Default is 30."
+		},
+		"zwave": {
+			"index": 20,
+			"size": 1
 		}
 	},
 	{
@@ -184,6 +226,10 @@
 		"value": 1,
 		"hint": {
 			"en": "0 = Turn of this function. Enable this function the device will measure every minute. When the temperature is over 140 degrees Fahrenheit, it will continue report. This setting is in Fahrenheit even if you set the reporting to Celsius"
+		},
+		"zwave": {
+			"index": 21,
+			"size": 1
 		}
 	},
 	{
@@ -199,6 +245,27 @@
 		"value": 5,
 		"hint": {
 			"en": "The humidity differential to report. The unit is percentage. When enabled, the device will detect every 10 seconds."
+		},
+		"zwave": {
+			"index": 23,
+			"size": 1
+		}
+	},
+	{
+		"id": "tamper_cancellation",
+		"type": "number",
+		"label": {
+			"en": "Tamper Cancellation Time",
+			"nl": "Sabotage Annulerings Tijd"
+		},
+		"hint": {
+			"en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
+			"nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
+		},
+		"value": 120,
+		"attr": {
+			"min": 0,
+			"max": 86400
 		}
 	}
 ]
