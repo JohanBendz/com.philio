@@ -1,0 +1,178 @@
+[
+	{
+		"id": "modeSelection",
+		"type": "dropdown",
+		"label": {
+			"en": "Selected Relay that can be controlled."
+		},
+		"value": "3",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Only relay1"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Only relay2"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Relay1 and relay2"
+				}
+			}
+		],
+		"zwave": {
+			"index": 1,
+			"size": 1
+		}
+	},
+	{
+		"id": "edgePulseedgeToggleMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Edge / Pulse / Edge-Toggle mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Edge mode"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Pulse mode"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Edge-Toggle mode"
+				}
+			}
+		],
+		"zwave": {
+			"index": 2,
+			"size": 1
+		}
+	},
+	{
+		"id": "restoreSwitchStateMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Restore switch state mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Last Switch State"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		],
+		"zwave": {
+			"index": 3,
+			"size": 1
+		}
+	},
+	{
+		"id": "autoOffTimer",
+		"type": "number",
+		"label": {
+			"en": "Auto off timer."
+		},
+		"value": 0,
+		"attr": {
+			"min": 0,
+			"max": 32767
+		},
+		"zwave": {
+			"index": 4,
+			"size": 2
+		}
+	},
+	{
+		"id": "rfOffCommand",
+		"type": "dropdown",
+		"label": {
+			"en": "RF off command mode."
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Ignore"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch Toggle"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		],
+		"zwave": {
+			"index": 5,
+			"size": 1
+		}
+	},
+	{
+		"id": "existenceEndpoint3",
+		"type": "dropdown",
+		"label": {
+			"en": "Existence of Endpoint3."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Endpoint3 exist"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "No Endpoint3"
+				}
+			}
+		],
+		"zwave": {
+			"index": 6,
+			"size": 1
+		}
+	}
+]

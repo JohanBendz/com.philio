@@ -4,8 +4,9 @@ This app adds support for Philio Z-Wave devices to Homey.
 
 
 Supported devices:
-* PAN04     In wall dual relay(1 way) switch module
-* PAN06     In wall dual relay(1 way) switch module
+* PAN04     In wall dual relay (1 way) switch module
+* PAN06     In wall dual relay (1 way) switch module
+* PAN07     Smart in wall dual relay switch module
 * PAN08     In wall roller shutter module
 * PAN11     Smart Energy Plug In Switch
 * PAN16     Smart Energy Plug In Switch
@@ -32,9 +33,11 @@ Homey version >= 2.0.4
 Changelog:
 0.1.0
 * Rewrite to SDKv2/meshdriver
-* Added tamper cancellation for PAT02-(1A/1B/1C) and PST02-(A/B/C)
+* Added (software) tamper cancellation for PAT02-(1A/1B/1C) and PST02-(A/B/C)
 * Trying to seperate out PAN11 devices into measuring and non measuring
 * Add support PSR07 Smart color button
+* Add support PAN07
+* Added an ID to PAN08 driver
 
 0.0.30
 * Fixed PAN08-1 support
