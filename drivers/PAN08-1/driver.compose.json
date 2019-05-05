@@ -24,6 +24,7 @@
 	},
 	"class": "windowcoverings",
 	"capabilities": [
+		"windowcoverings_state",
 		"dim",
 		"measure_power",
 		"meter_power"
