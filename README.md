@@ -31,6 +31,9 @@ Homey version >= 2.0.4
 
 
 Changelog:
+0.1.1
+* PST02 (A/B/C) now will show (approximate) lux, instead of the percentage it only sends, its range is small (only 0 - 500 lux), so keep that in mind.
+
 0.1.0
 * Rewrite to SDKv2/meshdriver
 * Added (software) tamper cancellation for PAT02-(1A/1B/1C) and PST02-(A/B/C)

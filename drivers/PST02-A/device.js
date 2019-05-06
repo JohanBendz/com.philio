@@ -5,15 +5,16 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class PST02A extends ZwaveDevice {
 	onMeshInit() {
 		this.registerCapability('alarm_motion', 'SENSOR_BINARY', {
-      getOpts: {
-        getOnOnline: true,
-      }
-    });
+			getOpts: {
+				getOnOnline: true,
+			}
+		});
+
 		this.registerCapability('alarm_contact', 'SENSOR_BINARY', {
-      getOpts: {
-        getOnOnline: true,
-      }
-    });
+			getOpts: {
+				getOnOnline: true,
+			}
+		});
 
 		this.registerCapability('alarm_tamper', 'SENSOR_BINARY', {
 			reportParser: report => {
@@ -33,11 +34,30 @@ class PST02A extends ZwaveDevice {
 		});
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
-      getOpts: {
-        getOnStart: false,
-      }
-    });
-		this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
+			getOpts: {
+				getOnStart: false,
+			}
+		});
+
+		this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL', {
+			getOpts: {
+				getOnOnline: true,
+			},
+			reportParser: report => {
+				if (report &&
+					report.hasOwnProperty('Sensor Type') &&
+					report.hasOwnProperty('Sensor Value (Parsed)') &&
+					report.hasOwnProperty('Level') &&
+					report.Level.hasOwnProperty('Scale') &&
+					report['Sensor Type'] === 'Luminance (version 1)') {
+					if (report.Level.Scale === 0) return report['Sensor Value (Parsed)'] * 5;
+					else return report['Sensor Value (Parsed)'];
+				}
+				return null;
+			},
+			reportParserOverride: true
+		});
+
 		this.registerCapability('measure_battery', 'BATTERY');
 	}
 }
