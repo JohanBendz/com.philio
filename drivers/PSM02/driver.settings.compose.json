@@ -12,7 +12,12 @@
     },
     "hint": {
       "en": "Setting the BASIC command value to turn on the light. 255 = Turn On. 1 - 100 = Dimming level"
-    }
+    },
+		"zwave": {
+			"index": 2,
+			"size": 1,
+			"signed": false
+		}
   },
   {
     "id": "pir_sensitivity",
@@ -27,7 +32,11 @@
     "attr": {
       "min": 0,
       "max": 99
-    }
+    },
+		"zwave": {
+			"index": 3,
+			"size": 1
+		}
   },
   {
     "id": "light_threshold",
@@ -42,7 +51,11 @@
     },
     "hint": {
       "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light. 1 - 99 = 1 means darkest, 99 means brightest. 100 = Turn off illumination detected. 0 means turn off illumination detected function And never turn on the light."
-    }
+    },
+		"zwave": {
+			"index": 4,
+			"size": 1
+		}
   },
   {
     "id": "operation_mode",
@@ -57,7 +70,11 @@
     },
     "hint": {
       "en": "Bit0. 0 - Home Automation mode 1 - Security Mode,Bit1. Test Mode,Bit2. Disable Door/Window Sensor,Bit3. 0 - Temperature in Fahrenheit; 1 - Temperature in Celsius,Bit4. Disable illumination report after event triggered,Bit5. Disable temperature report after event triggered, Bit6&7 = 0"
-    }
+    },
+		"zwave": {
+			"index": 5,
+			"size": 1
+		}
   },
   {
     "id": "multi_sensor_function_switch",
@@ -72,7 +89,11 @@
     },
     "hint": {
       "en": "Bit0. Disable magnetic integrate illumination,Bit1. Disable PIR integrate Illumination,Bit2. Disable magnetic integrate PIR,Bit3. When Bit2 is 0 (Enable), the device is install in the same room with the light? 0: In the same room(Default), 1: In the different room,Bit4. Disable delay 5 seconds to turn off the light, when door/window closed,Bit5. Disable auto turn off the light, after door/window opened to turn on the light. If Bit2 = 0, this setting is useless,Bit6. Enable temperature monitoring. When this bit enable, the temperature changed 3 degree Fahrenheit, it will report. And also the temperature over 140 degree Fahrenheit, it will report every 64 second"
-    }
+    },
+		"zwave": {
+			"index": 6,
+			"size": 1
+		}
   },
   {
     "id": "pir_re_detect_interval_time",
@@ -87,7 +108,11 @@
     },
     "hint": {
       "en": "In the security mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, and minimum time is 24 seconds, default tick is 3 (24 seconds)"
-    }
+    },
+		"zwave": {
+			"index": 8,
+			"size": 1
+		}
   },
   {
     "id": "turn_off_light_time",
@@ -102,7 +127,11 @@
     },
     "hint": {
       "en": "After turn on the light, setting the delay time to turn off the light when the PIR motion is not detected. 8 seconds per tick, and minimum time is 32 seconds, default tick is 4 (32 seconds)"
-    }
+    },
+		"zwave": {
+			"index": 9,
+			"size": 1
+		}
   },
   {
     "id": "auto_report_battery_time",
@@ -117,7 +146,11 @@
     },
     "hint": {
       "en": "Interval time for auto report the battery level. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
-    }
+    },
+		"zwave": {
+			"index": 10,
+			"size": 1
+		}
   },
   {
     "id": "auto_report_door_window_state_time",
@@ -132,7 +165,11 @@
     },
     "hint": {
       "en": "Interval time for auto report the door/window state. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
-    }
+    },
+		"zwave": {
+			"index": 11,
+			"size": 1
+		}
   },
   {
     "id": "auto_report_illumination_time",
@@ -147,7 +184,11 @@
     },
     "hint": {
       "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
-    }
+    },
+		"zwave": {
+			"index": 12,
+			"size": 1
+		}
   },
   {
     "id": "auto_report_temperature_time",
@@ -162,7 +203,11 @@
     },
     "hint": {
       "en": "Interval time for auto report the temperature. 30 minutes per tick and minimum time is 30 minutes, default tick is 12 (6 hours)"
-    }
+    },
+		"zwave": {
+			"index": 13,
+			"size": 1
+		}
   },
   {
     "id": "tamper_cancellation",
