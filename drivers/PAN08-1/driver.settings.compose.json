@@ -8,23 +8,19 @@
 		},
 		"value": "2",
 		"values": [
-			{
-				"id": "1",
-				"label": {
-					"en": "Report destination level in 5s"
-				}
-			},
-			{
-				"id": "2",
-				"label": {
-					"en": "Report 10 percent level while running"
-				}
+		{
+			"id": "1",
+			"label": {
+				"en": "Report destination level in 5s"
 			}
-		],
-		"zwave": {
-			"index": 6,
-			"size": 1
+		},
+		{
+			"id": "2",
+			"label": {
+				"en": "Report 10 percent level while running"
+			}
 		}
+		]
 	},
 	{
 		"id": "switch_type",
@@ -33,29 +29,25 @@
 			"en": "Switch type",
 			"nl": "Schakel type"
 		},
-		"value": "2",
+		"value": "1",
 		"hint": {
 			"en": "See the manual for explanation",
 			"nl": "See the manual for explanation"
 		},
 		"values": [
-			{
-				"id": "1",
-				"label": {
-					"en": "One push button"
-				}
-			},
-			{
-				"id": "2",
-				"label": {
-					"en": "Two push button"
-				}
+		{
+			"id": "1",
+			"label": {
+				"en": "One push button"
 			}
-		],
-		"zwave": {
-			"index": 5,
-			"size": 1
+		},
+		{
+			"id": "2",
+			"label": {
+				"en": "Two push button"
+			}
 		}
+		]
 	},
 	{
 		"id": "Watt meter report period",
@@ -68,10 +60,6 @@
 		"attr": {
 			"min": 1,
 			"max": 32767
-		},
-		"zwave": {
-			"index": 1,
-			"size": 2
 		}
 	},
 	{
@@ -85,10 +73,6 @@
 		"attr": {
 			"min": 1,
 			"max": 32767
-		},
-		"zwave": {
-			"index": 2,
-			"size": 2
 		}
 	}
 ]

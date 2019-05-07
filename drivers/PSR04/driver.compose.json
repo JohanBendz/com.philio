@@ -43,5 +43,25 @@
 				}
 			}
 		}
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "icon",
+				"capabilities": []
+			},
+			{
+				"id": "battery",
+				"capabilities": [
+					"measure_battery"
+				]
+			},
+			{
+				"id": "slider",
+				"capabilities": [
+					"show_dim_level"
+				]
+			}
+		]
 	}
 }

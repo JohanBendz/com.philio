@@ -13,10 +13,6 @@
 		"attr": {
 			"min": 1,
 			"max": 32767
-		},
-		"zwave": {
-			"index": 1,
-			"size": 2
 		}
 	},
 	{
@@ -33,10 +29,6 @@
 		"attr": {
 			"min": 1,
 			"max": 32767
-		},
-		"zwave": {
-			"index": 2,
-			"size": 2
 		}
 	},
 	{
@@ -49,14 +41,10 @@
 		"hint": {
 			"en": "This is a warning when the current of load over the preset threshold value, if the setting value is 3000, when the load current of Relay1 over this value, PAN16 will send current meter report to warn the Group1 node, the Range of the setting value is from 10 to 3000,and the default value is 3000."
 		},
-		"value": 1300,
+		"value": 3000,
 		"attr": {
 			"min": 10,
-			"max": 1300
-		},
-		"zwave": {
-			"index": 3,
-			"size": 2
+			"max": 3000
 		}
 	},
 	{
@@ -73,10 +61,6 @@
 		"attr": {
 			"min": 1,
 			"max": 10000
-		},
-		"zwave": {
-			"index": 4,
-			"size": 2
 		}
 	},
 	{
@@ -109,11 +93,7 @@
 					"en": "Switch On"
 				}
 			}
-		],
-		"zwave": {
-			"index": 5,
-			"size": 1
-		}
+		]
 	},
 	{
 		"id": "mode_of_switch_off",
@@ -139,11 +119,7 @@
 					"en": "Enable"
 				}
 			}
-		],
-		"zwave": {
-			"index": 6,
-			"size": 1
-		}
+		]
 	},
 	{
 		"id": "LED_indication",
@@ -175,11 +151,7 @@
 					"en": "One flash mode"
 				}
 			}
-		],
-		"zwave": {
-			"index": 7,
-			"size": 1
-		}
+		]
 	},
 	{
 		"id": "auto_off_timer",
@@ -195,10 +167,6 @@
 		"attr": {
 			"min": 0,
 			"max": 32767
-		},
-		"zwave": {
-			"index": 8,
-			"size": 2
 		}
 	},
 	{
@@ -237,11 +205,7 @@
 					"en": "Switch On"
 				}
 			}
-		],
-		"zwave": {
-			"index": 9,
-			"size": 1
-		}
+		]
 	},
 	{
 		"id":"manual_switch_report_mode",
@@ -263,10 +227,6 @@
 					"en": "Enable"
 				}
 			}
-		],
-		"zwave": {
-			"index": 11,
-			"size": 1
-		}
+		]
 	}
 ]

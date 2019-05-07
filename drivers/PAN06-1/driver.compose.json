@@ -17,7 +17,9 @@
 			}
 		},
 		"associationGroups": [
-			1
+			1,
+			2,
+			3
 		],
 		"multiChannelNodes": {
 			"2": {
@@ -40,7 +42,34 @@
 					"en": "In Wall Dual relay PAN06-1 (Switch-A & Switch-B)"
 				}
 			}
-		}
+		},
+		"defaultConfiguration": [
+			{
+				"id": 1,
+				"size": 1,
+				"value": 3
+			},
+			{
+				"id": 2,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 3,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 4,
+				"size": 2,
+				"value": 0
+			},
+			{
+				"id": 5,
+				"size": 1,
+				"value": 0
+			}
+		]
 	},
 	"class": "socket",
 	"capabilities": [

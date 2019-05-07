@@ -14,10 +14,6 @@
 		"attr": {
 			"min": 0,
 			"max": 99
-		},
-		"zwave": {
-			"index": 3,
-			"size": 1
 		}
 	},
 	{
@@ -53,10 +49,6 @@
 			"min": 8,
 			"max": 1016,
 			"step": 8
-		},
-		"zwave": {
-			"index": 8,
-			"size": 1
 		}
 	},
 	{
@@ -91,11 +83,6 @@
 		"attr": {
 			"min": 0,
 			"max": 255
-		},
-		"zwave": {
-			"index": 2,
-			"size": 1,
-			"signed": false
 		}
 	},
 	{
@@ -114,10 +101,6 @@
 			"min": 0,
 			"max": 1016,
 			"step": 8
-		},
-		"zwave": {
-			"index": 9,
-			"size": 1
 		}
 	},
 	{
@@ -135,10 +118,6 @@
 		"attr": {
 			"min": 0,
 			"max": 127
-		},
-		"zwave": {
-			"index": 10,
-			"size": 1
 		}
 	},
 	{
@@ -168,10 +147,6 @@
 					"nl": "Uren"
 				}
 			}
-		],
-		"zwave": {
-			"index": 20,
-			"size": 1
-		}
+		]
 	}
 ]

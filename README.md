@@ -4,44 +4,28 @@ This app adds support for Philio Z-Wave devices to Homey.
 
 
 Supported devices:
-* PAN04     In wall dual relay (1 way) switch module
-* PAN06     In wall dual relay (1 way) switch module
-* PAN07     Smart in wall dual relay switch module
-* PAN08     In wall roller shutter module
-* PAN11     Smart Energy Plug In Switch
-* PAN16     Smart Energy Plug In Switch
-* PAT02-1A  Flood Multisensor
-* PAT02-1B  Temperature and Humidity sensor
-* PAT02-1C  Flood sensor
-* PSM02     Motion sensor 4:1
-* PSP05     Outdoor motion sensor
-* PSR04     Smart color button
-* PSR07     Smart color button
-* PST02-A   Motion sensor 4:1
-* PST02-B   Motion sensor 3:1
-* PST02-C   Door/Window sensor 3:1
+* PSM02   motion sensor 4:1
+* PSP05   outdoor motion sensor
+* PSR04   smart color button
+* PAT02-1A Flood Multisensor
+* PAT02-1B Temperature and Humidity sensor
+* PAT02-1C Flood sensor
+* PST02-A motion sensor 4:1
+* PST02-C Door/Window 3 in 1 sensor
+* PAN11-1* Smart Energy Plug In Switch
+* PAN16-1 Smart Energy Plug In Switch
+* PAN04-1* In Wall Dual relay(1 way) switch module
+* PAN06-1* In Wall Dual relay(1 way) switch module
 
 Currently supported languages:
 * English
-* Dutch (Gedeeltelijk)
 
 
 #Compatibility
-Homey version >= 2.0.4
+Homey version >= 1.1.0
 
 
 Changelog:
-0.1.1
-* PST02 (A/B/C) now will show (approximate) lux, instead of the percentage it only sends, its range is small (only 0 - 500 lux), so keep that in mind.
-
-0.1.0
-* Rewrite to SDKv2/meshdriver
-* Added (software) tamper cancellation for PAT02-(1A/1B/1C) and PST02-(A/B/C)
-* Trying to seperate out PAN11 devices into measuring and non measuring
-* Add support PSR07 Smart color button
-* Add support PAN07
-* Added an ID to PAN08 driver
-
 0.0.30
 * Fixed PAN08-1 support
 * Fixed any validator issues related to homey v2, further nothing functional changed (preparing SDKv2 rewrite)
