@@ -12,11 +12,6 @@
 		"value": 255,
 		"hint": {
 			"en": "Setting the BASIC command value to turn on the light. 0 = Turn off the light, 1 - 100 = For dimmers 1 to 100 means the light strength, 255 = turns on the light. (Default)"
-		},
-		"zwave": {
-			"index": 2,
-			"size": 1,
-			"signed": false
 		}
 	},
 	{
@@ -32,10 +27,6 @@
 		"value": 99,
 		"hint": {
 			"en": "Setting the illumination threshold to turn on the light. When the event triggers and the environment illumination is lower than the threshold, the device will turn on the light. 0 = Turn off illumination detected function and never turn on the light."
-		},
-		"zwave": {
-			"index": 4,
-			"size": 1
 		}
 	},
 	{
@@ -73,10 +64,6 @@
 		],
 		"hint": {
 			"en": "Bit 0: Reserved. Bit 1: Test mode, 1 = enable; 0 = normal mode. (Notice: this bit is ignored if DIP Switch is not set to Customer Mode). Bit 2: Door/window function, 1 = Disable; 0 = Enable. Bit 3: Temperature, 0 = Fahrenheid; 1 = Celcius. Bit 4: Illumination report after event, 1 = Disable; 0 = Enable. Temperature report after event, 1 = Disable; 0 = Enable."
-		},
-		"zwave": {
-			"index": 5,
-			"size": 1
 		}
 	},
 	{
@@ -92,10 +79,6 @@
 		},
 		"hint": {
 			"en": "Bit 0: Disable magnetic integrate illumination to turn on the lighting nodes in the association group 2. 1: Disable, 0: Enable, Bit 1: Disable PIR integrate Illumination to turn on the"
-		},
-		"zwave": {
-			"index": 6,
-			"size": 1
 		}
 	},
 	{
@@ -111,10 +94,6 @@
 		},
 		"hint": {
 			"en": "Bit 0: Reserved. Bit 1: Sending motion OFF report (1 = Enable, 0 = Disable). Bit 2: PIR super sensitive mode (1 = Enable, 0 = Disable). Bit 3: Send out BASIC OFF after door closed (1 = Disabled, 0 = Enabled). Bit 4: Notification Type (0 = Using notification report, 1 = Using binary report). Bit 5: Multi CC in auto report (1 = Disable, 0 = Enable), Bit 6: Report battery state when device triggered (1 = Disable, 0 = Enable). Preferred settings for Homey: 00110110 = 54."
-		},
-		"zwave": {
-			"index": 7,
-			"size": 1
 		}
 	},
 	{
@@ -130,10 +109,6 @@
 		"value": 4,
 		"hint": {
 			"en": "After turn on the light, setting the delay time to turn off the light when the PIR motion is not detected. 8 seconds per tick, and minimum time is 32 seconds, default tick is 4 (32 seconds)"
-		},
-		"zwave": {
-			"index": 9,
-			"size": 1
 		}
 	},
 	{
@@ -149,10 +124,6 @@
 		"value": 12,
 		"hint": {
 			"en": "The interval time for auto reporting the battery level. 0 = Turn off auto report battery. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
-		},
-		"zwave": {
-			"index": 10,
-			"size": 1
 		}
 	},
 	{
@@ -168,10 +139,6 @@
 		"value": 12,
 		"hint": {
 			"en": "The interval time for auto reporting the door/window state. 0 = Turn off auto report door/window state. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
-		},
-		"zwave": {
-			"index": 11,
-			"size": 1
 		}
 	},
 	{
@@ -187,10 +154,6 @@
 		"value": 12,
 		"hint": {
 			"en": "The Interval time for auto reporting the illumination state. 0 = Turn off auto report illumination. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
-		},
-		"zwave": {
-			"index": 12,
-			"size": 1
 		}
 	},
 	{
@@ -206,10 +169,6 @@
 		"value": 12,
 		"hint": {
 			"en": "The interval time for auto reporting the temperature state. 0 = Turn off auto report temperature. 1-127 = Number of ticks. The default value is 12. The tick time can be set by configuration 'Auto Report Tick Interval'."
-		},
-		"zwave": {
-			"index": 13,
-			"size": 1
 		}
 	},
 	{
@@ -225,10 +184,6 @@
 		},
 		"hint": {
 			"en": "The interval time for each auto report tick. Setting this configuration will effect configurations Auto Report Battery Time, Door/Window State Time, Illumination Time and Tempperature Time. 0 = Turn off all auto report functions. 1-255 = Interval time for each tick (tick is 8 seconds). Default is 30."
-		},
-		"zwave": {
-			"index": 20,
-			"size": 1
 		}
 	},
 	{
@@ -244,10 +199,6 @@
 		"value": 1,
 		"hint": {
 			"en": "0 = Turn of this function. Enable this function the device will measure every minute. When the temperature is over 140 degrees Fahrenheit, it will continue report. Enable this function will cause some issue, please check the 'Illumination Report' section of the manual."
-		},
-		"zwave": {
-			"index": 21,
-			"size": 1
 		}
 	},
 	{
@@ -263,27 +214,6 @@
 		"value": 1,
 		"hint": {
 			"en": "The illumination differential to report. The unit is percentage. When enabled, the device will measure every minute. Enabling this functionality will cause some issue. Please check the 'Illumination Report' section of the manual."
-		},
-		"zwave": {
-			"index": 22,
-			"size": 1
-		}
-	},
-	{
-		"id": "tamper_cancellation",
-		"type": "number",
-		"label": {
-			"en": "Tamper Cancellation Time",
-			"nl": "Sabotage Annulerings Tijd"
-		},
-		"hint": {
-			"en": "How many seconds will the tamper alarm be activated.\nRange: 0 (don't cancel), 1 - 86400 seconds",
-			"nl": "Hoeveel seconden moet het tamper alarm geactiveerd blijven.\nBereik: 0 (niet annuleren), 1 - 86400 seconden"
-		},
-		"value": 120,
-		"attr": {
-			"min": 0,
-			"max": 86400
 		}
 	}
 ]

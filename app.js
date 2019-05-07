@@ -1,10 +1,5 @@
-'use strict';
-const Homey = require('homey');
+"use strict";
 
-class PhilioApp extends Homey.App {
-	onInit() {
-		this.log(`${Homey.manifest.id} running...`);
-	}
+module.exports.init = function() {
+	Homey.log("athom project --run is running 'com.philio'...");
 }
-
-module.exports = PhilioApp;

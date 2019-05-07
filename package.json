@@ -4,7 +4,7 @@
   "description": "This app adds support for Philio Z-Wave devices to Homey",
   "main": "app.js",
   "dependencies": {
-    "homey-meshdriver": "^1.2.32"
+    "homey-zwavedriver": "git+https://github.com/athombv/node-homey-zwavedriver.git"
   },
   "repository": {
     "type": "git",
