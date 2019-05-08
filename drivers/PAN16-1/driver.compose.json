@@ -6,7 +6,9 @@
 	"zwave": {
 		"manufacturerId": 316,
 		"productTypeId": 1,
-		"productId": 41,
+		"productId": [
+			41
+		],
 		"learnmode": {
 			"image": "/drivers/PAN16-1/assets/learnmode.svg",
 			"instruction": {
@@ -15,28 +17,6 @@
 		},
 		"associationGroups": [
 			1
-		],
-		"defaultConfiguration": [
-			{
-				"id": 1,
-				"size": 2,
-				"value": 720
-			},
-			{
-				"id": 2,
-				"size": 2,
-				"value": 6
-			},
-			{
-				"id": 3,
-				"size": 2,
-				"value": 3000
-			},
-			{
-				"id": 4,
-				"size": 2,
-				"value": 10000
-			}
 		]
 	},
 	"class": "socket",

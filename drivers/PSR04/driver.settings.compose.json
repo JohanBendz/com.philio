@@ -14,6 +14,10 @@
 		"hint": {
 			"en": "What dimming level will be send, when sending the 'Off' Command. Range: 0 - 99",
 			"nl": "Welk dim niveau moet worden verzonden bij het 'Uit' Commando. Bereik: 0 - 99"
+		},
+		"zwave": {
+			"index": 1,
+			"size": 1
 		}
 	},
 	{
@@ -31,6 +35,10 @@
 		"hint": {
 			"en": "What dimming level will be send, when sending the 'On' Command. Range: 1 - 99",
 			"nl": "Welk dim niveau moet worden verzonden bij het 'Aan' Commando. Bereik: 1 - 99"
+		},
+		"zwave": {
+			"index": 2,
+			"size": 1
 		}
 	},
 	{
@@ -48,6 +56,10 @@
 		"hint": {
 			"en": "Interval (in hours) for when to send the battery level. Range: 0 (off), 1 - 127",
 			"nl": "Interval (in uur) wanneer het batterij niveau word verzonden. Bereik: 0 (uit), 1 - 127"
+		},
+		"zwave": {
+			"index": 10,
+			"size": 1
 		}
 	},
 	{
@@ -66,18 +78,22 @@
 			{
 				"id": "0",
 				"label": {
-					"en": "Automatic after rotating.",
-					"nl": "Automatische no rotatie."
+					"en": "Automatic after rotating",
+					"nl": "Automatische na rotatie"
 				}
 			},
 			{
 				"id": "1",
 				"label": {
-					"en": "After pressing the button.",
-					"nl": "Met het drukken op de knop."
+					"en": "After pressing the button",
+					"nl": "Met het drukken op de knop"
 				}
 			}
-		]
+		],
+		"zwave": {
+			"index": 25,
+			"size": 1
+		}
 	},
 	{
 		"id": 252,
@@ -90,6 +106,10 @@
 		"hint": {
 			"en": "Determine if the buzzer will activate with the timer.",
 			"nl": "Bepaal of de buzzer activeert met de timer."
+		},
+		"zwave": {
+			"index": 25,
+			"size": 1
 		}
 	}
 ]
