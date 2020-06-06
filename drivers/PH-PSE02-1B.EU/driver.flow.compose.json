@@ -5,38 +5,51 @@
   ],
   "actions": [
     {
-      "$extends":"turn_alarm_off",
-      "id": "PH-PSE02-1B.EU-turn_alarm_off"
-    },
-    {
-      "$extends":"turn_alarm_on",
-      "id": "PH-PSE02-1B.EU-turn_alarm_on"
-    },
-    {
-      "$extends":"play_sound",
-      "id": "PH-PSE02-1B.EU-play_sound"
-    },
-    {
-      "id": "PH-PSE02-1B.EU-disable_siren",
+      "id": "PH-PSE02-1B.EU-siren_on",
       "title": {
-        "en": "Disable Siren",
-        "de": "Alarm deaktivieren"
-      },
-      "hint": {
-        "en": "This does not turn off the alarm.",
-        "de": "Dies schaltet nicht den Alarm aus."
-      },
-      "args": []
+        "en": "Turn Siren On"
+      }
+    },
+    {
+      "id": "PH-PSE02-1B.EU-siren_off",
+      "title": {
+        "en": "Turn Siren Off"
+      }
+    },
+    {
+      "id": "PH-PSE02-1B.EU-alarm_sound",
+      "title": {"en": "Alarm sound"},
+      "args": [{
+          "name": "sound",
+          "type": "dropdown",
+          "values": [
+              {"id": "0", "label": {"en": "No Sound"}},
+              {"id": "1", "label": {"en": "Intruder Alert"}},
+              {"id": "2", "label": {"en": "Fire Alert"}},
+              {"id": "3", "label": {"en": "Ambulance Sound"}},
+              {"id": "4", "label": {"en": "Police Car Sound"}},
+              {"id": "5", "label": {"en": "Door Chime"}},
+              {"id": "6", "label": {"en": "Arm/Disarm"}}
+          ]
+      }]
     },
     {
       "id": "PH-PSE02-1B.EU-enable_siren",
       "title": {
-        "en": "Enable Siren",
-        "de": "Alarm aktivieren"
+        "en": "Enable Siren"
       },
       "hint": {
-        "en": "This does not trigger the alarm.",
-        "de": "Dies löst nicht den Alarm aus."
+        "en": "This does not trigger the alarm."
+      },
+      "args": []
+    },
+    {
+      "id": "PH-PSE02-1B.EU-disable_siren",
+      "title": {
+        "en": "Disable Siren"
+      },
+      "hint": {
+        "en": "This does not turn off the alarm."
       },
       "args": []
     }
