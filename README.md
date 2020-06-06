@@ -1,36 +1,43 @@
 # Philio Z-Wave devices
-
 This app adds support for Philio Z-Wave devices to Homey.
 
-
 Supported devices:
-* PAN04     In wall dual relay (1 way) switch module
-* PAN06     In wall dual relay (1 way) switch module
-* PAN07     Smart in wall dual relay switch module
-* PAN08     In wall roller shutter module
-* PAN11     Smart Energy Plug In Switch
-* PAN16     Smart Energy Plug In Switch
-* PAT02-1A  Flood Multisensor
-* PAT02-1B  Temperature and Humidity sensor
-* PAT02-1C  Flood sensor
-* PSM02     Motion sensor 4:1
-* PSP05     Outdoor motion sensor
-* PSR04     Smart color button
-* PSR07     Smart color button
-* PST02-A   Motion sensor 4:1
-* PST02-B   Motion sensor 3:1
-* PST02-C   Door/Window sensor 3:1
+* PAD07         In wall single live line dimmer switch
+* PAN03         In wall meter switch module
+* PAN04         In wall dual relay (1 way) switch module
+* PAN06         In wall dual relay (1 way) switch module
+* PAN07         Smart in wall dual relay switch module
+* PAN08         In wall roller shutter module
+* PAN11-1       Smart Energy Plug In Switch
+* PAN11-1D      Smart Energy Plug In Switch
+* PAN11-1E      Smart Energy Plug In Switch
+* PAN16         Smart Energy Plug In Switch
+* PAT02-1A      Flood Multisensor
+* PAT02-1B      Temperature and Humidity sensor
+* PAT02-1C      Flood sensor
+* PH-PSE02-1B   Mulitsound Sirene
+* PSM02         Motion sensor 4:1
+* PSP05         Outdoor motion sensor
+* PSR04         Smart color button
+* PSR07         Smart color button
+* PST02-A       Motion sensor 4:1
+* PST02-B       Motion sensor 3:1
+* PST02-C       Door/Window sensor 3:1
 
 Currently supported languages:
 * English
 * Dutch (Gedeeltelijk)
 
-
-#Compatibility
+# Compatibility
 Homey version >= 2.0.4
 
-
 Changelog:
+0.1.2
+* Added support for PAD07
+* Added support for PAN03
+* Added support for PAN11-1E
+* Added support for PH-PSE02-1B.EU
+
 0.1.1
 * PST02 (A/B/C) now will show (approximate) lux, instead of the percentage it only sends, its range is small (only 0 - 500 lux), so keep that in mind.
 

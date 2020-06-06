@@ -1,0 +1,43 @@
+{
+	"id": "PAN07",
+	"name": {
+		"en": "In Wall Dimmer PAN07"
+	},
+	"class": "dimmer",
+	"capabilities": [
+		"onoff",
+		"dim"
+	],
+	"images": {
+		"large": "/drivers/PAN07/assets/images/large.png",
+		"small": "/drivers/PAN07/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": 316,
+		"productTypeId": 5,
+		"productId": [
+			81
+		],
+		"learnmode": {
+			"instruction": {
+				"en": "Pressing Include button three times within 2 seconds will enter inclusion mode"
+			}
+		},
+		"associationGroups": [
+			1,
+			2
+		],
+		"associationGroupsOptions": {
+			"1": {
+			  "hint": {
+				"en": "Lifeline. MULTILEVEL_SWITCH_REPORT, ALARM_REPORT and DEVICE_RESET_LOCALLY_NOTIFICATION. "
+			  }
+			},
+			"2": {
+				"hint": {
+				  "en": "When the On/Off status changes or the dim level is achieved manually, it will send BASIC_SET command to group 2 nodes"
+				}
+			  }
+		  }
+	}
+}

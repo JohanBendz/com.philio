@@ -1,0 +1,210 @@
+[
+	{
+		"id": "wattMeterReportPeriod",
+		"type": "number",
+		"label": {
+			"en": "Watt Meter Report Period"
+		},
+		"value": 720,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		},
+		"zwave": {
+			"index": 1,
+			"size": 2
+		}
+	},
+	{
+		"id": "kwhMeterReportPeriod",
+		"type": "number",
+		"label": {
+			"en": "KWH Meter Report Period"
+		},
+		"value": 6,
+		"attr": {
+			"min": 1,
+			"max": 32767
+		},
+		"zwave": {
+			"index": 2,
+			"size": 2
+		}
+	},
+	{
+		"id": "edgePulseModeEdgeToggleMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Edge / Pulse / Edge-Toggle mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Edge mode"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Pulse mode"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Edge-Toggle mode"
+				}
+			}
+		],
+		"zwave": {
+			"index": 4,
+			"size": 1
+		}
+	},
+	{
+		"id": "thresholdCurrentLoadCaution",
+		"type": "number",
+		"label": {
+			"en": "Threshold of current for Load Caution"
+		},
+		"value": 750,
+		"attr": {
+			"min": 1,
+			"max": 750
+		},
+		"zwave": {
+			"index": 5,
+			"size": 2
+		}
+	},
+	{
+		"id": "thresholdKwhLoadCaution",
+		"type": "number",
+		"label": {
+			"en": "Threshold of KWh for Load Caution"
+		},
+		"value": 10000,
+		"attr": {
+			"min": 1,
+			"max": 10000
+		},
+		"zwave": {
+			"index": 6,
+			"size": 2
+		}
+	},
+	{
+		"id": "restoreSwitchStateMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Restore switch state mode."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Last Switch State"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		],
+		"zwave": {
+			"index": 7,
+			"size": 1
+		}
+	},
+	{
+		"id": "autoOffTimer",
+		"type": "number",
+		"label": {
+			"en": "Auto off timer."
+		},
+		"value": 0,
+		"attr": {
+			"min": 0,
+			"max": 32767
+		},
+		"zwave": {
+			"index": 8,
+			"size": 2
+		}
+	},
+	{
+		"id": "rfOffCommandMode",
+		"type": "dropdown",
+		"label": {
+			"en": "RF off command mode."
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Switch Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Ignore"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch Toggle"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Switch On"
+				}
+			}
+		],
+		"zwave": {
+			"index": 9,
+			"size": 1
+		}
+	},
+	{
+		"id": "existenceOfEndpoint3",
+		"type": "dropdown",
+		"label": {
+			"en": "Existence of Endpoint3."
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Endpoint3 exist"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "No Endpoint3"
+				}
+			}
+		],
+		"zwave": {
+			"index": 10,
+			"size": 1
+		}
+	}
+]

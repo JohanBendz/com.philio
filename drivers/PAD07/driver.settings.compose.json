@@ -1,0 +1,124 @@
+[
+	{
+		"id": "dimmerLevelReportMode",
+		"type": "dropdown",
+		"label": {
+			"en": "Dimmer Level Report mode"
+		},
+		"value": 1,
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disable"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Enable"
+				}
+			}
+		],
+		"zwave": {
+			"index": 1,
+			"size": 1
+		}
+	},
+	{
+		"id": "ledIndicationMode",
+		"type": "dropdown",
+		"label": {
+			"en": "LED indication mode"
+		},
+		"value": 1,
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Show dimmer state"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Show night mode"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "One flash mode"
+				}
+			}
+		],
+		"zwave": {
+			"index": 2,
+			"size": 1
+		}
+	},
+	{
+		"id": "externalSwitchType",
+		"type": "dropdown",
+		"label": {
+			"en": "External switch type"
+		},
+		"value": "1",
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "One switch mode"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Two switch mode"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Up/Down switch mode"
+				}
+			}
+		],
+		"zwave": {
+			"index": 3,
+			"size": 1
+		}
+	},
+	{
+		"id": "restoreDimmerState",
+		"type": "number",
+		"label": {
+			"en": "Restore dimmer state"
+		},
+		"value": 1,
+		"values": [
+			{
+				"id": "1",
+				"label": {
+					"en": "Dimmer off"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Last dimmer state"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Dimmer on"
+				}
+			}
+		],
+		"zwave": {
+			"index": 4,
+			"size": 1
+		}
+	}
+]
