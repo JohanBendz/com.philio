@@ -1,5 +1,8 @@
 {
   "0.1.2": {
     "en": "Added support for PAD07, PAN03, PAN11-1E, PH-PSE02-1B.EU"
+  },
+  "0.1.3": {
+    "en": "Added battery type for devices with batteries"
   }
 }

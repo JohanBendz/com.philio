@@ -5,7 +5,7 @@
 		"label": {
 			"en": "Dimmer Level Report mode"
 		},
-		"value": 1,
+		"value": "1",
 		"values": [
 			{
 				"id": "0",
@@ -31,7 +31,7 @@
 		"label": {
 			"en": "LED indication mode"
 		},
-		"value": 1,
+		"value": "1",
 		"values": [
 			{
 				"id": "1",
@@ -91,11 +91,11 @@
 	},
 	{
 		"id": "restoreDimmerState",
-		"type": "number",
+		"type": "dropdown",
 		"label": {
 			"en": "Restore dimmer state"
 		},
-		"value": 1,
+		"value": "1",
 		"values": [
 			{
 				"id": "1",

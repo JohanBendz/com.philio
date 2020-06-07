@@ -12,6 +12,11 @@
 		"measure_luminance",
 		"measure_battery"
 	],
+	"energy": {
+		"batteries": [
+		  "CR123A"
+		]
+	},
 	"images": {
 		"large": "/drivers/PSM02/assets/images/large.png",
 		"small": "/drivers/PSM02/assets/images/small.png"

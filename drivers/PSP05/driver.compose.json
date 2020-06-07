@@ -9,6 +9,11 @@
 		"alarm_motion",
 		"alarm_tamper"
 	],
+	"energy": {
+		"batteries": [
+		  "CR123A"
+		]
+	},
 	"images": {
 		"large": "/drivers/PSP05/assets/images/large.png",
 		"small": "/drivers/PSP05/assets/images/small.png"

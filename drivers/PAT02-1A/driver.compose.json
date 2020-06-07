@@ -12,6 +12,11 @@
 		"measure_battery",
 		"alarm_tamper"
 	],
+	"energy": {
+		"batteries": [
+		  "CR123A"
+		]
+	},
 	"images": {
 		"large": "/drivers/PAT02-1A/assets/images/large.png",
 		"small": "/drivers/PAT02-1A/assets/images/small.png"

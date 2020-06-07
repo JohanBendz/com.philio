@@ -32,6 +32,9 @@ Currently supported languages:
 Homey version >= 2.0.4
 
 Changelog:
+0.1.3
+* Added battery type for all devices with batteries
+
 0.1.2
 * Added support for PAD07
 * Added support for PAN03
@@ -39,7 +42,7 @@ Changelog:
 * Added support for PH-PSE02-1B.EU
 
 0.1.1
-* PST02 (A/B/C) now will show (approximate) lux, instead of the percentage it only sends, its range is small (only 0 - 500 lux), so keep that in mind.
+* PST02 (A/B/C) now will show (approximate) lux, instead of the percentage it only sends, its range is small (only 0 - 500 lux), so keep that in mind
 
 0.1.0
 * Rewrite to SDKv2/meshdriver

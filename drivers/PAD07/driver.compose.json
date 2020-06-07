@@ -3,7 +3,7 @@
 	"name": {
 		"en": "In Wall Dimmer PAN07"
 	},
-	"class": "dimmer",
+	"class": "light",
 	"capabilities": [
 		"onoff",
 		"dim"
