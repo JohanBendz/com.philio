@@ -1,9 +1,9 @@
 {
     "id": "PH-PSE02-1B.EU",
     "name": {
-      "en": "Indoor siren",
-      "nl": "Binnen sirene",
-      "de": "Alarmsirene"
+      "en": "Indoor siren - PH-PSE02-1B.EU",
+      "nl": "Binnen sirene - PH-PSE02-1B.EU",
+      "de": "Alarmsirene - PH-PSE02-1B.EU"
     },
     "class": "homealarm",
     "capabilities": [
