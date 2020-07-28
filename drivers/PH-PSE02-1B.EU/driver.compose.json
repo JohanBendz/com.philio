@@ -10,9 +10,10 @@
       "onoff",
       "alarm_tamper"
     ],
+    "icon": "{{driverAssetsPath}}/icon.svg",
     "images": {
-      "large": "/drivers/PH-PSE02-1B.EU/assets/images/large.png",
-      "small": "/drivers/PH-PSE02-1B.EU/assets/images/small.png"
+      "large": "{{driverAssetsPath}}/images/large.png",
+      "small": "{{driverAssetsPath}}/images/small.png"
     },
     "zwave": {
         "manufacturerId": 316,

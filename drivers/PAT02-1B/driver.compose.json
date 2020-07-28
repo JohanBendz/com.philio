@@ -16,9 +16,10 @@
 		  "CR123A"
 		]
 	},
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PAT02-1B/assets/images/large.png",
-		"small": "/drivers/PAT02-1B/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,
@@ -27,7 +28,7 @@
 			32
 		],
 		"learnmode": {
-			"image": "/drivers/PAT02-1B/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Put the battery in the device or tripple click the tamper button on the backside of the device to put in in inclusion/exclusion modus.",
 				"nl": "Stop de batterij in het apparaat of klik drie keer op de tamper knop op de achterzijde / binnenkant van het apparaat om deze in de toevoeg/verwijder modus te zetten."

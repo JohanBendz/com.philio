@@ -71,5 +71,11 @@
         "email": ""
       }
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/JohanBendz/com.philio/issues"
+  },
+  "source":  {
+    "url": "https://github.com/JohanBendz/com.philio"
   }
 }

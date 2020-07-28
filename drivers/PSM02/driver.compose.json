@@ -17,9 +17,10 @@
 		  "CR123A"
 		]
 	},
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PSM02/assets/images/large.png",
-		"small": "/drivers/PSM02/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,
@@ -28,7 +29,7 @@
 			2
 		],
 		"learnmode": {
-			"image": "/drivers/PSM02/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Triple click the Tamper Switch on the backside confirms inclusion and exclusion."
 			}

@@ -9,9 +9,10 @@
 		"measure_power",
 		"meter_power"
 	],
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PAN03/assets/images/large.png",
-		"small": "/drivers/PAN03/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,

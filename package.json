@@ -1,6 +1,6 @@
 {
   "name": "com.philio",
-  "version": "0.0.1",
+  "version": "0.1.4",
   "description": "This app adds support for Philio Z-Wave devices to Homey",
   "main": "app.js",
   "dependencies": {
@@ -8,10 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Inversion-NL/com.philio.git"
+    "url": "git+https://github.com/JohanBendz/com.philio.git"
   },
   "devDependencies": {},
   "author": "",
-  "license": "ISC",
-  "homepage": "http://www.frijmann.nl"
+  "license": "ISC"
 }

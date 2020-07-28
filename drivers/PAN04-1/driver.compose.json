@@ -3,6 +3,17 @@
 	"name": {
 		"en": "In Wall Dual relay PAN04-1 (Switch-A)"
 	},
+	"class": "socket",
+	"capabilities": [
+		"onoff",
+		"measure_power",
+		"meter_power"
+	],
+	"icon": "{{driverAssetsPath}}/icon.svg",
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
 	"zwave": {
 		"manufacturerId": 316,
 		"productTypeId": 1,
@@ -11,7 +22,7 @@
 			18
 		],
 		"learnmode": {
-			"image": "/drivers/PAN04-1/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Pressing Include button of PAN04 three times within 2 seconds will enter inclusion mode"
 			}
@@ -27,7 +38,7 @@
 					"measure_power",
 					"meter_power"
 				],
-				"icon": "/drivers/PAN04-1/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN04-1 (Switch-B)"
 				}
@@ -39,21 +50,11 @@
 					"measure_power",
 					"meter_power"
 				],
-				"icon": "/drivers/PAN04-1/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN04-1 (Switch-A & Switch-B)"
 				}
 			}
 		}
-	},
-	"class": "socket",
-	"capabilities": [
-		"onoff",
-		"measure_power",
-		"meter_power"
-	],
-	"images": {
-		"large": "/drivers/PAN04-1/assets/images/large.png",
-		"small": "/drivers/PAN04-1/assets/images/small.png"
 	}
 }

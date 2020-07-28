@@ -4,5 +4,8 @@
   },
   "0.1.3": {
     "en": "Added battery type for devices with batteries"
+  },
+  "0.1.4": {
+    "en": "Bug fix and some typo corrections"
   }
 }

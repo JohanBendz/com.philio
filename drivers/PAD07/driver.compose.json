@@ -1,16 +1,17 @@
 {
-	"id": "PAN07",
+	"id": "PAD07",
 	"name": {
-		"en": "In Wall Dimmer PAN07"
+		"en": "In Wall Dimmer PAD07"
 	},
 	"class": "light",
 	"capabilities": [
 		"onoff",
 		"dim"
 	],
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PAN07/assets/images/large.png",
-		"small": "/drivers/PAN07/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,

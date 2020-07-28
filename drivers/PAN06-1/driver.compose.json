@@ -3,6 +3,15 @@
 	"name": {
 		"en": "In Wall Dual relay PAN06-1 (Switch-A)"
 	},
+	"class": "socket",
+	"capabilities": [
+		"onoff"
+	],
+	"icon": "{{driverAssetsPath}}/icon.svg",
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
 	"zwave": {
 		"manufacturerId": 316,
 		"productTypeId": 1,
@@ -11,7 +20,7 @@
 			19
 		],
 		"learnmode": {
-			"image": "/drivers/PAN06-1/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Pressing Include button of PAN06 three times within 2 seconds will enter inclusion mode"
 			}
@@ -25,7 +34,7 @@
 				"capabilities": [
 					"onoff"
 				],
-				"icon": "/drivers/PAN06-1/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN06-1 (Switch-B)"
 				}
@@ -35,19 +44,11 @@
 				"capabilities": [
 					"onoff"
 				],
-				"icon": "/drivers/PAN06-1/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN06-1 (Switch-A & Switch-B)"
 				}
 			}
 		}
-	},
-	"class": "socket",
-	"capabilities": [
-		"onoff"
-	],
-	"images": {
-		"large": "/drivers/PAN06-1/assets/images/large.png",
-		"small": "/drivers/PAN06-1/assets/images/small.png"
 	}
 }

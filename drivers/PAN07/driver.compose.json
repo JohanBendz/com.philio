@@ -3,6 +3,19 @@
 	"name": {
 		"en": "Smart in Wall Dual relay PAN07 (Switch-A)"
 	},
+	"class": "socket",
+	"capabilities": [
+		"onoff",
+		"measure_power",
+		"meter_power",
+		"measure_voltage",
+		"measure_current"
+	],
+	"icon": "{{driverAssetsPath}}/icon.svg",
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
 	"zwave": {
 		"manufacturerId": 316,
 		"productTypeId": 1,
@@ -10,7 +23,7 @@
 			5
 		],
 		"learnmode": {
-			"image": "/drivers/PAN07/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Pressing Include button of PAN07 three times within 2 seconds will enter inclusion mode"
 			}
@@ -28,7 +41,7 @@
 					"measure_voltage",
 					"measure_current"
 				],
-				"icon": "/drivers/PAN07/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN07 (Switch-B)"
 				}
@@ -38,23 +51,11 @@
 				"capabilities": [
 					"onoff"
 				],
-				"icon": "/drivers/PAN07/assets/icon.svg",
+				"icon": "{{driverAssetsPath}}/icon.svg",
 				"name": {
 					"en": "In Wall Dual relay PAN07 (Switch-A & Switch-B)"
 				}
 			}
 		}
-	},
-	"class": "socket",
-	"capabilities": [
-		"onoff",
-		"measure_power",
-		"meter_power",
-		"measure_voltage",
-		"measure_current"
-	],
-	"images": {
-		"large": "/drivers/PAN07/assets/images/large.png",
-		"small": "/drivers/PAN07/assets/images/small.png"
 	}
 }

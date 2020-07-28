@@ -4,4 +4,4 @@ Philio technology aims to develop consumer friendly products that provide securi
  
 Philio is committed to provide good quality technology that’s affordable for everyone.
 
-To request additional devices, please create an issue at Github: https://github.com/JohanBendz/com.philio/issues
+To report a bug or request additional devices, please create an issue at Github.

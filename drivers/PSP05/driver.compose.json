@@ -14,9 +14,10 @@
 		  "CR123A"
 		]
 	},
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PSP05/assets/images/large.png",
-		"small": "/drivers/PSP05/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,
@@ -27,7 +28,7 @@
 			80
 		],
 		"learnmode": {
-			"image": "/drivers/PSP05/assets/learnmode.svg",
+			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Press the button on the inside once.",
 				"nl": "Druk 1 keer op de knop aan de binnenkant."

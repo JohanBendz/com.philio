@@ -13,9 +13,10 @@
 		  "INTERNAL"
 		]
 	},
+	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
-		"large": "/drivers/PSR07/assets/images/large.png",
-		"small": "/drivers/PSR07/assets/images/small.png"
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
 	},
 	"zwave": {
 		"manufacturerId": 316,
@@ -24,7 +25,7 @@
 			57
 		],
 		"learnmode": {
-			"image": "/drivers/PSR07/assets/icon.svg",
+			"image": "{{driverAssetsPath}}/icon.svg",
 			"instruction": {
 				"en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
 				"nl": "Draai de knop naar Zone A (Onderin) en druk 3 keer op de knop."
