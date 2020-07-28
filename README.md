@@ -32,6 +32,9 @@ Currently supported languages:
 Homey version >= 2.0.4
 
 Changelog:
+0.1.4
+* Some fixes and typo corrections
+
 0.1.3
 * Added battery type for all devices with batteries
 
