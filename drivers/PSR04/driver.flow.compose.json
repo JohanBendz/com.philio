@@ -25,14 +25,7 @@
 					},
 					"example": 0.5
 				}
-			],
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR04"
-				}
-			  ]
+			]
 		},
 		{
 			"id": "PSR04_off",

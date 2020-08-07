@@ -5393,11 +5393,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PSR04"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR04"
           }
         ]
       },
