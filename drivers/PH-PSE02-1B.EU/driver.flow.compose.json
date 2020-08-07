@@ -8,27 +8,13 @@
       "id": "PH-PSE02-1B.EU-siren_on",
       "title": {
         "en": "Turn Siren On"
-      },
-      "args": [
-        {
-          "type": "device",
-          "name": "device",
-          "filter": "driver_id=PH-PSE02-1B.EU"
-        }
-      ]
+      }
     },
     {
       "id": "PH-PSE02-1B.EU-siren_off",
       "title": {
         "en": "Turn Siren Off"
-      },
-      "args": [
-        {
-          "type": "device",
-          "name": "device",
-          "filter": "driver_id=PH-PSE02-1B.EU"
-        }
-      ]
+      }
     },
     {
       "id": "PH-PSE02-1B.EU-alarm_sound",
@@ -54,14 +40,7 @@
       },
       "hint": {
         "en": "This does not trigger the alarm."
-      },
-      "args": [
-        {
-          "type": "device",
-          "name": "device",
-          "filter": "driver_id=PH-PSE02-1B.EU"
-        }
-      ]
+      }
     },
     {
       "id": "PH-PSE02-1B.EU-disable_siren",
@@ -70,14 +49,7 @@
       },
       "hint": {
         "en": "This does not turn off the alarm."
-      },
-      "args": [
-        {
-          "type": "device",
-          "name": "device",
-          "filter": "driver_id=PH-PSE02-1B.EU"
-        }
-      ]
+      }
     }
   ]
 }

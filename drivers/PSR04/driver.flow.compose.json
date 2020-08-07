@@ -5,14 +5,7 @@
 			"title": {
 				"en": "Is !{{on|off}}",
 				"nl": "Is !{{aan|uit}}"
-			},
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR04"
-				}
-			  ]
+			}
 		}
 	],
 	"triggers": [
@@ -46,14 +39,7 @@
 			"title": {
 				"en": "Switched off",
 				"nl": "Uitgezet"
-			},
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR04"
-				}
-			  ]
+			}
 		},
 		{
 			"id": "PSR04_dim",
@@ -71,14 +57,7 @@
 					},
 					"example": 0.5
 				}
-			],
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR04"
-				}
-			  ]
+			]
 		}
 	]
 }

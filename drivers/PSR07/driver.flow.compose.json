@@ -5,14 +5,7 @@
 			"title": {
 				"en": "Is !{{on|off}}",
 				"nl": "Is !{{aan|uit}}"
-			},
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR07"
-				}
-			  ]
+			}
 		}
 	],
 	"triggers": [
@@ -32,14 +25,7 @@
 					},
 					"example": 0.5
 				}
-			],
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR07"
-				}
-			  ]
+			]
 		},
 		{
 			"id": "PSR07_off",
@@ -64,14 +50,7 @@
 					},
 					"example": 0.5
 				}
-			],
-			"args": [
-				{
-				  "type": "device",
-				  "name": "device",
-				  "filter": "driver_id=PSR07"
-				}
-			  ]
+			]
 		},
 		{
 			"id": "PSR07_scene",
