@@ -3,7 +3,7 @@
   "name": {
     "en": "Philio"
   },
-  "version": "0.1.4",
+  "version": "0.1.5",
   "compatibility": ">=2.0.4",
   "sdk": 2,
   "brandColor": "#009947",
@@ -5260,11 +5260,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PH-PSE02-1B.EU"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PH-PSE02-1B.EU"
           }
         ]
       },
@@ -5274,11 +5269,6 @@
           "en": "Turn Siren Off"
         },
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PH-PSE02-1B.EU"
-          },
           {
             "type": "device",
             "name": "device",
@@ -5360,11 +5350,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PH-PSE02-1B.EU"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PH-PSE02-1B.EU"
           }
         ]
       },
@@ -5377,11 +5362,6 @@
           "en": "This does not turn off the alarm."
         },
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PH-PSE02-1B.EU"
-          },
           {
             "type": "device",
             "name": "device",
@@ -5432,11 +5412,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PSR04"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR04"
           }
         ]
       },
@@ -5462,11 +5437,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PSR04"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR04"
           }
         ]
       },
@@ -5488,11 +5458,6 @@
           }
         ],
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR07"
-          },
           {
             "type": "device",
             "name": "device",
@@ -5532,11 +5497,6 @@
           }
         ],
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR07"
-          },
           {
             "type": "device",
             "name": "device",
@@ -5619,11 +5579,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=PSR04"
-          },
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR04"
           }
         ]
       },
@@ -5634,11 +5589,6 @@
           "nl": "Is !{{aan|uit}}"
         },
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=PSR07"
-          },
           {
             "type": "device",
             "name": "device",
