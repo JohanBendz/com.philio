@@ -13,5 +13,8 @@
   },
   "0.1.6": {
     "en": "icon fix"
+  },
+  "0.1.7": {
+    "en": "Updated Z-wave driver"
   }
 }
