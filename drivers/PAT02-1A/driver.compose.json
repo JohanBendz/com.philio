@@ -5,6 +5,8 @@
 		"nl": "Flood Multisensor PAT02-1A"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"measure_temperature",
 		"measure_humidity",

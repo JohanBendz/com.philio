@@ -5,6 +5,8 @@
 		"nl": "Slim Multi-Sensor PST02-C 3:1"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"alarm_contact",
 		"alarm_tamper",

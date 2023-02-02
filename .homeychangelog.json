@@ -16,5 +16,11 @@
   },
   "0.1.7": {
     "en": "Updated Z-wave driver"
+  },
+  "0.2.0": {
+    "en": "Upgraded to SDK3 to be compatible with the new Homey Pro"
+  },
+  "0.2.9": {
+    "en": "SDK3 fixes and cleanup after update"
   }
 }

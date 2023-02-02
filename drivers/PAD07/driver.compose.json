@@ -4,6 +4,8 @@
 		"en": "In Wall Dimmer PAD07"
 	},
 	"class": "light",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff",
 		"dim"

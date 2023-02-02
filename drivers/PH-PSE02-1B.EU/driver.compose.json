@@ -6,6 +6,8 @@
       "de": "Alarmsirene - PH-PSE02-1B.EU"
     },
     "class": "homealarm",
+    "platforms": ["local"],
+    "connectivity": ["zwave"],
     "capabilities": [
       "onoff",
       "alarm_tamper"

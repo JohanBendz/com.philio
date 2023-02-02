@@ -4,6 +4,8 @@
 		"en": "Outdoor Motion Sensor PSP05"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"measure_battery",
 		"alarm_motion",

@@ -4,6 +4,8 @@
 		"en": "In Wall Meter Switch PAN03"
 	},
 	"class": "socket",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff",
 		"measure_power",

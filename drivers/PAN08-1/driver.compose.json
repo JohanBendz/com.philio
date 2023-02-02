@@ -5,6 +5,8 @@
 		"nl": "Rolluikschakelaar PAN08"
 	},
 	"class": "windowcoverings",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"windowcoverings_state",
 		"dim",

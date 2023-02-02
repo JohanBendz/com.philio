@@ -4,13 +4,25 @@
   "name": {
     "en": "Philio"
   },
-  "version": "0.1.7",
-  "compatibility": ">=2.0.4",
-  "sdk": 2,
-  "brandColor": "#009947",
   "description": {
     "en": "Philio Z-Wave devices for Homey"
   },
+  "version": "0.2.9",
+  "compatibility": ">=5.0.0",
+  "platforms": [
+    "local"
+  ],
+  "sdk": 3,
+  "brandColor": "#009947",
+  "permissions": [
+    "homey:wireless:zwave"
+  ],
+  "homeyCommunityTopicId": 26439,
+  "bugs": {
+    "url": "https://github.com/JohanBendz/com.philio/issues"
+  },
+  "source": "https://github.com/JohanBendz/com.philio",
+  "support": "mailto:homey@bortbytt.se",
   "category": [
     "appliances"
   ],
@@ -73,10 +85,6 @@
       }
     ]
   },
-  "bugs": {
-    "url": "https://github.com/JohanBendz/com.philio/issues"
-  },
-  "source": "https://github.com/JohanBendz/com.philio",
   "drivers": [
     {
       "id": "PAD07",
@@ -84,6 +92,12 @@
         "en": "In Wall Dimmer PAD07"
       },
       "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "dim"
@@ -252,6 +266,12 @@
         "en": "In Wall Meter Switch PAN03"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "measure_power",
@@ -494,6 +514,12 @@
         "en": "In Wall Dual relay PAN04-1 (Switch-A)"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "measure_power",
@@ -523,6 +549,12 @@
         "multiChannelNodes": {
           "2": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff",
               "measure_power",
@@ -535,6 +567,12 @@
           },
           "3": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff",
               "measure_power",
@@ -796,6 +834,12 @@
         "en": "In Wall Dual relay PAN06-1 (Switch-A)"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -823,6 +867,12 @@
         "multiChannelNodes": {
           "2": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff"
             ],
@@ -833,6 +883,12 @@
           },
           "3": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff"
             ],
@@ -1028,6 +1084,12 @@
         "en": "Smart in Wall Dual relay PAN07 (Switch-A)"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "measure_power",
@@ -1058,6 +1120,12 @@
         "multiChannelNodes": {
           "2": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff",
               "measure_power",
@@ -1072,6 +1140,12 @@
           },
           "3": {
             "class": "socket",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zwave"
+            ],
             "capabilities": [
               "onoff"
             ],
@@ -1268,6 +1342,12 @@
         "nl": "Rolluikschakelaar PAN08"
       },
       "class": "windowcoverings",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "windowcoverings_state",
         "dim",
@@ -1398,6 +1478,12 @@
         "en": "Smart Energy Plug-In Switch PAN11-1"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "measure_power",
@@ -1680,6 +1766,12 @@
         "en": "Plug-In Switch PAN11-1D"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -1842,6 +1934,12 @@
         "en": "Plug-In Switch PAN11-1E"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -2040,6 +2138,12 @@
         "en": "Smart Energy Plug In Switch PAN16-1"
       },
       "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "measure_power",
@@ -2349,6 +2453,12 @@
         "nl": "Flood Multisensor PAT02-1A"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "measure_temperature",
         "measure_humidity",
@@ -2679,6 +2789,12 @@
         "nl": "Temperature and Humidity sensor PAT02-1B"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "measure_temperature",
         "measure_humidity",
@@ -2918,6 +3034,12 @@
         "nl": "Flood sensor PAT02-1C"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "alarm_water",
         "measure_battery",
@@ -3140,6 +3262,12 @@
         "de": "Alarmsirene - PH-PSE02-1B.EU"
       },
       "class": "homealarm",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "onoff",
         "alarm_tamper"
@@ -3281,6 +3409,12 @@
         "en": "Slim Multi-Sensor PSM02 4:1"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "alarm_motion",
         "alarm_contact",
@@ -3563,6 +3697,12 @@
         "en": "Outdoor Motion Sensor PSP05"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "measure_battery",
         "alarm_motion",
@@ -3812,6 +3952,12 @@
         "en": "Smart Color Button PSR04"
       },
       "class": "other",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "measure_battery",
         "show_dim_level"
@@ -3980,6 +4126,12 @@
         "en": "Smart Color Button PSR07"
       },
       "class": "other",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "measure_battery",
         "show_dim_level"
@@ -4132,6 +4284,12 @@
         "nl": "Slim Multi-Sensor PST02-A 4:1"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "alarm_motion",
         "alarm_contact",
@@ -4530,6 +4688,12 @@
         "nl": "Slim Multi-Sensor PST02-B 3:1"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "alarm_motion",
         "alarm_tamper",
@@ -4902,6 +5066,12 @@
         "nl": "Slim Multi-Sensor PST02-C 3:1"
       },
       "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "capabilities": [
         "alarm_contact",
         "alarm_tamper",
@@ -5282,6 +5452,9 @@
         "title": {
           "en": "Alarm sound"
         },
+        "titleFormatted": {
+          "en": "Set sound to [[sound]]"
+        },
         "args": [
           {
             "type": "device",
@@ -5291,6 +5464,9 @@
           {
             "name": "sound",
             "type": "dropdown",
+            "title": {
+              "en": "Select sound"
+            },
             "values": [
               {
                 "id": "0",
@@ -5343,6 +5519,7 @@
         "title": {
           "en": "Enable Siren"
         },
+        "titleFormatted": "Enable Siren",
         "hint": {
           "en": "This does not trigger the alarm."
         },
@@ -5359,6 +5536,7 @@
         "title": {
           "en": "Disable Siren"
         },
+        "titleFormatted": "Disable Siren",
         "hint": {
           "en": "This does not turn off the alarm."
         },
@@ -5506,6 +5684,10 @@
           "en": "Scene activation",
           "nl": "Scene activatie"
         },
+        "titleFormatted": {
+          "en": "The Button was [[scene]]",
+          "nl": "De knop is [[scene]]"
+        },
         "args": [
           {
             "type": "device",
@@ -5554,7 +5736,7 @@
               {
                 "id": "Key Released",
                 "label": {
-                  "en": "Key released",
+                  "en": "Released",
                   "nl": "Losgelaten"
                 }
               }

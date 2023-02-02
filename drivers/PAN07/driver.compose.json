@@ -4,6 +4,8 @@
 		"en": "Smart in Wall Dual relay PAN07 (Switch-A)"
 	},
 	"class": "socket",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff",
 		"measure_power",
@@ -34,6 +36,8 @@
 		"multiChannelNodes": {
 			"2": {
 				"class": "socket",
+				"platforms": ["local"],
+				"connectivity": ["zwave"],
 				"capabilities": [
 					"onoff",
 					"measure_power",
@@ -48,6 +52,8 @@
 			},
 			"3": {
 				"class": "socket",
+				"platforms": ["local"],
+				"connectivity": ["zwave"],
 				"capabilities": [
 					"onoff"
 				],

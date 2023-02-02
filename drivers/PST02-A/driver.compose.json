@@ -5,6 +5,8 @@
 		"nl": "Slim Multi-Sensor PST02-A 4:1"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"alarm_motion",
 		"alarm_contact",

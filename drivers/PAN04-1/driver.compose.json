@@ -4,6 +4,8 @@
 		"en": "In Wall Dual relay PAN04-1 (Switch-A)"
 	},
 	"class": "socket",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff",
 		"measure_power",
@@ -33,6 +35,8 @@
 		"multiChannelNodes": {
 			"2": {
 				"class": "socket",
+				"platforms": ["local"],
+				"connectivity": ["zwave"],
 				"capabilities": [
 					"onoff",
 					"measure_power",
@@ -45,6 +49,8 @@
 			},
 			"3": {
 				"class": "socket",
+				"platforms": ["local"],
+				"connectivity": ["zwave"],
 				"capabilities": [
 					"onoff",
 					"measure_power",

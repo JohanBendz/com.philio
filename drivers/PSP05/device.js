@@ -1,11 +1,11 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 // TODO: setting: motion & tamper cancellation
 
 class PSP05 extends ZwaveDevice {
-	onMeshInit() {
+	async onNodeInit() {
 		this.registerCapability('alarm_motion', 'SENSOR_BINARY', {
 			getOpts: {
 				getOnOnline: true,
@@ -17,7 +17,6 @@ class PSP05 extends ZwaveDevice {
 					report['Sensor Type'] === 'Motion') {
 					if (report['Sensor Value'] === 'detected an event') {
 						this.getDriver().motionTimeout(this.getData(), this.getSetting('motion_cancellation') || 30);
-
 						return true;
 					}
 					if (this.getSetting('motion_cancellation') <= 0) return false;
@@ -35,7 +34,6 @@ class PSP05 extends ZwaveDevice {
 					report['Sensor Type'] === 'Tamper') {
 					if (report['Sensor Value'] === 'detected an event') {
 						this.getDriver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
-
 						return true;
 					}
 				}

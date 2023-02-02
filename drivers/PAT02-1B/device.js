@@ -1,9 +1,9 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class PAT02B extends ZwaveDevice {
-	onMeshInit() {
+	async onNodeInit() {
 		this.registerCapability('alarm_tamper', 'SENSOR_BINARY', {
 			reportParser: report => {
 				if (report &&
@@ -12,7 +12,6 @@ class PAT02B extends ZwaveDevice {
 					report['Sensor Type'] === 'Tamper') {
 					if (report['Sensor Value'] === 'detected an event') {
 						this.getDriver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
-
 						return true;
 					}
 				}

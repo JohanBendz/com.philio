@@ -1,9 +1,9 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class PSR04 extends ZwaveDevice {
-	onMeshInit() {
+	async onNodeInit() {
 		// REGISTER FLOWS
 		this._triggerOn = this.getDriver().PSR04_onTrigger;
 		this._triggerOff = this.getDriver().PSR04_offTrigger;
@@ -32,8 +32,8 @@ class PSR04 extends ZwaveDevice {
 		this.registerCapability('measure_battery', 'BATTERY');
 
 		// REGISTER SETTINGS
-		this.registerSetting(251, (value, settings) => new Buffer([ Math.round( parseInt(settings['251']) + (value) ? 0 : 2) ]));
-		this.registerSetting(252, (value, settings) => new Buffer([ Math.round( parseInt(value) + (settings['252']) ? 0 : 2) ]));
+		this.registerSetting(251, (value, settings) => Buffer.from([ Math.round( parseInt(value) + (settings[251] ? 0 : 2)) ]));
+		this.registerSetting(252, (value, settings) => Buffer.from([ Math.round( parseInt(value) + (settings[252] ? 0 : 2)) ]));
 	}
 }
 

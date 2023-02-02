@@ -1,9 +1,9 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class PST02C extends ZwaveDevice {
-	onMeshInit() {
+	async onNodeInit() {
 		this.registerCapability('alarm_contact', 'SENSOR_BINARY', {
 			getOpts: {
 				getOnOnline: true,

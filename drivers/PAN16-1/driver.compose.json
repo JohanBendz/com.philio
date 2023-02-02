@@ -4,6 +4,8 @@
 		"en": "Smart Energy Plug In Switch PAN16-1"
 	},
 	"class": "socket",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff",
 		"measure_power",

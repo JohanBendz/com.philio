@@ -1,9 +1,10 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class PAD07 extends ZwaveDevice {
-	onMeshInit() {
+	async onNodeInit() {
 		this.registerCapability('onoff', 'MULTILEVEL_SWITCH');
 		this.registerCapability('dim', 'MULTILEVEL_SWITCH');
 	}

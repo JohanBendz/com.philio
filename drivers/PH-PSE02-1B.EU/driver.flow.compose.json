@@ -19,9 +19,11 @@
     {
       "id": "PH-PSE02-1B.EU-alarm_sound",
       "title": {"en": "Alarm sound"},
+      "titleFormatted": {"en": "Set sound to [[sound]]"},
       "args": [{
           "name": "sound",
           "type": "dropdown",
+          "title": {"en": "Select sound"},
           "values": [
               {"id": "0", "label": {"en": "No Sound"}},
               {"id": "1", "label": {"en": "Intruder Alert"}},
@@ -38,6 +40,7 @@
       "title": {
         "en": "Enable Siren"
       },
+      "titleFormatted": "Enable Siren",
       "hint": {
         "en": "This does not trigger the alarm."
       }
@@ -47,6 +50,7 @@
       "title": {
         "en": "Disable Siren"
       },
+      "titleFormatted": "Disable Siren",
       "hint": {
         "en": "This does not turn off the alarm."
       }

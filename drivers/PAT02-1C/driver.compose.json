@@ -5,6 +5,8 @@
 		"nl": "Flood sensor PAT02-1C"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"alarm_water",
 		"measure_battery",

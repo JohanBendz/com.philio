@@ -3,13 +3,23 @@
   "name": {
     "en": "Philio"
   },
-  "version": "0.1.7",
-  "compatibility": ">=2.0.4",
-  "sdk": 2,
-  "brandColor": "#009947",
   "description": {
     "en": "Philio Z-Wave devices for Homey"
   },
+  "version": "0.2.9",
+  "compatibility": ">=5.0.0",
+  "platforms": ["local"],
+  "sdk": 3,
+  "brandColor": "#009947",
+  "permissions": [
+    "homey:wireless:zwave"
+  ],
+  "homeyCommunityTopicId": 26439,
+  "bugs": {
+    "url": "https://github.com/JohanBendz/com.philio/issues"
+  },
+  "source": "https://github.com/JohanBendz/com.philio",
+  "support": "mailto:homey@bortbytt.se",
   "category": [
     "appliances"
   ],
@@ -71,9 +81,5 @@
         "email": ""
       }
     ]
-  },
-  "bugs": {
-    "url": "https://github.com/JohanBendz/com.philio/issues"
-  },
-  "source": "https://github.com/JohanBendz/com.philio"
+  }
 }

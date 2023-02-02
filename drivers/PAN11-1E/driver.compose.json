@@ -4,6 +4,8 @@
 		"en": "Plug-In Switch PAN11-1E"
 	},
 	"class": "socket",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"onoff"
 	],

@@ -5,6 +5,8 @@
 		"nl": "Temperature and Humidity sensor PAT02-1B"
 	},
 	"class": "sensor",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"measure_temperature",
 		"measure_humidity",

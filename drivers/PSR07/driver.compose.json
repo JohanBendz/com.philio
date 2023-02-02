@@ -4,6 +4,8 @@
 		"en": "Smart Color Button PSR07"
 	},
 	"class": "other",
+	"platforms": ["local"],
+	"connectivity": ["zwave"],
 	"capabilities": [
 		"measure_battery",
 		"show_dim_level"

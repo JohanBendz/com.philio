@@ -58,6 +58,10 @@
 				"en": "Scene activation",
 				"nl": "Scene activatie"
 			},
+			"titleFormatted": {
+				"en": "The Button was [[scene]]",
+				"nl": "De knop is [[scene]]"
+			},
 			"args": [
 				{
 					"name": "scene",
@@ -101,7 +105,7 @@
 						{
 							"id": "Key Released",
 							"label": {
-								"en": "Key released",
+								"en": "Released",
 								"nl": "Losgelaten"
 							}
 						}
