@@ -4,20 +4,25 @@ const { ZwaveDevice } = require('homey-zwavedriver');
 
 class PAT02A extends ZwaveDevice {
 	async onNodeInit() {
+
 		this.registerCapability('alarm_tamper', 'SENSOR_BINARY', {
-			reportParser: report => {
-				if (report &&
-					report.hasOwnProperty('Sensor Value') &&
-					report.hasOwnProperty('Sensor Type') &&
-					report['Sensor Type'] === 'Tamper') {
-					if (report['Sensor Value'] === 'detected an event') {
-						this.driver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
-						return true;
-					}
-				}
-				return null;
-			},
-			reportParserOverride: true
+			getOpts: {
+				getOnOnline: true,
+			}
+		});
+
+		// This device does not send a timeout when the tamper period is over. Use a timeout to reset the capability
+		this.registerReportListener('SENSOR_BINARY', 'SENSOR_BINARY_REPORT', report => {
+	
+			if (!report || !report.hasOwnProperty('Sensor Value') || !report.hasOwnProperty('Sensor Type')) return null;
+		
+			if (report['Sensor Type'] === 'Tamper' && report['Sensor Value'] === 'detected an event') {
+				this.setCapabilityValue('alarm_tamper', true);
+				this.tamperTimeOut = setTimeout(() => {
+				this.setCapabilityValue('alarm_tamper', false);
+				}, this.getSetting('tamper_cancellation')*1000 || 120000);
+			}
+		
 		});
 
 		this.registerCapability('alarm_water', 'SENSOR_BINARY', {

@@ -1,6 +1,6 @@
 {
   "name": "com.philio",
-  "version": "0.2.10",
+  "version": "0.2.12",
   "description": "This app adds support for Philio Z-Wave devices to Homey",
   "main": "app.js",
   "dependencies": {
