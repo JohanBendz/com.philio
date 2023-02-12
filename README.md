@@ -32,7 +32,7 @@ Currently supported languages:
 Homey version >= 5.0.0
 
 Changelog:
-0.2.1...9
+0.2.1...10
 * SDK3 fixes and cleanup after the update.
 
 0.2.0

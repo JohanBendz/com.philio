@@ -24,7 +24,7 @@ class PSM02 extends ZwaveDevice {
 					report.hasOwnProperty('Sensor Type') &&
 					report['Sensor Type'] === 'Tamper') {
 					if (report['Sensor Value'] === 'detected an event') {
-						this.getDriver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
+						this.driver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
 						return true;
 					}
 				}

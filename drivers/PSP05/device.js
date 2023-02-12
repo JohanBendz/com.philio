@@ -16,7 +16,7 @@ class PSP05 extends ZwaveDevice {
 					report.hasOwnProperty('Sensor Type') &&
 					report['Sensor Type'] === 'Motion') {
 					if (report['Sensor Value'] === 'detected an event') {
-						this.getDriver().motionTimeout(this.getData(), this.getSetting('motion_cancellation') || 30);
+						this.driver().motionTimeout(this.getData(), this.getSetting('motion_cancellation') || 30);
 						return true;
 					}
 					if (this.getSetting('motion_cancellation') <= 0) return false;
@@ -33,7 +33,7 @@ class PSP05 extends ZwaveDevice {
 					report.hasOwnProperty('Sensor Type') &&
 					report['Sensor Type'] === 'Tamper') {
 					if (report['Sensor Value'] === 'detected an event') {
-						this.getDriver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
+						this.driver().tamperTimeout(this.getData(), this.getSetting('tamper_cancellation') || 120);
 						return true;
 					}
 				}

@@ -22,5 +22,8 @@
   },
   "0.2.9": {
     "en": "SDK3 fixes and cleanup after update"
+  },
+  "0.2.10": {
+    "en": "SDK3 fix"
   }
 }

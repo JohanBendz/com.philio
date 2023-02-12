@@ -5,9 +5,9 @@ const { ZwaveDevice } = require('homey-zwavedriver');
 class PSR04 extends ZwaveDevice {
 	async onNodeInit() {
 		// REGISTER FLOWS
-		this._triggerOn = this.getDriver().PSR04_onTrigger;
-		this._triggerOff = this.getDriver().PSR04_offTrigger;
-		this._triggerDim = this.getDriver().PSR04_dimTrigger;
+		this._triggerOn = this.driver().PSR04_onTrigger;
+		this._triggerOff = this.driver().PSR04_offTrigger;
+		this._triggerDim = this.driver().PSR04_dimTrigger;
 
 		// REGISTER CAPABILITIES
 		this.registerCapability('show_dim_level', 'BASIC', {
